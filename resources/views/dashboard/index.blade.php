@@ -11,7 +11,7 @@
             <div class="row">
 
                 <!-- Sales Card -->
-                <div class="col-xxl-4 col-md-6">
+                {{-- <div class="col-xxl-4 col-md-6">
                     <div class="card info-card sales-card">
 
                    
@@ -59,7 +59,7 @@
                         </div>
 
                     </div>
-                </div><!-- End Revenue Card -->
+                </div><!-- End Revenue Card --> --}}
 
 
                 <!-- Recent Sales -->

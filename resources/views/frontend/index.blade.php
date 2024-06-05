@@ -670,7 +670,7 @@
 
               <div class="text-content" data-v-ac7e90e5>
                 <p class="text-preheader" data-v-ac7e90e5>
-                  This is the <span style='color:#f25621'>DNASOUND</span> STUDIO.
+                  This is <span style='color:#f25621'>DNASOUND</span> STUDIO.
                 </p>
                 <h2 class="text-header" data-v-ac7e90e5>
                   Helping you <span style='color:#f25621'>connect with great</span>
@@ -810,9 +810,9 @@
                         <li>✔️100MB cloud storage</li>
                         <li>✔️Limited beat sales and collaboration features</li>
                         <li>✔️Community forum access</li>
-                        <li>✔️Licensing rules with 30% platform fee</li>
+                        {{-- <li>✔️Licensing rules with 30% platform fee</li> --}}
                         {{-- <li>✔️Basic profile without social media links</li> --}}
-                        <li>✔️Earn coins for referrals and sales</li>
+                        {{-- <li>✔️Earn coins for referrals and sales</li> --}}
                         <li>✔️Ad-supported</li>
                       </ul>
                     </div>
