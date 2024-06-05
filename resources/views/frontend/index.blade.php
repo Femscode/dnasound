@@ -1338,7 +1338,7 @@
             </div>
           </div>
           <div data-v-b9699ad0 data-v-906eeacc>
-            <a href="https://w5az.app.link/xZ2ty1CTQnb" rel="noopener noreferrer" target="_blank" class="badge-wrapper"
+            <a href="#" rel="noopener noreferrer" target="_blank" class="badge-wrapper"
               title="Contact Us." data-v-906eeacc>
               <div role="dialog" class="badge" aria-label="Contact Us." data-v-906eeacc>
                 <img alt="Contact Us. icon" width="24" height="24" loading="lazy"
@@ -1348,8 +1348,9 @@
             </a>
             <div role="dialog" class="gta-fixed-wrapper" aria-label="Contact Us." data-v-906eeacc>
               <img alt="Contact Us. QR" width="72" height="72" class="qr-white" loading="lazy"
-                src="nuxt/get-the-app-qr.CHbn3ZX2.svg" data-v-906eeacc /><img alt="Contact Us. QR" width="124"
-                height="124" class="qr-purple" loading="lazy" src="nuxt/get-the-app-qr.CHbn3ZX2.svg" data-v-906eeacc />
+                src="/assets/images/logo/png/logo1.png" data-v-906eeacc />
+                <img alt="Contact Us. QR" width="124"
+                height="124" class="qr-purple" loading="lazy" src="/assets/images/logo/png/logo1.png" data-v-906eeacc />
                 {{-- <div class="text" data-v-906eeacc>Contact Us.</div> --}}
               </div>
             <div class="badge-placeholder" data-v-906eeacc></div>
