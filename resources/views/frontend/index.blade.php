@@ -280,8 +280,8 @@
               <div class="nav-buttons-wrapper" data-v-c835270e>
                 <div class="nav-button login-menu" data-v-c835270e>
 
-                  <button class="stylish-button">Login</button>
-                  <button class="stylish-button">Register</button>
+                  <a href='/login' class="stylish-button">Login</a>
+                  <a href='/register' class="stylish-button">Register</a>
                 </div>
 
               </div>
@@ -320,9 +320,9 @@
                               </div>
                             </div>
                             <div class="input-wrapper" data-v-6ca93fbe>
-                              <input class="native-input" type="text" value spellcheck="false" data-v-6ca93fbe /><label
-                                class="input-label" data-v-6ca93fbe>Looking for a beat or producer, search it
-                                here?</label>
+                              <input class="native-input" type="text"  data-v-6ca93fbe placeholder="Looking for a beat or producer, search it
+                              here?"/>
+                                                       
                             </div>
                             <!---->
                           </div>
@@ -435,9 +435,9 @@
                             </div>
                           </div>
                           <div class="input-wrapper" data-v-6ca93fbe>
-                            <input class="input-standalone native-input" readonly type="text" value spellcheck="false"
-                              data-v-6ca93fbe /><label class="input-label" data-v-6ca93fbe>Looking for a beat or
-                              producer?</label>
+                            <input class="input-standalone native-input" placeholder="Looking for a beat or
+                            producer?" type="text" 
+                              data-v-6ca93fbe />
                           </div>
                           <div class="input-suffix" data-v-6ca93fbe>
                             <!---->
@@ -566,28 +566,8 @@
                     <div class="play-button"></div>
                   </div>
                 </div>
-              </a><a target="_blank" href="#" rel="noopener noreferrer" title="Connect With Artist"
-                data-v-0fd099b2 data-v-41fb6fcd>
-                <div class="card">
-                  <img src="/assets/images/djneptune.jpeg" alt="Card Image" class="card-image">
-                  <div class="card-text">DJ Neptune</div>
-                  <div class="play-button-overlay">
-                    <div class="play-button"></div>
-                  </div>
-                </div>
-
-              </a><a target="_blank" href="#"
-                rel="noopener noreferrer" title="Connect With Producers" data-v-0fd099b2
-                data-v-41fb6fcd>
-                <div class="card">
-                  <img src="/assets/images/djy.jpeg" alt="Card Image" class="card-image">
-                  <div class="card-text">DJ YK</div>
-                  <div class="play-button-overlay">
-                    <div class="play-button"></div>
-                  </div>
-                </div>
-
-              </a><a target="_blank" href="#"
+              </a>
+              <a target="_blank" href="#"
                 rel="noopener noreferrer" title="Connect With Producers" data-v-0fd099b2 data-v-41fb6fcd>
                 <div class="card">
                   <img src="/assets/images/ds2.jpg" alt="Card Image" class="card-image">
@@ -647,6 +627,30 @@
                 </div>
 
               </a>
+              <a target="_blank" href="#" rel="noopener noreferrer" title="Connect With Artist"
+                data-v-0fd099b2 data-v-41fb6fcd>
+                <div class="card">
+                  <img src="/assets/images/djneptune.jpeg" alt="Card Image" class="card-image">
+                  <div class="card-text">DJ Neptune</div>
+                  <div class="play-button-overlay">
+                    <div class="play-button"></div>
+                  </div>
+                </div>
+
+              </a>
+              <a target="_blank" href="#"
+                rel="noopener noreferrer" title="Connect With Producers" data-v-0fd099b2
+                data-v-41fb6fcd>
+                <div class="card">
+                  <img src="/assets/images/djy.jpeg" alt="Card Image" class="card-image">
+                  <div class="card-text">DJ YK</div>
+                  <div class="play-button-overlay">
+                    <div class="play-button"></div>
+                  </div>
+                </div>
+
+              </a>
+              
               <!--]-->
             </div>
             <div class="carousel-footer" data-v-0fd099b2>
@@ -807,7 +811,7 @@
                         <li>✔️Limited beat sales and collaboration features</li>
                         <li>✔️Community forum access</li>
                         <li>✔️Licensing rules with 30% platform fee</li>
-                        <li>✔️Basic profile without social media links</li>
+                        {{-- <li>✔️Basic profile without social media links</li> --}}
                         <li>✔️Earn coins for referrals and sales</li>
                         <li>✔️Ad-supported</li>
                       </ul>
@@ -819,7 +823,7 @@
                         <li>✔️Advanced beat sales options</li>
                         <li>✔️No ads</li>
                         <li>✔️Higher audio quality (up to 320 kbps)</li>
-                        <li>✔️Social media links and verification tick</li>
+                        {{-- <li>✔️Social media links and verification tick</li> --}}
                         <li>✔️Priority customer support</li>
                       </ul>
                     </div>
@@ -852,7 +856,7 @@
                 <span>Start with DNASOUND</span> studio today.
               </h2>
               <p class="text-body" data-v-74b15b82>
-                Explore somewhere new, with a ready-made beat! Adventurous
+                Explore something new, with a ready-made beat! Adventurous
                 producers, that will take you there.
               </p>
               <a href="#" rel="noopener" target="_blank" class="text-button"
@@ -1064,7 +1068,7 @@
               <img alt="Download the app now." title="Download the app now." class="logo" width="196" height="196"
                 loading="lazy" src="/assets/images/logo/png/logo5.png" data-v-9b767e01 />
               <h2 class="text-header" data-v-9b767e01>
-                Get started and <a href='/register'>claim</a> your free account now!
+                Get started and <a style="color:#f25621" href='/register'>claim</a> your free account now!
               </h2>
             </div>
 
@@ -1328,11 +1332,11 @@
               </label>
             </div>
             <div class="newsletter-message" data-v-a2a0aa55>
-              <p class="text-body body-3-reg" data-v-a2a0aa55>
+              {{-- <p class="text-body body-3-reg" data-v-a2a0aa55>
                 Just so you know, we’ll be able to see if you receive and open
                 our emails to help us monitor the success of our marketing
                 campaigns.
-              </p>
+              </p> --}}
             </div>
           </div>
           <div data-v-b9699ad0 data-v-906eeacc>
@@ -1340,7 +1344,7 @@
               title="Contact Us." data-v-906eeacc>
               <div role="dialog" class="badge" aria-label="Contact Us." data-v-906eeacc>
                 <img alt="Contact Us. icon" width="24" height="24" loading="lazy"
-                  src="https://a.hwstatic.com/image/upload/v1644942643/pwa/sp/hw-icon.svg" data-v-906eeacc />
+                  src="/assets/images/logo/png/logo1.png" data-v-906eeacc />
                 {{-- Contact Us. --}}
               </div>
             </a>

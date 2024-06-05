@@ -48,7 +48,7 @@
 
     <!-- Header -->
     <header id="header" class="ex-2-header">
-        <div class="container">
+        <div class="container" style='opacity:0.9'>
             <div class="row">
                 <div class="col-lg-12">
                     <!-- Sign Up Form -->
