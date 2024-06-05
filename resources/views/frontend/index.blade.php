@@ -798,12 +798,12 @@
 
               <div class="text-content" data-v-ac7e90e5>
               
-                <div class="pricing-container">
+                <div class="pricing-container" style='background:#ffedd5;border-left:5px solid #f25621'>
                   <div class="toggle-buttons">
                     <button id="freemium-btn" class="active">Freemium</button>
                     <button id="premium-btn">Premium</button>
                   </div>
-                  <div class="pricing-content">
+                  <div class="pricing-content" >
                     <div id="freemium-content" class="active">
                       {{-- <h2>Freemium Package</h2> --}}
                       <ul>
@@ -1305,7 +1305,7 @@
                     </div>
                     <div class="input-wrapper" data-v-6ca93fbe>
                       <input debounce="1000" class="native-input" type="text" value spellcheck="false"
-                        data-v-6ca93fbe /><label class="input-label" data-v-6ca93fbe>Your email address</label>
+                        data-v-6ca93fbe placeholder="Your email address" />
                     </div>
                     <div class="input-suffix" data-v-6ca93fbe>
                       <!---->
@@ -1315,9 +1315,7 @@
                           data-v-74f29db0 data-v-a2a0aa55>
                           <!--[-->
                           <div class="icon-container" style="" data-v-01502a85 data-v-74f29db0>
-                            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" data-v-01502a85>
-                              <use xlinkHref="#arrow-right" href="#arrow-right" data-v-01502a85></use>
-                            </svg>
+                            →
                           </div>
                           <!---->
                           <!---->
