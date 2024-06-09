@@ -856,7 +856,7 @@
                 Start with <span style='color:#f25621'>DNASoundStudio</span>  today.
               </h2>
               <p class="text-body" data-v-74b15b82>
-                We offer secure storage, seamless collaboration tools, and a vibrant marketplace for beats.
+                We offer secure storage, seamless collaboration tools, and a vibrant marketplace for beats. Whether you're a producer, artist, or music enthusiast, join our dynamic community to elevate your creative journey and connect with industry talent.
               </p>
               <a href="#" style='background:#fffdd4;color:#222222' rel="noopener" target="_blank" class="text-button"
                 data-v-74b15b82>Show Me</a>
