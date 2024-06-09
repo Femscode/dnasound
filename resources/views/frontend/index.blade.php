@@ -675,7 +675,7 @@
                   Helping you <span style='color:#f25621'>connect with great</span>
                   producers.
                 </h2>
-                <p  class="text-body" style='text-align:center'>DNA Sound Studio is your ultimate hub for music creation and collaboration. We offer secure storage, seamless collaboration tools, and a vibrant marketplace for beats. Whether you're a producer, artist, or music enthusiast, join our dynamic community to elevate your creative journey and connect with industry talent. Discover, create, and succeed with DNA Sound Studio.</p>
+                {{-- <p  class="text-body" style='text-align:center'>DNA Sound Studio is your ultimate hub for music creation and collaboration. We offer secure storage, seamless collaboration tools, and a vibrant marketplace for beats. Whether you're a producer, artist, or music enthusiast, join our dynamic community to elevate your creative journey and connect with industry talent. Discover, create, and succeed with DNA Sound Studio.</p> --}}
                 {{-- <button class="cta yellow" data-v-ac7e90e5>
                   Check our latest beat
                   <div class="icon-container button-icon" style="" data-v-01502a85 data-v-ac7e90e5>
