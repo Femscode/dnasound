@@ -1429,9 +1429,9 @@
                 </div>
                 <div class="quick-links-group" data-v-ca696f30>
                   <strong class="footer-heading" data-v-ca696f30>Customer Support</strong>
-                  <!--[--><a href="https://hwhelp.DNASound STUDIOgroup.com/hc/en-us/requests/new?ticket_form_id=63361"
+                  <!--[--><a href="#"
                     title="Talk to Us" aria-label="Talk to Us" class="footer-link" data-v-ca696f30>Talk to Us</a><a
-                    href="https://hwhelp.DNASound STUDIOgroup.com/hc/en-us" title="Help" aria-label="Help"
+                    href="#" title="Help" aria-label="Help"
                     class="footer-link" data-v-ca696f30>Help</a>
                   <!--]-->
                 </div>
@@ -1441,20 +1441,20 @@
                 <!--[-->
                 <div class="quick-links-group" data-v-ca696f30>
                   <strong class="footer-heading" data-v-ca696f30>Quick Links</strong>
-                  <!--[--><a href="https://www.DNASound STUDIO.com/blog/" rel="noopener" title="Blog" aria-label="Blog"
-                    class="footer-link" data-v-ca696f30>Blog</a><a href="https://www.DNASound STUDIO.com/guarantee/"
+                  <!--[--><a href="#" rel="noopener" title="Blog" aria-label="Blog"
+                    class="footer-link" data-v-ca696f30>Blog</a><a href="#"
                     rel="opener" target="_self" title="Booking Guarantee" aria-label="Booking Guarantee"
                     class="footer-link" data-v-ca696f30>Purchase Beat</a><a
-                    href="https://www.DNASound STUDIO.com/hoscars" rel="noopener" title="Hostel Awards"
+                    href="#" rel="noopener" title="Hostel Awards"
                     aria-label="Hostel Awards" class="footer-link" data-v-ca696f30>About Us</a><a
-                    href="https://www.DNASound STUDIO.com/experiences-hub/" rel="noopener"
+                    href="#" rel="noopener"
                     title="Tours &amp; Experiences" aria-label="Tours &amp; Experiences" class="footer-link"
-                    data-v-ca696f30>Our Services</a><a href="https://www.DNASound STUDIO.com/blog/solo-travel/"
+                    data-v-ca696f30>Our Services</a><a href="#"
                     rel="noopener" title="Solo Travel" aria-label="Solo Travel" class="footer-link"
-                    data-v-ca696f30>FAQ</a><a href="https://connect.studentbeans.com/v4/DNASound STUDIO/uk"
+                    data-v-ca696f30>FAQ</a><a href="#"
                     rel="noopener nofollow noreferrer sponsored" target="_blank" title="Student Discount"
                     aria-label="Student Discount" class="footer-link" data-v-ca696f30> Discount</a><a
-                    href="https://www.DNASound STUDIO.com/roamies/" rel="noopener" title="Roamies" aria-label="Roamies"
+                    href="#" rel="noopener" title="Roamies" aria-label="Roamies"
                     class="footer-link" data-v-ca696f30>Promotion</a>
                   <!--]-->
                 </div>
@@ -1464,21 +1464,21 @@
                 <!--[-->
                 <div class="quick-links-group" data-v-ca696f30>
                   <strong class="footer-heading" data-v-ca696f30>About Us</strong>
-                  <!--[--><a href="https://www.DNASound STUDIOgroup.com/" title="DNASound STUDIO Group PLC"
+                  <!--[--><a href="#" title="DNASound STUDIO Group PLC"
                     aria-label="DNASound STUDIO Group PLC" class="footer-link" data-v-ca696f30>DNASound STUDIO Group
-                    PLC</a><a href="https://www.DNASound STUDIOgroup.com/media/press-releases/" title="Press"
+                    PLC</a><a href="#" title="Press"
                     aria-label="Press" class="footer-link" data-v-ca696f30>Press</a><a
-                    href="https://people.DNASound STUDIO.com/" title="Careers" aria-label="Careers" class="footer-link"
+                    href="#" title="Careers" aria-label="Careers" class="footer-link"
                     data-v-ca696f30>Careers</a>
                   <!--]-->
                 </div>
                 <div class="quick-links-group" data-v-ca696f30>
                   <strong class="footer-heading" data-v-ca696f30>Work With Us</strong>
-                  <!--[--><a href="https://signup.DNASound STUDIO.com/en/property/intro" title="Hostel Sign Up"
+                  <!--[--><a href="#" title="Hostel Sign Up"
                     aria-label="Hostel Sign Up" class="footer-link" data-v-ca696f30>Producer Sign Up</a><a
-                    href="https://partners.DNASound STUDIO.com/" title="Affiliate Program"
+                    href="#" title="Affiliate Program"
                     aria-label="Affiliate Program" class="footer-link" data-v-ca696f30>Affiliate Program</a><a
-                    href="https://inbox.DNASound STUDIO.com/inbox/?Language=English" title="DNASound STUDIO Inbox"
+                    href="#" title="DNASound STUDIO Inbox"
                     aria-label="DNASound STUDIO Inbox" class="footer-link" data-v-ca696f30>DNASound STUDIO Inbox</a>
                   <!--]-->
                 </div>
@@ -1507,20 +1507,7 @@
               </div>
               <!--]-->
             </div>
-            {{-- <div class="footer-area legal-links" data-v-ca696f30>
-              <!--[--><a href="https://www.DNASound STUDIO.com/securityprivacy/" title="Data Protection Notice"
-                aria-label="Data Protection Notice" class="footer-link" data-v-ca696f30>Data Protection Notice</a><a
-                href="https://www.DNASound STUDIO.com/hosteltermsandconditions/" title="Terms &amp; Legal"
-                aria-label="Terms &amp; Legal" class="footer-link" data-v-ca696f30>Terms &amp; Legal</a><a
-                href="https://www.DNASound STUDIO.com/coupons-terms-conditions/" title="Coupons" aria-label="Coupons"
-                class="footer-link" data-v-ca696f30>Coupons</a><a
-                href="https://www.DNASound STUDIO.com/vouchertermsandconditions/" title="Vouchers" aria-label="Vouchers"
-                class="footer-link" data-v-ca696f30>Vouchers</a>
-              <a href="https://www.DNASound STUDIO.com/sitemap/" title="Site Map" aria-label="Site Map"
-                class="footer-link" data-v-ca696f30>Site Map</a><span id="teconsent" class="footer-link"
-                data-v-ca696f30></span>
-              <!--]-->
-            </div> --}}
+          
           </div>
         </footer>
         <span data-v-4bbdb0e5></span>
