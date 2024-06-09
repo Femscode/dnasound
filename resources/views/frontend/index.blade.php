@@ -856,8 +856,7 @@
                 Start with <span style='color:#f25621'>DNASoundStudio</span>  today.
               </h2>
               <p class="text-body" data-v-74b15b82>
-                Explore something new, with a ready-made beat! Adventurous
-                producers, that will take you there.
+                We offer secure storage, seamless collaboration tools, and a vibrant marketplace for beats.
               </p>
               <a href="#" style='background:#fffdd4;color:#222222' rel="noopener" target="_blank" class="text-button"
                 data-v-74b15b82>Show Me</a>
