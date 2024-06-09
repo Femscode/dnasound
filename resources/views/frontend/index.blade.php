@@ -15,7 +15,7 @@
   <link rel="mask-icon" color="#000000" href="st/redirectf02d.html" />
   <link rel="preload" as="image" href="/assets/images/logo/png/logo5.png" />
   <script async crossorigin="anonymous" fetchpriority="high"
-    src="https://consent.trustarc.com/notice?domain=DNASOUND STUDIO.com&amp;c=teconsent&amp;gtm=1&amp;js=nj&amp;noticeType=bb&amp;language=en&amp;language=true&amp;text=true&amp;cookieLink=https%3A%2F%2Fwww.DNASOUND STUDIO.com%2Fcookiespolicy%2F&amp;privacypolicylink=https%3A%2F%2Fwww.DNASOUND STUDIO.com%2Fsecurityprivacy%2F">
+    src="https://consent.trustarc.com/notice?domain=DNASound STUDIO.com&amp;c=teconsent&amp;gtm=1&amp;js=nj&amp;noticeType=bb&amp;language=en&amp;language=true&amp;text=true&amp;cookieLink=https%3A%2F%2Fwww.DNASound STUDIO.com%2Fcookiespolicy%2F&amp;privacypolicylink=https%3A%2F%2Fwww.DNASound STUDIO.com%2Fsecurityprivacy%2F">
   </script>
   <script defer crossorigin="anonymous" src="https://www.googletagmanager.com/gtag/js?id=AW-792870594"
     data-hid="92ebc66"></script>
@@ -271,9 +271,9 @@
             <nav class="extra-content homepage-navbar" data-v-b1bf6ef2 data-v-c835270e>
               <div class="nav-hw-brand" data-v-c835270e>
                 <a aria-current="page" href="index.html" class="router-link-active router-link-exact-active"
-                  rel="noopener" aria-label="DNASOUND STUDIO.com" data-testid="hw-brand-link" data-v-c835270e><img
-                    width="203" height="45" title="DNASOUND STUDIO.com" alt="DNASOUND STUDIO.com"
-                    aria-label="DNASOUND STUDIO.com" loading="eager" src="/assets/images/logo/png/logo5.png"
+                  rel="noopener" aria-label="DNASound STUDIO.com" data-testid="hw-brand-link" data-v-c835270e><img
+                    width="203" height="45" title="DNASound STUDIO.com" alt="DNASound STUDIO.com"
+                    aria-label="DNASound STUDIO.com" loading="eager" src="/assets/images/logo/png/logo5.png"
                     data-v-c835270e /></a>
               </div>
 
@@ -287,14 +287,13 @@
               </div>
             </nav>
             <div class="hero-container homepage-hero" data-v-b1bf6ef2 data-v-fd6f8bdd>
-              <div class="hero-image" data-v-fd6f8bdd>
+              <div class="hero-image" data-v-fd6f8bdd style='background:#222222'>
                 <div class="hero-headline" data-v-fd6f8bdd>
                   <h4 class="hero-headline-title" data-v-fd6f8bdd>
-                    <span style='background:#f25621'>Disc</span>over Your Perfect B<span
-                      style='background:#f25621'>eat!</span>
+                    Discover Your Perfect Beat!
                     {{-- Welcome to DNA Sound Studio. --}}
                   </h4>
-                  <span class="hero-headline-subtitle" data-v-fd6f8bdd>Connecting Music Stars, Producers, and
+                  <span style='color:#f25621' class="hero-headline-subtitle" data-v-fd6f8bdd>Connecting Music Stars, Producers, and
                     Artists.</span><img class="hero-headline-arrow"
                     src="https://a.hwstatic.com/image/upload/f_auto,q_auto/pwa/arrow.svg" alt="Start searching arrow"
                     loading="lazy" width="170" height="69" data-v-fd6f8bdd />
@@ -670,12 +669,13 @@
 
               <div class="text-content" data-v-ac7e90e5>
                 <p class="text-preheader" data-v-ac7e90e5>
-                  This is <span style='color:#f25621'>DNASOUND</span> STUDIO.
+                  This is <span style='color:#f25621'>DNASoundStudio</span>.
                 </p>
                 <h2 class="text-header" data-v-ac7e90e5>
                   Helping you <span style='color:#f25621'>connect with great</span>
                   producers.
                 </h2>
+                <p  class="text-body" style='text-align:center'>DNA Sound Studio is your ultimate hub for music creation and collaboration. We offer secure storage, seamless collaboration tools, and a vibrant marketplace for beats. Whether you're a producer, artist, or music enthusiast, join our dynamic community to elevate your creative journey and connect with industry talent. Discover, create, and succeed with DNA Sound Studio.</p>
                 {{-- <button class="cta yellow" data-v-ac7e90e5>
                   Check our latest beat
                   <div class="icon-container button-icon" style="" data-v-01502a85 data-v-ac7e90e5>
@@ -690,7 +690,7 @@
                 alt="Connect with artist" height="568" width="504" data-v-ac7e90e5 />
             </div>
           </section>
-          <section id="swis-section" class="swis-section-wrapper" data-v-b9699ad0 data-v-3806af8f>
+          <section id="swis-section" class="swis-section-wrapper" data-v-b9699ad0 data-v-3806af8f style='background:#222222'>
             <div class="animation-container" data-v-3806af8f>
               <img srcset="
               /assets/images/ds3.jpg 2x,
@@ -785,7 +785,7 @@
             </div>
             <div class="text" data-v-3806af8f>
               <h2 class="text-header" data-v-3806af8f>
-                See <span>who's</span> trending.
+                See <span style='color:#f25621'>who's</span> trending.
               </h2>
               <p class="text-body" data-v-3806af8f>
                 Connect with other artist and producer to stay updated.
@@ -848,18 +848,18 @@
           <!--[-->
           <section class="roamies-section-wrapper" data-v-b9699ad0 data-v-74b15b82>
             <div class="text" data-v-74b15b82>
-              {{-- <img loading="lazy" width="169" height="40" src="/assets/images/ds3.jpg" alt="DNASOUND STUDIO"
+              {{-- <img loading="lazy" width="169" height="40" src="/assets/images/ds3.jpg" alt="DNASound STUDIO"
                 class="text-logo text-desktop" data-v-74b15b82 /><img loading="lazy" width="135" height="32"
-                src="/assets/images/ds3.jpg" alt="Roamies - DNASOUND STUDIO" class="text-logo text-mobile"
+                src="/assets/images/ds3.jpg" alt="Roamies - DNASound STUDIO" class="text-logo text-mobile"
                 data-v-74b15b82 /> --}}
               <h2 class="text-header" data-v-74b15b82>
-                <span>Start with DNASOUND</span> studio today.
+                Start with <span style='color:#f25621'>DNASoundStudio</span>  today.
               </h2>
               <p class="text-body" data-v-74b15b82>
                 Explore something new, with a ready-made beat! Adventurous
                 producers, that will take you there.
               </p>
-              <a href="#" rel="noopener" target="_blank" class="text-button"
+              <a href="#" style='background:#fffdd4;color:#222222' rel="noopener" target="_blank" class="text-button"
                 data-v-74b15b82>Show Me</a>
             </div>
             <div class="mosaic" data-v-74b15b82>
@@ -1063,11 +1063,11 @@
             </div>
           </section>
           <!--]-->
-          <section id="download-section" class="download-section-wrapper" data-v-b9699ad0 data-v-9b767e01>
+          <section id="download-section" class="download-section-wrapper" data-v-b9699ad0 data-v-9b767e01 style='background:#fffdd4'>
             <div class="download-header" data-v-9b767e01>
               <img alt="Download the app now." title="Download the app now." class="logo" width="196" height="196"
                 loading="lazy" src="/assets/images/logo/png/logo5.png" data-v-9b767e01 />
-              <h2 class="text-header" data-v-9b767e01>
+              <h2 style='color:#222222' class="text-header" data-v-9b767e01>
                 Get started and <a style="color:#f25621" href='/register'>claim</a> your free account now!
               </h2>
             </div>
@@ -1085,8 +1085,8 @@
                   aria-label="We are commited to a better world." loading="lazy"
                   src="https://a.hwstatic.com/raw/upload/f_auto,q_auto/wds/illustrations/lg/eco.svg"
                   class="illustration" data-v-f9b5f01c />
-                <h2 class="text-header" data-v-f9b5f01c>
-                  Grow your music <span>business today!</span>.
+                <h2 class="text-header" data-v-f9b5f01c >
+                  Grow your music <span style='color:#f25621'>business today!</span>.
                 </h2>
                 <p class="text-body body-1-reg" data-v-f9b5f01c>
                   Join us in making the every beat count. We are proud to be
@@ -1274,7 +1274,7 @@
             </div>
           </div>
 
-          <div class="newsletter" data-v-b9699ad0 data-v-a2a0aa55>
+          <div class="newsletter" data-v-b9699ad0 data-v-a2a0aa55 style='background:#fffdd4'>
             <div class="newsletter-wrapper" data-v-a2a0aa55>
               <div class="header" data-v-a2a0aa55>
                 <div class="header-icon" data-v-a2a0aa55>
@@ -1337,16 +1337,16 @@
               </p> --}}
             </div>
           </div>
-          <div data-v-b9699ad0 data-v-906eeacc>
+          <div data-v-b9699ad0 data-v-906eeacc style='background:#222222'>
             <a href="#" rel="noopener noreferrer" target="_blank" class="badge-wrapper"
               title="Contact Us." data-v-906eeacc>
-              <div role="dialog" class="badge" aria-label="Contact Us." data-v-906eeacc>
+              <div role="dialog" class="badge" style='background:#222222' aria-label="Contact Us." data-v-906eeacc>
                 <img alt="Contact Us. icon" width="24" height="24" loading="lazy"
                   src="/assets/images/logo/png/logo1.png" data-v-906eeacc />
                 {{-- Contact Us. --}}
               </div>
             </a>
-            <div role="dialog" class="gta-fixed-wrapper" aria-label="Contact Us." data-v-906eeacc>
+            <div role="dialog" class="gta-fixed-wrapper" aria-label="Contact Us." style='background:#222222' data-v-906eeacc>
               <img alt="Contact Us. QR" width="72" height="72" class="qr-white" loading="lazy"
                 src="/assets/images/logo/png/logo1.png" data-v-906eeacc />
                 <img alt="Contact Us. QR" width="124"
@@ -1365,43 +1365,43 @@
             <div class="footer-area social-media" data-v-ca696f30>
               <!--[--><strong class="footer-heading" data-v-ca696f30>Follow us on</strong>
               <div class="social-media-logos" data-v-ca696f30>
-                <!--[--><a href="#" title="DNASOUND STUDIO Facebook"
-                  aria-label="DNASOUND STUDIO Facebook" class="footer-link" data-v-ca696f30>
+                <!--[--><a href="#" title="DNASound STUDIO Facebook"
+                  aria-label="DNASound STUDIO Facebook" class="footer-link" data-v-ca696f30>
                   <div class="icon-container social-media-icon" style="" data-v-01502a85 data-v-ca696f30>
                     <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" data-v-01502a85>
                       <use xlinkHref="#sn-facebook" href="#sn-facebook" data-v-01502a85></use>
                     </svg>
                   </div>
-                </a><a href="#" title="DNASOUND STUDIO Twitter"
-                  aria-label="DNASOUND STUDIO Twitter" class="footer-link" data-v-ca696f30>
+                </a><a href="#" title="DNASound STUDIO Twitter"
+                  aria-label="DNASound STUDIO Twitter" class="footer-link" data-v-ca696f30>
                   <div class="icon-container social-media-icon" style="" data-v-01502a85 data-v-ca696f30>
                     <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" data-v-01502a85>
                       <use xlinkHref="#sn-twitter-circle" href="#sn-twitter-circle" data-v-01502a85></use>
                     </svg>
                   </div>
-                </a><a href="#" title="DNASOUND STUDIO Instagram"
-                  aria-label="DNASOUND STUDIO Instagram" class="footer-link" data-v-ca696f30>
+                </a><a href="#" title="DNASound STUDIO Instagram"
+                  aria-label="DNASound STUDIO Instagram" class="footer-link" data-v-ca696f30>
                   <div class="icon-container social-media-icon" style="" data-v-01502a85 data-v-ca696f30>
                     <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" data-v-01502a85>
                       <use xlinkHref="#sn-instagram-circle" href="#sn-instagram-circle" data-v-01502a85></use>
                     </svg>
                   </div>
-                </a><a href="#" title="DNASOUND STUDIO YouTube"
-                  aria-label="DNASOUND STUDIO YouTube" class="footer-link" data-v-ca696f30>
+                </a><a href="#" title="DNASound STUDIO YouTube"
+                  aria-label="DNASound STUDIO YouTube" class="footer-link" data-v-ca696f30>
                   <div class="icon-container social-media-icon" style="" data-v-01502a85 data-v-ca696f30>
                     <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" data-v-01502a85>
                       <use xlinkHref="#sn-youtube-circle" href="#sn-youtube-circle" data-v-01502a85></use>
                     </svg>
                   </div>
-                </a><a href="#" title="DNASOUND STUDIO Pinterest"
-                  aria-label="DNASOUND STUDIO Pinterest" class="footer-link" data-v-ca696f30>
+                </a><a href="#" title="DNASound STUDIO Pinterest"
+                  aria-label="DNASound STUDIO Pinterest" class="footer-link" data-v-ca696f30>
                   <div class="icon-container social-media-icon" style="" data-v-01502a85 data-v-ca696f30>
                     <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" data-v-01502a85>
                       <use xlinkHref="#sn-pinterest" href="#sn-pinterest" data-v-01502a85></use>
                     </svg>
                   </div>
-                </a><a href="#" title="DNASOUND STUDIO Tiktok"
-                  aria-label="DNASOUND STUDIO Tiktok" class="footer-link" data-v-ca696f30>
+                </a><a href="#" title="DNASound STUDIO Tiktok"
+                  aria-label="DNASound STUDIO Tiktok" class="footer-link" data-v-ca696f30>
                   <div class="icon-container social-media-icon" style="" data-v-01502a85 data-v-ca696f30>
                     <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" data-v-01502a85>
                       <use xlinkHref="#sn-tiktok-circle" href="#sn-tiktok-circle" data-v-01502a85></use>
@@ -1429,9 +1429,9 @@
                 </div>
                 <div class="quick-links-group" data-v-ca696f30>
                   <strong class="footer-heading" data-v-ca696f30>Customer Support</strong>
-                  <!--[--><a href="https://hwhelp.DNASOUND STUDIOgroup.com/hc/en-us/requests/new?ticket_form_id=63361"
+                  <!--[--><a href="https://hwhelp.DNASound STUDIOgroup.com/hc/en-us/requests/new?ticket_form_id=63361"
                     title="Talk to Us" aria-label="Talk to Us" class="footer-link" data-v-ca696f30>Talk to Us</a><a
-                    href="https://hwhelp.DNASOUND STUDIOgroup.com/hc/en-us" title="Help" aria-label="Help"
+                    href="https://hwhelp.DNASound STUDIOgroup.com/hc/en-us" title="Help" aria-label="Help"
                     class="footer-link" data-v-ca696f30>Help</a>
                   <!--]-->
                 </div>
@@ -1441,20 +1441,20 @@
                 <!--[-->
                 <div class="quick-links-group" data-v-ca696f30>
                   <strong class="footer-heading" data-v-ca696f30>Quick Links</strong>
-                  <!--[--><a href="https://www.DNASOUND STUDIO.com/blog/" rel="noopener" title="Blog" aria-label="Blog"
-                    class="footer-link" data-v-ca696f30>Blog</a><a href="https://www.DNASOUND STUDIO.com/guarantee/"
+                  <!--[--><a href="https://www.DNASound STUDIO.com/blog/" rel="noopener" title="Blog" aria-label="Blog"
+                    class="footer-link" data-v-ca696f30>Blog</a><a href="https://www.DNASound STUDIO.com/guarantee/"
                     rel="opener" target="_self" title="Booking Guarantee" aria-label="Booking Guarantee"
                     class="footer-link" data-v-ca696f30>Purchase Beat</a><a
-                    href="https://www.DNASOUND STUDIO.com/hoscars" rel="noopener" title="Hostel Awards"
+                    href="https://www.DNASound STUDIO.com/hoscars" rel="noopener" title="Hostel Awards"
                     aria-label="Hostel Awards" class="footer-link" data-v-ca696f30>About Us</a><a
-                    href="https://www.DNASOUND STUDIO.com/experiences-hub/" rel="noopener"
+                    href="https://www.DNASound STUDIO.com/experiences-hub/" rel="noopener"
                     title="Tours &amp; Experiences" aria-label="Tours &amp; Experiences" class="footer-link"
-                    data-v-ca696f30>Our Services</a><a href="https://www.DNASOUND STUDIO.com/blog/solo-travel/"
+                    data-v-ca696f30>Our Services</a><a href="https://www.DNASound STUDIO.com/blog/solo-travel/"
                     rel="noopener" title="Solo Travel" aria-label="Solo Travel" class="footer-link"
-                    data-v-ca696f30>FAQ</a><a href="https://connect.studentbeans.com/v4/DNASOUND STUDIO/uk"
+                    data-v-ca696f30>FAQ</a><a href="https://connect.studentbeans.com/v4/DNASound STUDIO/uk"
                     rel="noopener nofollow noreferrer sponsored" target="_blank" title="Student Discount"
                     aria-label="Student Discount" class="footer-link" data-v-ca696f30> Discount</a><a
-                    href="https://www.DNASOUND STUDIO.com/roamies/" rel="noopener" title="Roamies" aria-label="Roamies"
+                    href="https://www.DNASound STUDIO.com/roamies/" rel="noopener" title="Roamies" aria-label="Roamies"
                     class="footer-link" data-v-ca696f30>Promotion</a>
                   <!--]-->
                 </div>
@@ -1464,22 +1464,22 @@
                 <!--[-->
                 <div class="quick-links-group" data-v-ca696f30>
                   <strong class="footer-heading" data-v-ca696f30>About Us</strong>
-                  <!--[--><a href="https://www.DNASOUND STUDIOgroup.com/" title="DNASOUND STUDIO Group PLC"
-                    aria-label="DNASOUND STUDIO Group PLC" class="footer-link" data-v-ca696f30>DNASOUND STUDIO Group
-                    PLC</a><a href="https://www.DNASOUND STUDIOgroup.com/media/press-releases/" title="Press"
+                  <!--[--><a href="https://www.DNASound STUDIOgroup.com/" title="DNASound STUDIO Group PLC"
+                    aria-label="DNASound STUDIO Group PLC" class="footer-link" data-v-ca696f30>DNASound STUDIO Group
+                    PLC</a><a href="https://www.DNASound STUDIOgroup.com/media/press-releases/" title="Press"
                     aria-label="Press" class="footer-link" data-v-ca696f30>Press</a><a
-                    href="https://people.DNASOUND STUDIO.com/" title="Careers" aria-label="Careers" class="footer-link"
+                    href="https://people.DNASound STUDIO.com/" title="Careers" aria-label="Careers" class="footer-link"
                     data-v-ca696f30>Careers</a>
                   <!--]-->
                 </div>
                 <div class="quick-links-group" data-v-ca696f30>
                   <strong class="footer-heading" data-v-ca696f30>Work With Us</strong>
-                  <!--[--><a href="https://signup.DNASOUND STUDIO.com/en/property/intro" title="Hostel Sign Up"
+                  <!--[--><a href="https://signup.DNASound STUDIO.com/en/property/intro" title="Hostel Sign Up"
                     aria-label="Hostel Sign Up" class="footer-link" data-v-ca696f30>Producer Sign Up</a><a
-                    href="https://partners.DNASOUND STUDIO.com/" title="Affiliate Program"
+                    href="https://partners.DNASound STUDIO.com/" title="Affiliate Program"
                     aria-label="Affiliate Program" class="footer-link" data-v-ca696f30>Affiliate Program</a><a
-                    href="https://inbox.DNASOUND STUDIO.com/inbox/?Language=English" title="DNASOUND STUDIO Inbox"
-                    aria-label="DNASOUND STUDIO Inbox" class="footer-link" data-v-ca696f30>DNASOUND STUDIO Inbox</a>
+                    href="https://inbox.DNASound STUDIO.com/inbox/?Language=English" title="DNASound STUDIO Inbox"
+                    aria-label="DNASound STUDIO Inbox" class="footer-link" data-v-ca696f30>DNASound STUDIO Inbox</a>
                   <!--]-->
                 </div>
                 <!--]-->
@@ -1503,20 +1503,20 @@
                 </div> --}}
               </div>
               <div class="notice-text" data-v-ca696f30>
-                © 2024 DNASOUND STUDIO Limited
+                © 2024 DNASound STUDIO Limited
               </div>
               <!--]-->
             </div>
             {{-- <div class="footer-area legal-links" data-v-ca696f30>
-              <!--[--><a href="https://www.DNASOUND STUDIO.com/securityprivacy/" title="Data Protection Notice"
+              <!--[--><a href="https://www.DNASound STUDIO.com/securityprivacy/" title="Data Protection Notice"
                 aria-label="Data Protection Notice" class="footer-link" data-v-ca696f30>Data Protection Notice</a><a
-                href="https://www.DNASOUND STUDIO.com/hosteltermsandconditions/" title="Terms &amp; Legal"
+                href="https://www.DNASound STUDIO.com/hosteltermsandconditions/" title="Terms &amp; Legal"
                 aria-label="Terms &amp; Legal" class="footer-link" data-v-ca696f30>Terms &amp; Legal</a><a
-                href="https://www.DNASOUND STUDIO.com/coupons-terms-conditions/" title="Coupons" aria-label="Coupons"
+                href="https://www.DNASound STUDIO.com/coupons-terms-conditions/" title="Coupons" aria-label="Coupons"
                 class="footer-link" data-v-ca696f30>Coupons</a><a
-                href="https://www.DNASOUND STUDIO.com/vouchertermsandconditions/" title="Vouchers" aria-label="Vouchers"
+                href="https://www.DNASound STUDIO.com/vouchertermsandconditions/" title="Vouchers" aria-label="Vouchers"
                 class="footer-link" data-v-ca696f30>Vouchers</a>
-              <a href="https://www.DNASOUND STUDIO.com/sitemap/" title="Site Map" aria-label="Site Map"
+              <a href="https://www.DNASound STUDIO.com/sitemap/" title="Site Map" aria-label="Site Map"
                 class="footer-link" data-v-ca696f30>Site Map</a><span id="teconsent" class="footer-link"
                 data-v-ca696f30></span>
               <!--]-->
@@ -1554,6 +1554,6 @@ freemiumContent.classList.remove('active');
   </script>
 
 </body>
-<!-- Mirrored from DNASOUND STUDIO.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 May 2024 09:54:20 GMT -->
+<!-- Mirrored from DNASound STUDIO.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 May 2024 09:54:20 GMT -->
 
 </html>
