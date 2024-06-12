@@ -669,7 +669,7 @@
 
               <div class="text-content" data-v-ac7e90e5>
                 <p class="text-preheader" data-v-ac7e90e5>
-                  This is <span style='color:#f25621'>DNASoundStudio</span>.
+                  This is <span style='color:#f25621'>DNA Sound Studio</span>.
                 </p>
                 <h2 class="text-header" data-v-ac7e90e5>
                   Helping you <span style='color:#f25621'>connect with great</span>
@@ -853,7 +853,7 @@
                 src="/assets/images/ds3.jpg" alt="Roamies - DNASound STUDIO" class="text-logo text-mobile"
                 data-v-74b15b82 /> --}}
               <h2 class="text-header" data-v-74b15b82>
-                Start with <span style='color:#f25621'>DNASoundStudio</span>  today.
+                Start with <span style='color:#f25621'>DNA Sound Studio</span>  today.
               </h2>
               <p class="text-body" data-v-74b15b82>
                 We offer secure storage, seamless collaboration tools, and a vibrant marketplace for beats. Whether you're a producer, artist, or music enthusiast, join our dynamic community to elevate your creative journey and connect with industry talent.
@@ -1464,7 +1464,7 @@
                 <div class="quick-links-group" data-v-ca696f30>
                   <strong class="footer-heading" data-v-ca696f30>About Us</strong>
                   <!--[--><a href="#" title="DNASound STUDIO Group PLC"
-                    aria-label="DNASound STUDIO Group PLC" class="footer-link" data-v-ca696f30>DNASound STUDIO Group
+                    aria-label="DNASound STUDIO Group PLC" class="footer-link" data-v-ca696f30>DNA Sound Studio Group
                     PLC</a><a href="#" title="Press"
                     aria-label="Press" class="footer-link" data-v-ca696f30>Press</a><a
                     href="#" title="Careers" aria-label="Careers" class="footer-link"
@@ -1478,7 +1478,7 @@
                     href="#" title="Affiliate Program"
                     aria-label="Affiliate Program" class="footer-link" data-v-ca696f30>Affiliate Program</a><a
                     href="#" title="DNASound STUDIO Inbox"
-                    aria-label="DNASound STUDIO Inbox" class="footer-link" data-v-ca696f30>DNASound STUDIO Inbox</a>
+                    aria-label="DNASound STUDIO Inbox" class="footer-link" data-v-ca696f30>DNA Sound Studio Inbox</a>
                   <!--]-->
                 </div>
                 <!--]-->
@@ -1502,7 +1502,7 @@
                 </div> --}}
               </div>
               <div class="notice-text" data-v-ca696f30>
-                © 2024 DNASound STUDIO Limited
+                © 2024 DNA Sound Studio Limited
               </div>
               <!--]-->
             </div>

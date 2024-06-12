@@ -16,7 +16,7 @@
     <meta property="og:type" content="article" />
 
     <!-- Website Title -->
-    <title>Sign Up - DNASOUNDSTUDIO</title>
+    <title>Sign Up - DNA Sound Studio</title>
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext"
@@ -56,7 +56,7 @@
                     {{-- <img src="telneting-files/png/white@300x.png" alt="alternative"
                         style="width: 200px; height: 40px; margin-bottom: 20px;"> --}}
                     <div class="form-container">
-                        <h3 style="color: #000C40">Create An Account with DNA<span style='color:red'>Sound</span>Studio 🤗</h3>
+                        <h3 style="color: #000C40">Create An Account with<br> DNA<span style='color:red'> Sound</span> Studio 🤗</h3>
                      
                         <form action='{{ route("register") }}' method='post'>@csrf
                             @if($errors->any())
