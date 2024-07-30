@@ -65,7 +65,7 @@
         //   }),
         // });
 
-        const { clientSecret } = 'pi_3PiK6aAvZkWDJwLR0eB6mVzQ';
+        const { clientSecret } = 'pi_3PiKBgAvZkWDJwLR1tFWRw8H_secret_4aoBzX8G9YDg7vXZpW6KKWe6H';
 
         const { error, paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
           payment_method: {
