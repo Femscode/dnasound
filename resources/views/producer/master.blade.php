@@ -217,7 +217,7 @@
                     <div class="iq-navbar-logo d-flex align-items-center justify-content-between">
                         <i class="ri-menu-line wrapper-menu"></i>
                         <a href="index.html" class="header-logo">
-                            <img src="https://templates.iqonic.design/prox/html/assets/images/logo.png" class="img-fluid rounded-normal" alt="logo">
+                            <img src="/assets/images/logo/png/logo5.png" class="img-fluid rounded-normal" alt="logo">
                         </a>
                     </div>
                     <div class="iq-search-bar device-search">
