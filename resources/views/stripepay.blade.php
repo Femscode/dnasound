@@ -54,20 +54,20 @@
         event.preventDefault();
 
         // Fetch the client secret from the backend
-        // const response = await fetch('/create-payment-intent', {
-        //   method: 'POST',
-        //   headers: {
-        //     'Content-Type': 'application/json',
-        //   },
-        //   body: JSON.stringify({
-        //     amount: 1099, // Amount in cents (e.g., $10.99)
-        //     currency: 'usd',
-        //   }),
-        // });
+        const response = await fetch('https://nifinspired.connectinskillz.com/api/stripe/payment', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            amount: 1099, // Amount in cents (e.g., $10.99)
+            currency: 'ngn',
+          }),
+        });
 
-        // const { clientSecret } = 'pi_3PiKBgAvZkWDJwLR1tFWRw8H_secret_4aoBzX8G9YDg7vXZpW6KKWe6H';
+        const { clientSecret } = await response.json();
 
-        const { error, paymentIntent } = await stripe.confirmCardPayment('pi_3PiKFzAvZkWDJwLR1sGVKvRK_secret_who5zMYJGA3rRdKStJ4f9TrfD', {
+        const { error, paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
           payment_method: {
             card: cardElement,
             billing_details: {
