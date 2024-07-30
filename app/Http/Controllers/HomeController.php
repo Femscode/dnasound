@@ -61,9 +61,7 @@ class HomeController extends Controller
 
         $data['active'] = 'dashboard';
 
-       
-
-        return response()->view('dashboard.index', $data);
+        return response()->view('producer.index', $data);
     }
 
     public function contactus()

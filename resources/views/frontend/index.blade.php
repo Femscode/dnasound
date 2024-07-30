@@ -14,9 +14,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/logo/png/logo1.png" />
   <link rel="mask-icon" color="#000000" href="st/redirectf02d.html" />
   <link rel="preload" as="image" href="/assets/images/logo/png/logo5.png" />
-  <script async crossorigin="anonymous" fetchpriority="high"
-    src="https://consent.trustarc.com/notice?domain=DNASound STUDIO.com&amp;c=teconsent&amp;gtm=1&amp;js=nj&amp;noticeType=bb&amp;language=en&amp;language=true&amp;text=true&amp;cookieLink=https%3A%2F%2Fwww.DNASound STUDIO.com%2Fcookiespolicy%2F&amp;privacypolicylink=https%3A%2F%2Fwww.DNASound STUDIO.com%2Fsecurityprivacy%2F">
-  </script>
+
   <script defer crossorigin="anonymous" src="https://www.googletagmanager.com/gtag/js?id=AW-792870594"
     data-hid="92ebc66"></script>
   <script defer crossorigin="anonymous" data-hid="702b59c">
@@ -270,9 +268,10 @@
             <!--[-->
             <nav class="extra-content homepage-navbar" data-v-b1bf6ef2 data-v-c835270e>
               <div class="nav-hw-brand" data-v-c835270e>
-                <a aria-current="page" href="index.html" class="router-link-active router-link-exact-active"
-                  rel="noopener" aria-label="DNASound STUDIO.com" data-testid="hw-brand-link" data-v-c835270e><img
-                    width="203" height="45" title="DNASound STUDIO.com" alt="DNASound STUDIO.com"
+                <a aria-current="page" href="#" class="router-link-active router-link-exact-active"
+                  rel="noopener" aria-label="DNASound STUDIO.com" data-testid="hw-brand-link" data-v-c835270e>
+                  <img
+                    width="203" height="45" title="DNASound STUDIO.com" alt="DNASoundStudio Logo"
                     aria-label="DNASound STUDIO.com" loading="eager" src="/assets/images/logo/png/logo5.png"
                     data-v-c835270e /></a>
               </div>
@@ -1494,12 +1493,7 @@
                     aria-label="Secure GlobalSign" loading="lazy" src="/assets/images/logo/png/logo4.png"
                     data-v-62da6a3a />
                 </div>
-                {{-- <div class="climate-neutral-logo cnc-logo" data-v-7f407042 data-v-ca696f30>
-                  <img width="82" height="40" title="Climate Neutral Company" alt="Climate Neutral Company"
-                    aria-label="Climate Neutral Company" loading="lazy"
-                    src="https://a.hwstatic.com/raw/upload/f_auto,q_auto/wds/logos/cnc.svg" class="white"
-                    data-v-7f407042 />
-                </div> --}}
+              
               </div>
               <div class="notice-text" data-v-ca696f30>
                 © 2024 DNA Sound Studio Limited
@@ -1540,6 +1534,5 @@ freemiumContent.classList.remove('active');
   </script>
 
 </body>
-<!-- Mirrored from DNASound STUDIO.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 May 2024 09:54:20 GMT -->
 
 </html>

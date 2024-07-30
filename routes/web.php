@@ -6,6 +6,7 @@ use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\FrontendController;
 
 
+Route::view('stripepay','stripepay');
 Route::get('/', [FrontendController::class, 'index'])->name('homepage');
 Route::get('/about', [FrontendController::class, 'about'])->name('about');
 Route::get('/products', [FrontendController::class, 'products'])->name('products');
