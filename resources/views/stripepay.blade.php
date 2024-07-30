@@ -65,13 +65,13 @@
         //   }),
         // });
 
-        const { clientSecret } = 'pi_3PiKBgAvZkWDJwLR1tFWRw8H_secret_4aoBzX8G9YDg7vXZpW6KKWe6H';
+        // const { clientSecret } = 'pi_3PiKBgAvZkWDJwLR1tFWRw8H_secret_4aoBzX8G9YDg7vXZpW6KKWe6H';
 
-        const { error, paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
+        const { error, paymentIntent } = await stripe.confirmCardPayment('pi_3PiKBgAvZkWDJwLR1tFWRw8H_secret_4aoBzX8G9YDg7vXZpW6KKWe6H', {
           payment_method: {
             card: cardElement,
             billing_details: {
-              name: 'Customer Name',
+              name: 'Fasanya Pelumi',
             },
           },
         });
