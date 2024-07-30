@@ -37,34 +37,35 @@
     <div id="card-element">
       <!-- A Stripe Element will be inserted here. -->
     </div>
-    <button id="submit">Pay</button>
+    <button id="submit">Pay Me</button>
     <div id="error-message" role="alert"></div>
   </form>
 
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
-      const stripe = Stripe('pi_3PiJh5AvZkWDJwLR0pB2XT8u');
+      const stripe = Stripe(env("STRIPE_PK"));
       const elements = stripe.elements();
       const cardElement = elements.create('card');
       cardElement.mount('#card-element');
-
+      
+      
       const form = document.getElementById('payment-form');
       form.addEventListener('submit', async (event) => {
         event.preventDefault();
 
         // Fetch the client secret from the backend
-        const response = await fetch('/create-payment-intent', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            amount: 1099, // Amount in cents (e.g., $10.99)
-            currency: 'usd',
-          }),
-        });
+        // const response = await fetch('/create-payment-intent', {
+        //   method: 'POST',
+        //   headers: {
+        //     'Content-Type': 'application/json',
+        //   },
+        //   body: JSON.stringify({
+        //     amount: 1099, // Amount in cents (e.g., $10.99)
+        //     currency: 'usd',
+        //   }),
+        // });
 
-        const { clientSecret } = await response.json();
+        const { clientSecret } = 'pi_3PiK6aAvZkWDJwLR0eB6mVzQ';
 
         const { error, paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
           payment_method: {
@@ -76,6 +77,7 @@
         });
 
         if (error) {
+           
           // Show error to your customer
           document.getElementById('error-message').textContent = error.message;
         } else if (paymentIntent.status === 'succeeded') {
