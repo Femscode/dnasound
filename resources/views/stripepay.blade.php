@@ -43,9 +43,10 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
-      const stripe = Stripe("{{env('STRIPE_PK')}}", {
-        stripeAccount: stripeAccountId
-      }); 
+      const stripe = Stripe("{{env('STRIPE_PK')}}"); 
+    //   const stripe = Stripe("{{env('STRIPE_PK')}}", {
+    //     stripeAccount: stripeAccountId
+    //   }); 
       const elements = stripe.elements();
       const cardElement = elements.create('card');
       cardElement.mount('#card-element');
