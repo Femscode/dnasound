@@ -49,7 +49,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="media align-items-center col-10 col-md-5">
                                                 <div class="iq-realese-song ">
-                                                    <a href="music-albums.html"><img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/realease-song/01.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
+                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/realease-song/01.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
                                                 </div>
                                                 <div class="media-body text-white ml-3">
                                                     <p class="mb-0 iq-music-title">DJ Khaled Featuring</p>
@@ -77,7 +77,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="media align-items-center col-10 col-md-5">
                                                 <div class="iq-realese-song ">
-                                                    <a href="music-albums.html"><img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/realease-song/02.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
+                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/02.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
                                                 </div>
                                                 <div class="media-body text-white ml-3">
                                                     <p class="mb-0 iq-music-title">Cold Outside</p>
@@ -105,7 +105,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="media align-items-center col-10 col-md-5">
                                                 <div class="iq-realese-song ">
-                                                    <a href="music-albums.html"><img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/realease-song/03.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
+                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/03.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
                                                 </div>
                                                 <div class="media-body text-white ml-3">
                                                     <p class="mb-0 iq-music-title">Oti Lo</p>
@@ -133,7 +133,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="media align-items-center col-10 col-md-5">
                                                 <div class="iq-realese-song ">
-                                                    <a href="music-albums.html"><img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/realease-song/04.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
+                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/04.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
                                                 </div>
                                                 <div class="media-body text-white ml-3">
                                                     <p class="mb-0 iq-music-title">Juice </p>
@@ -161,7 +161,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="media align-items-center col-10 col-md-5">
                                                 <div class="iq-realese-song ">
-                                                    <a href="music-albums.html"><img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/realease-song/05.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
+                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/05.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
                                                 </div>
                                                 <div class="media-body text-white ml-3">
                                                     <p class="mb-0 iq-music-title">Hmmmm..</p>
@@ -189,7 +189,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="media align-items-center col-10 col-md-5">
                                                 <div class="iq-realese-song ">
-                                                    <a href="music-albums.html"><img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/realease-song/06.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
+                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/06.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
                                                 </div>
                                                 <div class="media-body text-white ml-3">
                                                     <p class="mb-0 iq-music-title">Christ All</p>
@@ -217,7 +217,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="media align-items-center col-10 col-md-5">
                                                 <div class="iq-realese-song ">
-                                                    <a href="music-albums.html"><img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/realease-song/07.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
+                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/07.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
                                                 </div>
                                                 <div class="media-body text-white ml-3">
                                                     <p class="mb-0 iq-music-title">Morenidimu </p>
@@ -245,7 +245,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="media align-items-center col-10 col-md-5">
                                                 <div class="iq-realese-song ">
-                                                    <a href="music-albums.html"><img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/realease-song/08.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
+                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/08.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
                                                 </div>
                                                 <div class="media-body text-white ml-3">
                                                     <p class="mb-0 iq-music-title">Kokoro Igbala</p>
@@ -273,7 +273,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="media align-items-center col-10 col-md-5">
                                                 <div class="iq-realese-song ">
-                                                    <a href="music-albums.html"><img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/realease-song/09.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
+                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/09.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
                                                 </div>
                                                 <div class="media-body text-white ml-3">
                                                     <p class="mb-0">Come Off It</p>
@@ -319,7 +319,7 @@
                     <div class="iq-thumb">
                         <div class="iq-music-overlay"></div>
                         <a href="music-albums.html">
-                            <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/feature-album/01.png" class="img-border-radius img-fluid w-100" alt="">
+                            <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album/01.png" class="img-border-radius img-fluid w-100" alt="">
                         </a>
                         <div class="overlay-music-icon">
                             <a href="music-albums.html">
@@ -340,7 +340,7 @@
                     <div class="iq-thumb">
                         <div class="iq-music-overlay"></div>
                         <a href="music-albums.html">
-                            <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/feature-album/02.png" class="img-border-radius img-fluid w-100" alt="">
+                            <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album/02.png" class="img-border-radius img-fluid w-100" alt="">
                         </a>
                         <div class="overlay-music-icon">
                             <a href="music-albums.html">
@@ -361,7 +361,7 @@
                     <div class="iq-thumb">
                         <div class="iq-music-overlay"></div>
                         <a href="music-albums.html">
-                            <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/feature-album/03.png" class="img-border-radius img-fluid w-100" alt="">
+                            <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album/03.png" class="img-border-radius img-fluid w-100" alt="">
                         </a>
                         <div class="overlay-music-icon">
                             <a href="music-albums.html">
@@ -382,7 +382,7 @@
                     <div class="iq-thumb">
                         <div class="iq-music-overlay"></div>
                         <a href="music-albums.html">
-                            <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/feature-album/04.png" class="img-border-radius img-fluid w-100" alt="">
+                            <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album/04.png" class="img-border-radius img-fluid w-100" alt="">
                         </a>
                         <div class="overlay-music-icon">
                             <a href="music-albums.html">
@@ -403,7 +403,7 @@
                     <div class="iq-thumb">
                         <div class="iq-music-overlay"></div>
                         <a href="music-albums.html">
-                            <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/feature-album/05.png" class="img-border-radius img-fluid w-100" alt="">
+                            <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album/05.png" class="img-border-radius img-fluid w-100" alt="">
                         </a>
                         <div class="overlay-music-icon">
                             <a href="music-albums.html">
@@ -424,7 +424,7 @@
                     <div class="iq-thumb">
                         <div class="iq-music-overlay"></div>
                         <a href="music-albums.html">
-                            <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/feature-album/06.png" class="img-border-radius img-fluid w-100" alt="">
+                            <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album/06.png" class="img-border-radius img-fluid w-100" alt="">
                         </a>
                         <div class="overlay-music-icon">
                             <a href="music-albums.html">
@@ -445,7 +445,7 @@
                     <div class="iq-thumb">
                         <div class="iq-music-overlay"></div>
                         <a href="music-albums.html">
-                            <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/feature-album/07.png" class="img-border-radius img-fluid w-100" alt="">
+                            <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album/07.png" class="img-border-radius img-fluid w-100" alt="">
                         </a>
                         <div class="overlay-music-icon">
                             <a href="music-albums.html">
@@ -466,7 +466,7 @@
                     <div class="iq-thumb">
                         <div class="iq-music-overlay"></div>
                         <a href="music-albums.html">
-                            <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/feature-album/08.png" class="img-border-radius img-fluid w-100" alt="">
+                            <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album/08.png" class="img-border-radius img-fluid w-100" alt="">
                         </a>
                         <div class="overlay-music-icon">
                             <a href="music-albums.html">
@@ -487,7 +487,7 @@
                     <div class="iq-thumb">
                         <div class="iq-music-overlay"></div>
                         <a href="music-albums.html">
-                            <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/feature-album/09.png" class="img-border-radius img-fluid w-100" alt="">
+                            <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album/09.png" class="img-border-radius img-fluid w-100" alt="">
                         </a>
                         <div class="overlay-music-icon">
                             <a href="music-albums.html">
@@ -508,7 +508,7 @@
                     <div class="iq-thumb">
                         <div class="iq-music-overlay"></div>
                         <a href="music-albums.html">
-                            <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/feature-album/08.png" class="img-border-radius img-fluid w-100" alt="">
+                            <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album/08.png" class="img-border-radius img-fluid w-100" alt="">
                         </a>
                         <div class="overlay-music-icon">
                             <a href="music-albums.html">
@@ -542,7 +542,7 @@
                                 <div class="iq-thumb-artist">
                                     <div class="iq-music-overlay"></div>
                                     <a href="music-albums.html">
-                                        <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
+                                        <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
                                     </a>
                                     <div class="overlay-music-icon">
                                         <a href="music-albums.html">
@@ -558,7 +558,7 @@
                                 <div class="iq-thumb-artist">
                                     <div class="iq-music-overlay"></div>
                                     <a href="music-albums.html">
-                                        <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
+                                        <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
                                     </a>
                                     <div class="overlay-music-icon">
                                         <a href="music-albums.html">
@@ -574,7 +574,7 @@
                                 <div class="iq-thumb-artist">
                                     <div class="iq-music-overlay"></div>
                                     <a href="music-albums.html">
-                                        <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
+                                        <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
                                     </a>
                                     <div class="overlay-music-icon">
                                         <a href="music-albums.html">
@@ -590,7 +590,7 @@
                                 <div class="iq-thumb-artist">
                                     <div class="iq-music-overlay"></div>
                                     <a href="music-albums.html">
-                                        <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
+                                        <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
                                     </a>
                                     <div class="overlay-music-icon">
                                         <a href="music-albums.html">
@@ -606,7 +606,7 @@
                                 <div class="iq-thumb-artist">
                                     <div class="iq-music-overlay"></div>
                                     <a href="music-albums.html">
-                                        <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
+                                        <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
                                     </a>
                                     <div class="overlay-music-icon">
                                         <a href="music-albums.html">
@@ -622,7 +622,7 @@
                                 <div class="iq-thumb-artist">
                                     <div class="iq-music-overlay"></div>
                                     <a href="music-albums.html">
-                                        <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
+                                        <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
                                     </a>
                                     <div class="overlay-music-icon">
                                         <a href="music-albums.html">
@@ -638,7 +638,7 @@
                                 <div class="iq-thumb-artist">
                                     <div class="iq-music-overlay"></div>
                                     <a href="music-albums.html">
-                                        <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
+                                        <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
                                     </a>
                                     <div class="overlay-music-icon">
                                         <a href="music-albums.html">
@@ -654,7 +654,7 @@
                                 <div class="iq-thumb-artist">
                                     <div class="iq-music-overlay"></div>
                                     <a href="music-albums.html">
-                                        <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
+                                        <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
                                     </a>
                                     <div class="overlay-music-icon">
                                         <a href="music-albums.html">
@@ -670,7 +670,7 @@
                                 <div class="iq-thumb-artist">
                                     <div class="iq-music-overlay"></div>
                                     <a href="music-albums.html">
-                                        <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
+                                        <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
                                     </a>
                                     <div class="overlay-music-icon">
                                         <a href="music-albums.html">
@@ -686,7 +686,7 @@
                                 <div class="iq-thumb-artist">
                                     <div class="iq-music-overlay"></div>
                                     <a href="music-albums.html">
-                                        <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
+                                        <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
                                     </a>
                                     <div class="overlay-music-icon">
                                         <a href="music-albums.html">
@@ -721,7 +721,7 @@
                     <div class="iq-thumb">
                         <div class="iq-music-overlay"></div>
                         <a href="music-albums.html">
-                            <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/tranding-song/01.png" class="img-border-radius img-fluid w-100" alt="">
+                            <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/tranding-song/01.png" class="img-border-radius img-fluid w-100" alt="">
                         </a>
                         <div class="overlay-music-icon">
                             <a href="music-albums.html">
@@ -742,7 +742,7 @@
                     <div class="iq-thumb">
                         <div class="iq-music-overlay"></div>
                         <a href="music-albums.html">
-                            <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/tranding-song/02.png" class="img-border-radius img-fluid w-100" alt="">
+                            <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/tranding-song/02.png" class="img-border-radius img-fluid w-100" alt="">
                         </a>
                         <div class="overlay-music-icon">
                             <a href="music-albums.html">
@@ -763,7 +763,7 @@
                     <div class="iq-thumb">
                         <div class="iq-music-overlay"></div>
                         <a href="music-albums.html">
-                            <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/tranding-song/03.png" class="img-border-radius img-fluid w-100" alt="">
+                            <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/tranding-song/03.png" class="img-border-radius img-fluid w-100" alt="">
                         </a>
                         <div class="overlay-music-icon">
                             <a href="music-albums.html">
@@ -784,7 +784,7 @@
                     <div class="iq-thumb">
                         <div class="iq-music-overlay"></div>
                         <a href="music-albums.html">
-                            <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/tranding-song/04.png" class="img-border-radius img-fluid w-100" alt="">
+                            <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/tranding-song/04.png" class="img-border-radius img-fluid w-100" alt="">
                         </a>
                         <div class="overlay-music-icon">
                             <a href="music-albums.html">
@@ -805,7 +805,7 @@
                     <div class="iq-thumb">
                         <div class="iq-music-overlay"></div>
                         <a href="music-albums.html">
-                            <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/tranding-song/05.png" class="img-border-radius img-fluid w-100" alt="">
+                            <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/tranding-song/05.png" class="img-border-radius img-fluid w-100" alt="">
                         </a>
                         <div class="overlay-music-icon">
                             <a href="music-albums.html">
@@ -826,7 +826,7 @@
                     <div class="iq-thumb">
                         <div class="iq-music-overlay"></div>
                         <a href="music-albums.html">
-                            <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/tranding-song/06.png" class="img-border-radius img-fluid w-100" alt="">
+                            <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/tranding-song/06.png" class="img-border-radius img-fluid w-100" alt="">
                         </a>
                         <div class="overlay-music-icon">
                             <a href="music-albums.html">
@@ -847,7 +847,7 @@
                     <div class="iq-thumb">
                         <div class="iq-music-overlay"></div>
                         <a href="music-albums.html">
-                            <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/tranding-song/07.png" class="img-border-radius img-fluid w-100" alt="">
+                            <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/tranding-song/07.png" class="img-border-radius img-fluid w-100" alt="">
                         </a>
                         <div class="overlay-music-icon">
                             <a href="music-albums.html">
@@ -868,7 +868,7 @@
                     <div class="iq-thumb">
                         <div class="iq-music-overlay"></div>
                         <a href="music-albums.html">
-                            <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/tranding-song/08.png" class="img-border-radius img-fluid w-100" alt="">
+                            <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/tranding-song/08.png" class="img-border-radius img-fluid w-100" alt="">
                         </a>
                         <div class="overlay-music-icon">
                             <a href="music-albums.html">
@@ -889,7 +889,7 @@
                     <div class="iq-thumb">
                         <div class="iq-music-overlay"></div>
                         <a href="music-albums.html">
-                            <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/tranding-song/09.png" class="img-border-radius img-fluid w-100" alt="">
+                            <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/tranding-song/09.png" class="img-border-radius img-fluid w-100" alt="">
                         </a>
                         <div class="overlay-music-icon">
                             <a href="music-albums.html">
@@ -910,7 +910,7 @@
                     <div class="iq-thumb">
                         <div class="iq-music-overlay"></div>
                         <a href="music-albums.html">
-                            <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/tranding-song/10.png" class="img-border-radius img-fluid w-100" alt="">
+                            <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/tranding-song/10.png" class="img-border-radius img-fluid w-100" alt="">
                         </a>
                         <div class="overlay-music-icon">
                             <a href="music-albums.html">
@@ -931,7 +931,7 @@
                     <div class="iq-thumb">
                         <div class="iq-music-overlay"></div>
                         <a href="music-albums.html">
-                            <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/tranding-song/11.png" class="img-border-radius img-fluid w-100" alt="">
+                            <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/tranding-song/11.png" class="img-border-radius img-fluid w-100" alt="">
                         </a>
                         <div class="overlay-music-icon">
                             <a href="music-albums.html">
@@ -952,7 +952,7 @@
                     <div class="iq-thumb">
                         <div class="iq-music-overlay"></div>
                         <a href="music-albums.html">
-                            <img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/tranding-song/12.png" class="img-border-radius img-fluid w-100" alt="">
+                            <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/tranding-song/12.png" class="img-border-radius img-fluid w-100" alt="">
                         </a>
                         <div class="overlay-music-icon">
                             <a href="music-albums.html">
@@ -991,7 +991,7 @@
                                                 <div class="media align-items-center">
                                                     <div class="iq-thumb-hotsong">
                                                         <div class="iq-music-overlay"></div>
-                                                        <a href="music-albums.html"><img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/hot-songs/01.png" class="img-fluid avatar-60" alt="">
+                                                        <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/01.png" class="img-fluid avatar-60" alt="">
                                                         </a>
                                                         <div class="overlay-music-icon">
                                                             <a href="music-albums.html">
@@ -1013,7 +1013,7 @@
                                                 <div class="media align-items-center">
                                                     <div class="iq-thumb-hotsong">
                                                         <div class="iq-music-overlay"></div>
-                                                        <a href="music-albums.html"><img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/hot-songs/02.png" class="img-fluid avatar-60" alt="">
+                                                        <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/02.png" class="img-fluid avatar-60" alt="">
                                                         </a>
                                                         <div class="overlay-music-icon">
                                                             <a href="music-albums.html">
@@ -1035,7 +1035,7 @@
                                                 <div class="media align-items-center">
                                                     <div class="iq-thumb-hotsong">
                                                         <div class="iq-music-overlay"></div>
-                                                        <a href="music-albums.html"><img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/hot-songs/03.png" class="img-fluid avatar-60" alt=""></a>
+                                                        <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/03.png" class="img-fluid avatar-60" alt=""></a>
                                                         <div class="overlay-music-icon">
                                                             <a href="music-albums.html">
                                                                 <i class="las la-play-circle font-size-24"></i>
@@ -1056,7 +1056,7 @@
                                                 <div class="media align-items-center">
                                                     <div class="iq-thumb-hotsong">
                                                         <div class="iq-music-overlay"></div>
-                                                        <a href="music-albums.html"><img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/hot-songs/04.png" class="img-fluid avatar-60" alt="">
+                                                        <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/04.png" class="img-fluid avatar-60" alt="">
                                                         </a>
                                                         <div class="overlay-music-icon">
                                                             <a href="music-albums.html">
@@ -1078,7 +1078,7 @@
                                                 <div class="media align-items-center">
                                                     <div class="iq-thumb-hotsong">
                                                         <div class="iq-music-overlay"></div>
-                                                        <a href="music-albums.html"><img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/hot-songs/05.png" class="img-fluid avatar-60" alt="">
+                                                        <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/05.png" class="img-fluid avatar-60" alt="">
                                                         </a>
                                                         <div class="overlay-music-icon">
                                                             <a href="music-albums.html">
@@ -1100,7 +1100,7 @@
                                                 <div class="media align-items-center">
                                                     <div class="iq-thumb-hotsong">
                                                         <div class="iq-music-overlay"></div>
-                                                        <a href="music-albums.html"><img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/hot-songs/06.png" class="img-fluid avatar-60" alt="">
+                                                        <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/06.png" class="img-fluid avatar-60" alt="">
                                                         </a>
                                                         <div class="overlay-music-icon">
                                                             <a href="music-albums.html">
@@ -1122,7 +1122,7 @@
                                                 <div class="media align-items-center">
                                                     <div class="iq-thumb-hotsong">
                                                         <div class="iq-music-overlay"></div>
-                                                        <a href="music-albums.html"><img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/hot-songs/07.png" class="img-fluid avatar-60" alt="">
+                                                        <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/07.png" class="img-fluid avatar-60" alt="">
                                                         </a>
                                                         <div class="overlay-music-icon">
                                                             <a href="music-albums.html">
@@ -1144,7 +1144,7 @@
                                                 <div class="media align-items-center">
                                                     <div class="iq-thumb-hotsong">
                                                         <div class="iq-music-overlay"></div>
-                                                        <a href="music-albums.html"><img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/hot-songs/08.png" class="img-fluid avatar-60" alt="">
+                                                        <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/08.png" class="img-fluid avatar-60" alt="">
                                                         </a>
                                                         <div class="overlay-music-icon">
                                                             <a href="music-albums.html">
@@ -1166,7 +1166,7 @@
                                                 <div class="media align-items-center">
                                                     <div class="iq-thumb-hotsong">
                                                         <div class="iq-music-overlay"></div>
-                                                        <a href="music-albums.html"><img src="https://templates.iqonic.design/prox/html/assets/images/music-dashboard/hot-songs/09.png" class="img-fluid avatar-60" alt="">
+                                                        <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/09.png" class="img-fluid avatar-60" alt="">
                                                         </a>
                                                         <div class="overlay-music-icon">
                                                             <a href="music-albums.html">

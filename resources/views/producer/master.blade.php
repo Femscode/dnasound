@@ -7,19 +7,20 @@
     <title>DNA Sound Studio</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="https://templates.iqonic.design/prox/html/assets/images/favicon.ico" />
+    <link rel="shortcut icon" href="https://dnasoundstudio.com/producers/assets/images/favicon.ico" />
 
-    <link rel="stylesheet" href="{{url('producers/assets/backend.min.css')}}">
-    <link rel="stylesheet" href="{{url('producers/assets/all.min.css')}}">
-    <link rel="stylesheet" href="{{url('producers/assets/line-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{url('producers/assets/remixicon.css')}}">
-    <link rel="stylesheet" href="{{url('producers/assets/dripicons.css')}}">
-
-    <link rel='stylesheet' href='https://templates.iqonic.design/prox/html/assets/vendor/fullcalendar/core/main.css' />
-    <link rel='stylesheet' href='https://templates.iqonic.design/prox/html/assets/vendor/fullcalendar/daygrid/main.css' />
-    <link rel='stylesheet' href='https://templates.iqonic.design/prox/html/assets/vendor/fullcalendar/timegrid/main.css' />
-    <link rel='stylesheet' href='https://templates.iqonic.design/prox/html/assets/vendor/fullcalendar/list/main.css' />
-    <link rel="stylesheet" href="https://templates.iqonic.design/prox/html/assets/vendor/mapbox/mapbox-gl.css">
+      
+      <link rel="stylesheet" href="{{url('producers/assets/css/backend.min.css')}}">
+      <link rel="stylesheet" href="{{url('producers/assets/vendor/fortawesome/fontawesome-free/css/all.min.css')}}">
+      <link rel="stylesheet" href="{{url('producers/assets/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css')}}">
+      <link rel="stylesheet" href="{{url('producers/assets/vendor/remixicon/fonts/remixicon.css')}}">
+      <link rel="stylesheet" href="{{url('producers/assets/vendor/icon/dripicons/dripicons.css')}}">
+      
+      <link rel='stylesheet' href="{{url('producers/assets/vendor/fullcalendar/core/main.css')}}" />
+      <link rel='stylesheet' href="{{url('producers/assets/vendor/fullcalendar/daygrid/main.css')}}" />
+      <link rel='stylesheet' href="{{url('producers/assets/vendor/fullcalendar/timegrid/main.css')}}" />
+      <link rel='stylesheet' href="{{url('producers/assets/vendor/fullcalendar/list/main.css')}}" />
+      <link rel="stylesheet" href="{{url('producers/assets/vendor/mapbox/mapbox-gl.css')}}"> 
     @yield('header')
 </head>
 
@@ -86,12 +87,12 @@
                                     </a>
                                     <ul id="contact" class="iq-submenu collapse" data-parent="#pages">
                                         <li class=" ">
-                                            <a href="https://templates.iqonic.design/prox/html/backend/contact-list.html">
+                                            <a href="#">
                                                 <i class="las la-file-alt"></i><span>Contact List</span>
                                             </a>
                                         </li>
                                         <li class=" ">
-                                            <a href="https://templates.iqonic.design/prox/html/backend/contact-detail.html">
+                                            <a href="#">
                                                 <i class="las la-address-card"></i><span>Contact Details</span>
                                             </a>
                                         </li>
@@ -105,22 +106,22 @@
                                     </a>
                                     <ul id="timeline" class="iq-submenu collapse" data-parent="#pages">
                                         <li class=" ">
-                                            <a href="https://templates.iqonic.design/prox/html/backend/timeline.html">
+                                            <a href="https://dnasoundstudio.com/prox/html/backend/timeline.html">
                                                 <i class="las la-circle-notch"></i><span>Timeline 1</span>
                                             </a>
                                         </li>
                                         <li class=" ">
-                                            <a href="https://templates.iqonic.design/prox/html/backend/timeline-1.html">
+                                            <a href="https://dnasoundstudio.com/prox/html/backend/timeline-1.html">
                                                 <i class="las la-compact-disc"></i><span>Timeline 2</span>
                                             </a>
                                         </li>
                                         <li class=" ">
-                                            <a href="https://templates.iqonic.design/prox/html/backend/timeline-2.html">
+                                            <a href="https://dnasoundstudio.com/prox/html/backend/timeline-2.html">
                                                 <i class="las la-cog"></i><span>Timeline 3</span>
                                             </a>
                                         </li>
                                         <li class=" ">
-                                            <a href="https://templates.iqonic.design/prox/html/backend/timeline-3.html">
+                                            <a href="https://dnasoundstudio.com/prox/html/backend/timeline-3.html">
                                                 <i class="las la-snowflake"></i><span>Timeline 4</span>
                                             </a>
                                         </li>
@@ -134,22 +135,22 @@
                                     </a>
                                     <ul id="pricing" class="iq-submenu collapse" data-parent="#pages">
                                         <li class=" ">
-                                            <a href="https://templates.iqonic.design/prox/html/backend/pricing.html">
+                                            <a href="https://dnasoundstudio.com/prox/html/backend/pricing.html">
                                                 <i class="las la-weight"></i><span>Pricing 1</span>
                                             </a>
                                         </li>
                                         <li class=" ">
-                                            <a href="https://templates.iqonic.design/prox/html/backend/pricing-1.html">
+                                            <a href="https://dnasoundstudio.com/prox/html/backend/pricing-1.html">
                                                 <i class="las la-crutch"></i><span>Pricing 2</span>
                                             </a>
                                         </li>
                                         <li class=" ">
-                                            <a href="https://templates.iqonic.design/prox/html/backend/pricing-2.html">
+                                            <a href="https://dnasoundstudio.com/prox/html/backend/pricing-2.html">
                                                 <i class="las la-tablets"></i><span>Pricing 3</span>
                                             </a>
                                         </li>
                                         <li class=" ">
-                                            <a href="https://templates.iqonic.design/prox/html/backend/pricing-3.html">
+                                            <a href="https://dnasoundstudio.com/prox/html/backend/pricing-3.html">
                                                 <i class="las la-dna"></i><span>Pricing 4</span>
                                             </a>
                                         </li>
@@ -163,44 +164,44 @@
                                     </a>
                                     <ul id="pages-error" class="iq-submenu collapse" data-parent="#pages">
                                         <li class=" ">
-                                            <a href="https://templates.iqonic.design/prox/html/backend/pages-error.html">
+                                            <a href="https://dnasoundstudio.com/prox/html/backend/pages-error.html">
                                                 <i class="las la-exclamation-circle"></i><span>Error 404</span>
                                             </a>
                                         </li>
                                         <li class=" ">
-                                            <a href="https://templates.iqonic.design/prox/html/backend/pages-error-500.html">
+                                            <a href="https://dnasoundstudio.com/prox/html/backend/pages-error-500.html">
                                                 <i class="las la-bug"></i><span>Error 500</span>
                                             </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li class=" ">
-                                    <a href="https://templates.iqonic.design/prox/html/backend/pages-invoice.html">
+                                    <a href="https://dnasoundstudio.com/prox/html/backend/pages-invoice.html">
                                         <i class="las la-file-invoice"></i><span>Invoice</span>
                                     </a>
                                 </li>
                                 <li class=" ">
-                                    <a href="https://templates.iqonic.design/prox/html/backend/pages-subscribers.html">
+                                    <a href="https://dnasoundstudio.com/prox/html/backend/pages-subscribers.html">
                                         <i class="las la-sort"></i><span>Subscribers</span>
                                     </a>
                                 </li>
                                 <li class=" ">
-                                    <a href="https://templates.iqonic.design/prox/html/backend/pages-faq.html">
+                                    <a href="https://dnasoundstudio.com/prox/html/backend/pages-faq.html">
                                         <i class="las la-drafting-compass"></i><span>Faq</span>
                                     </a>
                                 </li>
                                 <li class=" ">
-                                    <a href="https://templates.iqonic.design/prox/html/backend/pages-blank-page.html">
+                                    <a href="https://dnasoundstudio.com/prox/html/backend/pages-blank-page.html">
                                         <i class="las la-folder-open"></i><span>Blank Page</span>
                                     </a>
                                 </li>
                                 <li class=" ">
-                                    <a href="https://templates.iqonic.design/prox/html/backend/pages-maintenance.html">
+                                    <a href="https://dnasoundstudio.com/prox/html/backend/pages-maintenance.html">
                                         <i class="las la-cogs"></i><span>Maintenance</span>
                                     </a>
                                 </li>
                                 <li class=" ">
-                                    <a href="https://templates.iqonic.design/prox/html/backend/pages-comingsoon.html">
+                                    <a href="https://dnasoundstudio.com/prox/html/backend/pages-comingsoon.html">
                                         <i class="lab la-cc-mastercard"></i><span>Coming Soon</span>
                                     </a>
                                 </li>
@@ -273,7 +274,7 @@
                                                     <a href="#" class="iq-sub-card">
                                                         <div class="media align-items-center">
                                                             <div class="">
-                                                                <img class="avatar-40 rounded-small" src="https://templates.iqonic.design/prox/html/assets/images/user/01.jpg" alt="01">
+                                                                <img class="avatar-40 rounded-small" src="https://dnasoundstudio.com/producers/assets/images/user/01.jpg" alt="01">
                                                             </div>
                                                             <div class="media-body ml-3">
                                                                 <h6 class="mb-0">New beat by DJ Chicken <small class="badge badge-success float-right">New</small></h6>
@@ -284,7 +285,7 @@
                                                     <a href="#" class="iq-sub-card">
                                                         <div class="media align-items-center">
                                                             <div class="">
-                                                                <img class="avatar-40 rounded-small" src="https://templates.iqonic.design/prox/html/assets/images/user/02.jpg" alt="02">
+                                                                <img class="avatar-40 rounded-small" src="https://dnasoundstudio.com/producers/assets/images/user/02.jpg" alt="02">
                                                             </div>
                                                             <div class="media-body ml-3">
                                                                 <h6 class="mb-0 ">New beat by Don Jazzy</h6>
@@ -317,7 +318,7 @@
                                                     <a href="#" class="iq-sub-card">
                                                         <div class="media align-items-center">
                                                             <div class="">
-                                                                <img class="avatar-40 rounded-small" src="https://templates.iqonic.design/prox/html/assets/images/user/01.jpg" alt="01">
+                                                                <img class="avatar-40 rounded-small" src="https://dnasoundstudio.com/producers/assets/images/user/01.jpg" alt="01">
                                                             </div>
                                                             <div class="media-body ml-3">
                                                                 <h6 class="mb-0">Fasanya just purchased your beat <small class="badge badge-success float-right">New</small></h6>
@@ -328,7 +329,7 @@
                                                     <a href="#" class="iq-sub-card">
                                                         <div class="media align-items-center">
                                                             <div class="">
-                                                                <img class="avatar-40 rounded-small" src="https://templates.iqonic.design/prox/html/assets/images/user/02.jpg" alt="02">
+                                                                <img class="avatar-40 rounded-small" src="https://dnasoundstudio.com/producers/assets/images/user/02.jpg" alt="02">
                                                             </div>
                                                             <div class="media-body ml-3">
                                                                 <h6 class="mb-0 ">You are almost out os space, try and upgrade your plan</h6>
@@ -351,7 +352,7 @@
                                 <li class="nav-item iq-full-screen"><a href="#" class="" id="btnFullscreen"><i class="ri-fullscreen-line"></i></a></li>
                                 <li class="caption-content">
                                     <a href="#" class="iq-user-toggle">
-                                        <img src="https://templates.iqonic.design/prox/html/assets/images/user/1.jpg" class="img-fluid rounded" alt="user">
+                                        <img src="https://dnasoundstudio.com/producers/assets/images/user/1.jpg" class="img-fluid rounded" alt="user">
                                     </a>
                                     <div class="iq-user-dropdown">
                                         <div class="card">
@@ -365,7 +366,7 @@
                                                 <div class="card-body">
                                                     <div class="profile-header">
                                                         <div class="cover-container text-center">
-                                                            <img src="https://templates.iqonic.design/prox/html/assets/images/user/1.jpg" alt="profile-bg" class="rounded img-fluid avatar-80">
+                                                            <img src="https://dnasoundstudio.com/producers/assets/images/user/1.jpg" alt="profile-bg" class="rounded img-fluid avatar-80">
                                                             <div class="profile-detail mt-3">
                                                                 <h3>{{Auth::user()->name }}</h3>
                                                                 <p class="mb-1">Producer</p>
@@ -423,47 +424,46 @@
             </div>
         </div>
     </footer>
-    <!-- Backend Bundle JavaScript -->
-    <script src="https://templates.iqonic.design/prox/html/assets/js/backend-bundle.min.js"></script>
-
+    <script src="{{url('producers/assets/js/backend-bundle.min.js')}}"></script>
+    
     <!-- Flextree Javascript-->
-    <script src="https://templates.iqonic.design/prox/html/assets/js/flex-tree.min.js"></script>
-    <script src="https://templates.iqonic.design/prox/html/assets/js/tree.js"></script>
-
+    <script src="{{url('producers/assets/js/flex-tree.min.js')}}"></script>
+    <script src="{{url('producers/assets/js/tree.js')}}"></script>
+    
     <!-- Table Treeview JavaScript -->
-    <script src="https://templates.iqonic.design/prox/html/assets/js/table-treeview.js"></script>
-
+    <script src="{{url('producers/assets/js/table-treeview.js')}}"></script>
+    
     <!-- Masonary Gallery Javascript -->
-    <script src="https://templates.iqonic.design/prox/html/assets/js/masonry.pkgd.min.js"></script>
-    <script src="https://templates.iqonic.design/prox/html/assets/js/imagesloaded.pkgd.min.js"></script>
-
+    <script src="{{url('producers/assets/js/masonry.pkgd.min.js')}}"></script>
+    <script src="{{url('producers/assets/js/imagesloaded.pkgd.min.js')}}"></script>
+    
     <!-- Mapbox Javascript -->
-    <script src="https://templates.iqonic.design/prox/html/assets/js/mapbox-gl.js"></script>
-    <script src="https://templates.iqonic.design/prox/html/assets/js/mapbox.js"></script>
-
+    <script src="{{url('producers/assets/js/mapbox-gl.js')}}"></script>
+    <script src="{{url('producers/assets/js/mapbox.js')}}"></script>
+    
     <!-- Fullcalender Javascript -->
-    <script src='https://templates.iqonic.design/prox/html/assets/vendor/fullcalendar/core/main.js'></script>
-    <script src='https://templates.iqonic.design/prox/html/assets/vendor/fullcalendar/daygrid/main.js'></script>
-    <script src='https://templates.iqonic.design/prox/html/assets/vendor/fullcalendar/timegrid/main.js'></script>
-    <script src='https://templates.iqonic.design/prox/html/assets/vendor/fullcalendar/list/main.js'></script>
-
+    <script src="{{url('producers/assets/vendor/fullcalendar/core/main.js')}}"></script>
+    <script src="{{url('producers/assets/vendor/fullcalendar/daygrid/main.js')}}"></script>
+    <script src="{{url('producers/assets/vendor/fullcalendar/timegrid/main.js')}}"></script>
+    <script src="{{url('producers/assets/vendor/fullcalendar/list/main.js')}}"></script>
+    
     <!-- SweetAlert JavaScript -->
-    <script src="https://templates.iqonic.design/prox/html/assets/js/sweetalert.js"></script>
-
+    <script src="{{url('producers/assets/js/sweetalert.js')}}"></script>
+    
     <!-- Vectoe Map JavaScript -->
-    <script src="https://templates.iqonic.design/prox/html/assets/js/vector-map-custom.js"></script>
-
+    <script src="{{url('producers/assets/js/vector-map-custom.js')}}"></script>
+    
     <!-- Chart Custom JavaScript -->
-    <script src="https://templates.iqonic.design/prox/html/assets/js/customizer.js"></script>
-
+    <script src="{{url('producers/assets/js/customizer.js')}}"></script>
+    
     <!-- Chart Custom JavaScript -->
-    <script src="https://templates.iqonic.design/prox/html/assets/js/chart-custom.js"></script>
-
+    <script src="{{url('producers/assets/js/chart-custom.js')}}"></script>
+    
     <!-- slider JavaScript -->
-    <script src="https://templates.iqonic.design/prox/html/assets/js/slider.js"></script>
-
+    <script src="{{url('producers/assets/js/slider.js')}}"></script>
+    
     <!-- app JavaScript -->
-    <script src="https://templates.iqonic.design/prox/html/assets/js/app.js"></script>
+    <script src="{{url('producers/assets/js/app.js')}}"></script>
 
     @yield('script')
 </body>
