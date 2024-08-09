@@ -49,7 +49,7 @@
                                         <div class="track-art1"></div>
                                         <div>
                                             <div class="track-name1">{{ $new->title }} </div>
-                                            <div class="track-artist1">{{$new->author->name}}</div>
+                                            <div class="track-artist1">{{$new->author->name ?? ""}}</div>
                                         </div>
                                     </div>
                                     <div class="buttons1 col-6 col-sm-2 col-lg-3">
@@ -81,7 +81,7 @@
                                                 </div>
                                                 <div class="media-body text-white ml-3">
                                                     <p class="mb-0 iq-music-title">{{$beat->title}}</p>
-                                                    <small>{{$beat->author->name}}</small>
+                                                    <small>{{$beat->author->name ?? ""}}</small>
                                                 </div>
                                             </div>
                                             <p class="mb-0 col-md-2 iq-m-time">7:18</p>
@@ -373,7 +373,7 @@
                                         </div>
                                         <div class="feature-list text-center">
                                             <h6 class="font-weight-600 mb-0">{{$beat->title}}</h6>
-                                            <p class="mb-0">{{$beat->author->name}}</p>
+                                            <p class="mb-0">{{$beat->author->name ?? ""}}</p>
                                             <div class='actions'>
                                                 <a href='#' class='las la-eye'></a>
                                                 <a href='#' class='las la-edit'></a>
