@@ -2,22 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use Carbon\Carbon;
-use App\Models\User;
-use App\Models\Service;
-use App\Models\Project;
-use App\Models\Transaction;
-use Illuminate\Support\Str;
-use App\Models\Notification;
-use Illuminate\Http\Request;
+use App\Models\Beat;
 use App\Models\BulkSMSTransaction;
 use App\Models\Contact;
-use Illuminate\Support\Facades\DB;
+use App\Models\Notification;
+use App\Models\Project;
+use App\Models\Service;
+use App\Models\Transaction;
+use App\Models\User;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Str;
 
 class HomeController extends Controller
 {
@@ -60,6 +61,20 @@ class HomeController extends Controller
         $data['user'] = $user = Auth::user();
 
         $data['active'] = 'dashboard';
+        $data['beats']  = Beat::where('user_id', $user->uuid)->latest()->get();
+        $data['trending']  = Beat::latest()->get();
+        $data['new'] = Beat::latest()->first();
+        $storage = $user->storage;
+
+        $totalSize = $user->used_storage;
+
+        // Convert total size to GB and calculate remaining storage in GB
+        $maxStorage = $user->storage * 1024 * 1024 * 1024; // User's max storage in bytes
+        $remainingStorageBytes = $maxStorage - $totalSize;
+    
+        $data['remainingStorageGB'] = number_format($remainingStorageBytes / (1024 * 1024 * 1024), 2);
+        $data['maxStorage'] = number_format($totalSize / (1024 * 1024 * 1024), 2);
+    
 
         return response()->view('producer.index', $data);
     }
@@ -76,6 +91,24 @@ class HomeController extends Controller
         return response()->view('dashboard.contactus', $data);
     }
 
- 
-   
+    public function updateProfile(Request $request) {
+        $data = $request->all();
+       if($request->has('logo') && $request->logo !== null) {
+        $image = $request->logo;
+        $imageName = $image->hashName();
+        $image->move(public_path('producerImage'),$imageName);
+        $data['logo'] = $imageName;
+       }
+
+       $user = Auth::user();
+       $user->update($data);
+       return redirect()->back()->with('message', "Profile Updated Successfully!");
+       
+    }
+
+    public function profile() {
+        $data['user'] = Auth::user();
+        
+        return view('producer.profile',$data);
+    }
 }

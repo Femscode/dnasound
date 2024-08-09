@@ -27,15 +27,9 @@ class User extends Authenticatable
      * @var array
      */
    protected $guarded = [];
+   protected $fillable = ['name', 'phone', 'email','used_storage','storage','logo','balance'];
    protected $table = 'users';
-   	 
-  public function category() {
-    return $this->belongsTo(Category::class);
-  }
-
-  public function brand() {
-    return $this->belongsTo(User::class, 'company_id', 'id');
-  }
+ 
 
   
 
@@ -47,9 +41,7 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-  public function school() {
-    return $this->belongsTo(schools::class);
-  }
+
 
     /**
      * The attributes that should be cast to native types.

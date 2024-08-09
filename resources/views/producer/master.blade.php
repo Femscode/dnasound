@@ -9,18 +9,20 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="https://dnasoundstudio.com/producers/assets/images/favicon.ico" />
 
-      
-      <link rel="stylesheet" href="{{url('producers/assets/css/backend.min.css')}}">
-      <link rel="stylesheet" href="{{url('producers/assets/vendor/fortawesome/fontawesome-free/css/all.min.css')}}">
-      <link rel="stylesheet" href="{{url('producers/assets/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css')}}">
-      <link rel="stylesheet" href="{{url('producers/assets/vendor/remixicon/fonts/remixicon.css')}}">
-      <link rel="stylesheet" href="{{url('producers/assets/vendor/icon/dripicons/dripicons.css')}}">
-      
-      <link rel='stylesheet' href="{{url('producers/assets/vendor/fullcalendar/core/main.css')}}" />
-      <link rel='stylesheet' href="{{url('producers/assets/vendor/fullcalendar/daygrid/main.css')}}" />
-      <link rel='stylesheet' href="{{url('producers/assets/vendor/fullcalendar/timegrid/main.css')}}" />
-      <link rel='stylesheet' href="{{url('producers/assets/vendor/fullcalendar/list/main.css')}}" />
-      <link rel="stylesheet" href="{{url('producers/assets/vendor/mapbox/mapbox-gl.css')}}"> 
+
+    <link rel="stylesheet" href="{{url('producers/assets/css/backend.min.css')}}">
+    <link rel="stylesheet" href="{{url('producers/assets/vendor/fortawesome/fontawesome-free/css/all.min.css')}}">
+    <link rel="stylesheet" href="{{url('producers/assets/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{url('producers/assets/vendor/remixicon/fonts/remixicon.css')}}">
+    <link rel="stylesheet" href="{{url('producers/assets/vendor/icon/dripicons/dripicons.css')}}">
+
+    <link rel='stylesheet' href="{{url('producers/assets/vendor/fullcalendar/core/main.css')}}" />
+    <link rel='stylesheet' href="{{url('producers/assets/vendor/fullcalendar/daygrid/main.css')}}" />
+    <link rel='stylesheet' href="{{url('producers/assets/vendor/fullcalendar/timegrid/main.css')}}" />
+    <link rel='stylesheet' href="{{url('producers/assets/vendor/fullcalendar/list/main.css')}}" />
+    <link rel="stylesheet" href="{{url('producers/assets/vendor/mapbox/mapbox-gl.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     @yield('header')
 </head>
 
@@ -50,29 +52,29 @@
                             <a href="/dashboard" class="">
                                 <i class="las la-home iq-arrow-left"></i><span>Dashboard</span>
                             </a>
-                           
+
                         </li>
                         <li class=" ">
+                            <a href="/profile" class="">
+                                <i class="las la-user iq-arrow-left"></i><span>Profile</span>
+                            </a>
+
+                        </li>
+                        <!-- <li class=" ">
                             <a href="/dashboard" class="">
-                                <i class="las la-home iq-arrow-left"></i><span>Profile</span>
+                                <i class="las la-folder iq-arrow-left"></i><span>Resources</span>
                             </a>
                            
-                        </li>
+                        </li> -->
                         <li class=" ">
-                            <a href="/dashboard" class="">
-                                <i class="las la-home iq-arrow-left"></i><span>Resources</span>
+                            <a href="/user-storage" class="">
+                                <i class="lab la-google-drive iq-arrow-left"></i><span>Storage Drive</span>
                             </a>
-                           
+
                         </li>
-                        <li class=" ">
-                            <a href="/dashboard" class="">
-                                <i class="las la-home iq-arrow-left"></i><span>Storage Drive</span>
-                            </a>
-                           
-                        </li>
-                    
-                      
-                        <li class=" ">
+
+
+                        <!-- <li class=" ">
                             <a href="#pages" class="collapsed" data-toggle="collapse" aria-expanded="false">
                                 <i class="lab la-readme iq-arrow-left"></i><span>Extra Pages</span>
                                 <i class="las la-plus iq-arrow-right arrow-active"></i>
@@ -206,7 +208,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
                 </nav>
                 <div class="p-3"></div>
@@ -258,7 +260,7 @@
                                         </form>
                                     </div>
                                 </li>
-                              
+
                                 <li class="nav-item nav-icon dropdown">
                                     <a href="#" class="search-toggle dropdown-toggle" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="ri-mail-line"></i>
@@ -293,7 +295,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                 
+
                                                 </div>
                                                 <a class="right-ic btn btn-primary btn-block position-relative p-2" href="#" role="button">
                                                     <div class="dd-icon"><i class="las la-arrow-right mr-0"></i></div>
@@ -337,8 +339,8 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                  
-                                                   
+
+
                                                 </div>
                                                 <a class="right-ic btn btn-primary btn-block position-relative p-2" href="#" role="button">
                                                     <div class="dd-icon"><i class="las la-arrow-right mr-0"></i></div>
@@ -348,11 +350,16 @@
                                         </div>
                                     </div>
                                 </li>
-                              
+
                                 <li class="nav-item iq-full-screen"><a href="#" class="" id="btnFullscreen"><i class="ri-fullscreen-line"></i></a></li>
                                 <li class="caption-content">
                                     <a href="#" class="iq-user-toggle">
-                                        <img src="https://dnasoundstudio.com/producers/assets/images/user/1.jpg" class="img-fluid rounded" alt="user">
+                                        @if($user->logo !== null)
+
+                                        <img src="{{ asset('producerImage/' . $user->logo) }}" class="rounded img-fluid avatar-80" alt="">
+                                        @else
+                                        <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png" class="rounded img-fluid avatar-80" alt="">
+                                        @endif
                                     </a>
                                     <div class="iq-user-dropdown">
                                         <div class="card">
@@ -366,7 +373,13 @@
                                                 <div class="card-body">
                                                     <div class="profile-header">
                                                         <div class="cover-container text-center">
-                                                            <img src="https://dnasoundstudio.com/producers/assets/images/user/1.jpg" alt="profile-bg" class="rounded img-fluid avatar-80">
+
+                                                            @if($user->logo !== null)
+
+                                                            <img src="{{ asset('producerImage/' . $user->logo) }}" class="rounded img-fluid avatar-80" alt="">
+                                                            @else
+                                                            <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png" class="rounded img-fluid avatar-80" alt="">
+                                                            @endif
                                                             <div class="profile-detail mt-3">
                                                                 <h3>{{Auth::user()->name }}</h3>
                                                                 <p class="mb-1">Producer</p>
@@ -385,9 +398,9 @@
                                                                     </div>
                                                                 </div>
                                                             </a>
-                                                         
+
                                                         </div>
-                                                      
+
                                                     </div>
                                                     <div class="p-3"></div>
                                                 </div>
@@ -402,7 +415,7 @@
             </div>
         </div>
         @yield('content')
-       
+
     </div>
     <!-- Wrapper End-->
     <footer class="iq-footer">
@@ -425,45 +438,55 @@
         </div>
     </footer>
     <script src="{{url('producers/assets/js/backend-bundle.min.js')}}"></script>
-    
+
     <!-- Flextree Javascript-->
     <script src="{{url('producers/assets/js/flex-tree.min.js')}}"></script>
     <script src="{{url('producers/assets/js/tree.js')}}"></script>
-    
+
     <!-- Table Treeview JavaScript -->
     <script src="{{url('producers/assets/js/table-treeview.js')}}"></script>
-    
+
     <!-- Masonary Gallery Javascript -->
     <script src="{{url('producers/assets/js/masonry.pkgd.min.js')}}"></script>
     <script src="{{url('producers/assets/js/imagesloaded.pkgd.min.js')}}"></script>
-    
+
     <!-- Mapbox Javascript -->
     <script src="{{url('producers/assets/js/mapbox-gl.js')}}"></script>
     <script src="{{url('producers/assets/js/mapbox.js')}}"></script>
-    
+
     <!-- Fullcalender Javascript -->
     <script src="{{url('producers/assets/vendor/fullcalendar/core/main.js')}}"></script>
     <script src="{{url('producers/assets/vendor/fullcalendar/daygrid/main.js')}}"></script>
     <script src="{{url('producers/assets/vendor/fullcalendar/timegrid/main.js')}}"></script>
     <script src="{{url('producers/assets/vendor/fullcalendar/list/main.js')}}"></script>
-    
+
     <!-- SweetAlert JavaScript -->
     <script src="{{url('producers/assets/js/sweetalert.js')}}"></script>
-    
+
     <!-- Vectoe Map JavaScript -->
     <script src="{{url('producers/assets/js/vector-map-custom.js')}}"></script>
-    
+
     <!-- Chart Custom JavaScript -->
     <script src="{{url('producers/assets/js/customizer.js')}}"></script>
-    
+
     <!-- Chart Custom JavaScript -->
     <script src="{{url('producers/assets/js/chart-custom.js')}}"></script>
-    
+
     <!-- slider JavaScript -->
     <script src="{{url('producers/assets/js/slider.js')}}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{url('producers/assets/js/app.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        @if(session('message'))
+        Swal.fire('Success!', "{{ session('message') }}", 'success');
+        @endif
+
+        @if(session('error'))
+        Swal.fire('Error!', "{{ session('error') }}", 'error');
+        @endif
+    </script>
 
     @yield('script')
 </body>

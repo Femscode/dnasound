@@ -34,6 +34,7 @@ class CreateUsersTable extends Migration
             $table->string('total_spent')->default(0);
             $table->string('user_type')->default('user');
             $table->string('address')->nullable();
+            $table->string('storage')->default(5);
             $table->string('instagram')->nullable();
             $table->string('facebook')->nullable();
             $table->string('twitter')->nullable();
