@@ -13,7 +13,7 @@
                     <p class="mb-1">Available Storage</p>
 
                 </div>
-                <h4><span class="counter" style="visibility: visible;">{{number_format($remainingStorageGB,2)}}GB</span> / 5GB</h4>
+                <h4><span class="counter" style="visibility: visible;">{{$remainingStorageGB}}GB</span> / 5GB</h4>
                 <div class="d-flex align-items-center justify-content-between mt-3 position-relative">
                     <div class="iq-progress-bar progress-4 bg-warning-light mt-3 iq-progress-bar-icon">
                         <span class="bg-warning" data-percent="100" style="transition: width 2s; width: 34%;">
@@ -72,11 +72,14 @@
                                                 <div class="iq-realese-song ">
                                                     <a href="#">
                                                         @if($beat->image !== null)
-
-                                                        <img src="{{ asset('beatImages/' . $beat->image) }}" class="img-border-radius avatar-60 img-fluid" alt="">
+                                                        <img src="{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}"
+                                                        class="img-border-radius avatar-60 img-fluid" alt="">
                                                         @else
-                                                        <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png" class="img-border-radius avatar-60 img-fluid" alt="">
+                                                        <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png"
+                                                        class="img-border-radius avatar-60 img-fluid" alt="">
                                                         @endif
+
+                                                      
                                                     </a>
                                                 </div>
                                                 <div class="media-body text-white ml-3">
@@ -87,7 +90,12 @@
                                             <p class="mb-0 col-md-2 iq-m-time">7:18</p>
                                             <p class="mb-0 col-md-2 iq-m-icon"><i class="lar la-star font-size-20"></i></p>
                                             <p class="mb-0 col-2 col-md-2">
-                                                <i class="las la-play-circle font-size-32" onclick="playAudio(this, '{{ asset('beatFiles/' . $beat->file) }}')"></i>
+                                                <i class="las la-play-circle font-size-32"
+                                                    onclick="playAudio(this, '{{ (config('app.env') === 'local') ? asset('beatFiles/' . $beat->file) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatFiles/' . $beat->file }}')">
+                                                </i>
+
+
+                                                <!-- <i class="las la-play-circle font-size-32" onclick="playAudio(this, '{{ asset('beatFiles/' . $beat->file) }}')"></i> -->
                                             </p>
                                             <div class="card-header-toolbar iq-music-drop d-flex align-items-center col-md-1">
                                                 <div class="dropdown">
@@ -104,7 +112,11 @@
                                         </div>
                                         <!-- Hidden audio player -->
                                         <audio class="audio-player" style="display:none;">
-                                            <source src="{{asset('beatFiles/258PcWacKXEKO7cUhvj95PR5WD8ROy62O7RpVzjA.mp3')}}" type="audio/mpeg">
+                                            <source
+                                                src="{{ config('app.env') === 'local' ? asset('beatFiles/'.$beat->file) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatFiles/'.$beat->file }}"
+                                                type="audio/mpeg">
+
+
                                             Your browser does not support the audio element.
                                         </audio>
                                     </li>
@@ -362,13 +374,18 @@
 
                                             <a href="#">
                                                 @if($beat->image !== null)
-                                                <img src="{{ asset('beatImages/' . $beat->image) }}" class="img-border-radius img-fluid w-100" alt="">
+                                                <img src="{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}"
+                                                    class="img-border-radius img-fluid w-100" alt="">
                                                 @else
-                                                <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png" class="img-border-radius img-fluid w-100" alt="">
+                                                <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png"
+                                                    class="img-border-radius img-fluid w-100" alt="">
                                                 @endif
+
                                             </a>
                                             <div class="overlay-music-icon">
-                                                <i class="las la-play-circle" onclick="playAudio(this, '{{ asset('beatFiles/' . $beat->file) }}')"></i>
+                                                <i class="las la-play-circle font-size-32"
+                                                    onclick="playAudio(this, '{{ (config('app.env') === 'local') ? asset('beatFiles/' . $beat->file) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatFiles/' . $beat->file }}')">
+                                                </i>
                                             </div>
                                         </div>
                                         <div class="feature-list text-center">
@@ -695,13 +712,18 @@
                                             <div class="iq-music-overlay"></div>
                                             <a href="#">
                                                 @if($beat->image !== null)
-                                                <img src="{{ asset('beatImages/' . $beat->image) }}" class="img-border-radius img-fluid w-100" alt="">
+                                                <img src="{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}"
+                                                    class="img-border-radius img-fluid w-100" alt="">
                                                 @else
-                                                <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png" class="img-border-radius img-fluid w-100" alt="">
+                                                <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png"
+                                                    class="img-border-radius img-fluid w-100" alt="">
                                                 @endif
+
                                             </a>
                                             <div class="overlay-music-icon">
-                                                <i class="las la-play-circle" onclick="playAudio(this, '{{ asset('beatFiles/' . $beat->file) }}')"></i>
+                                                <i class="las la-play-circle font-size-32"
+                                                    onclick="playAudio(this, '{{ (config('app.env') === 'local') ? asset('beatFiles/' . $beat->file) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatFiles/' . $beat->file }}')">
+                                                </i>
                                             </div>
                                         </div>
                                         <div class="feature-list text-center">

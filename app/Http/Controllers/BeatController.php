@@ -37,7 +37,7 @@ class BeatController extends Controller
     
         // Check if the user has enough storage space
         if (($user->used_storage + $fileSize) > $maxStorage) {
-            return redirect()->back()->with('message', "Not enough storage, upgrade plan!");
+            return redirect()->back()->with('error', "Not enough storage, upgrade plan!");
         }
     
         DB::transaction(function () use ($request, $user, $fileSize) {

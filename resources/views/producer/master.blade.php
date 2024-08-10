@@ -355,11 +355,14 @@
                                 <li class="caption-content">
                                     <a href="#" class="iq-user-toggle">
                                         @if($user->logo !== null)
-
                                         <img src="{{ asset('producerImage/' . $user->logo) }}" class="rounded img-fluid avatar-80" alt="">
                                         @else
-                                        <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png" class="rounded img-fluid avatar-80" alt="">
+                                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="40" cy="40" r="40" fill="#e0e0e0" />
+                                            <path d="M40 20C32.268 20 26 26.268 26 34C26 41.732 32.268 48 40 48C47.732 48 54 41.732 54 34C54 26.268 47.732 20 40 20ZM40 44C34.477 44 30 39.523 30 34C30 28.477 34.477 24 40 24C45.523 24 50 28.477 50 34C50 39.523 45.523 44 40 44ZM40 56C30.268 56 22 48.732 22 40H16C16 51.044 29.322 60 40 60C50.678 60 64 51.044 64 40H58C58 48.732 49.732 56 40 56Z" fill="#9e9e9e" />
+                                        </svg>
                                         @endif
+
                                     </a>
                                     <div class="iq-user-dropdown">
                                         <div class="card">
