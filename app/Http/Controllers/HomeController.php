@@ -64,6 +64,8 @@ class HomeController extends Controller
         $data['beats']  = Beat::where('user_id', $user->uuid)->latest()->get();
         $data['trending']  = Beat::latest()->get();
         $data['new'] = Beat::latest()->first();
+        $data['producers'] = User::latest()->get();
+        
         $storage = $user->storage;
 
         $totalSize = $user->used_storage;

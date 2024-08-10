@@ -73,13 +73,13 @@
                                                     <a href="#">
                                                         @if($beat->image !== null)
                                                         <img src="{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}"
-                                                        class="img-border-radius avatar-60 img-fluid" alt="">
+                                                            class="img-border-radius avatar-60 img-fluid" alt="">
                                                         @else
                                                         <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png"
-                                                        class="img-border-radius avatar-60 img-fluid" alt="">
+                                                            class="img-border-radius avatar-60 img-fluid" alt="">
                                                         @endif
 
-                                                      
+
                                                     </a>
                                                 </div>
                                                 <div class="media-body text-white ml-3">
@@ -126,7 +126,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="media align-items-center col-10 col-md-5">
                                                 <div class="iq-realese-song ">
-                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/02.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
+                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/02.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
                                                 </div>
                                                 <div class="media-body text-white ml-3">
                                                     <p class="mb-0 iq-music-title">Cold Outside</p>
@@ -154,7 +154,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="media align-items-center col-10 col-md-5">
                                                 <div class="iq-realese-song ">
-                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/03.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
+                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/03.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
                                                 </div>
                                                 <div class="media-body text-white ml-3">
                                                     <p class="mb-0 iq-music-title">Oti Lo</p>
@@ -182,7 +182,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="media align-items-center col-10 col-md-5">
                                                 <div class="iq-realese-song ">
-                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/04.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
+                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/04.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
                                                 </div>
                                                 <div class="media-body text-white ml-3">
                                                     <p class="mb-0 iq-music-title">Juice </p>
@@ -210,7 +210,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="media align-items-center col-10 col-md-5">
                                                 <div class="iq-realese-song ">
-                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/05.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
+                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/05.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
                                                 </div>
                                                 <div class="media-body text-white ml-3">
                                                     <p class="mb-0 iq-music-title">Hmmmm..</p>
@@ -238,7 +238,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="media align-items-center col-10 col-md-5">
                                                 <div class="iq-realese-song ">
-                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/06.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
+                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/06.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
                                                 </div>
                                                 <div class="media-body text-white ml-3">
                                                     <p class="mb-0 iq-music-title">Christ All</p>
@@ -266,7 +266,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="media align-items-center col-10 col-md-5">
                                                 <div class="iq-realese-song ">
-                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/07.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
+                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/07.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
                                                 </div>
                                                 <div class="media-body text-white ml-3">
                                                     <p class="mb-0 iq-music-title">Morenidimu </p>
@@ -294,7 +294,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="media align-items-center col-10 col-md-5">
                                                 <div class="iq-realese-song ">
-                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/08.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
+                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/08.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
                                                 </div>
                                                 <div class="media-body text-white ml-3">
                                                     <p class="mb-0 iq-music-title">Kokoro Igbala</p>
@@ -322,7 +322,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="media align-items-center col-10 col-md-5">
                                                 <div class="iq-realese-song ">
-                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/09.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
+                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/09.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
                                                 </div>
                                                 <div class="media-body text-white ml-3">
                                                     <p class="mb-0">Come Off It</p>
@@ -362,16 +362,13 @@
                         <div id="feature-album-slick-arrow" class="slick-aerrow-block"></div>
                     </div>
                     <div class="card-body">
-                        <ul class="list-unstyled row feature-album iq-box-hover mb-0">
-
+                        <ul class="list-unstyled row iq-box-hover mb-0">
                             @foreach($beats as $beat)
-
-                            <li class="col-lg-2 iq-music-box">
+                            <li class="col-xl-2 col-lg-3 col-md-4 iq-music-box">
                                 <div class="card mb-0">
                                     <div class="card-body p-0">
                                         <div class="iq-thumb">
                                             <div class="iq-music-overlay"></div>
-
                                             <a href="#">
                                                 @if($beat->image !== null)
                                                 <img src="{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}"
@@ -380,7 +377,6 @@
                                                 <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png"
                                                     class="img-border-radius img-fluid w-100" alt="">
                                                 @endif
-
                                             </a>
                                             <div class="overlay-music-icon">
                                                 <i class="las la-play-circle font-size-32"
@@ -405,293 +401,70 @@
                                     Your browser does not support the audio element.
                                 </audio>
                             </li>
-
                             @endforeach
-                            <li class="col-lg-2 iq-music-box">
-                                <div class="card mb-0">
-                                    <div class="card-body p-0">
-                                        <div class="iq-thumb">
-                                            <div class="iq-music-overlay"></div>
-                                            <a href="music-albums.html">
-                                                <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album/06.png" class="img-border-radius img-fluid w-100" alt="">
-                                            </a>
-                                            <div class="overlay-music-icon">
-                                                <a href="music-albums.html">
-                                                    <i class="las la-play-circle"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="feature-list text-center">
-                                            <h6 class="font-weight-600 mb-0">African Giant</h6>
-                                            <p class="mb-0">Burna Boy</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-lg-2 iq-music-box">
-                                <div class="card mb-0">
-                                    <div class="card-body p-0">
-                                        <div class="iq-thumb">
-                                            <div class="iq-music-overlay"></div>
-                                            <a href="music-albums.html">
-                                                <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album/07.png" class="img-border-radius img-fluid w-100" alt="">
-                                            </a>
-                                            <div class="overlay-music-icon">
-                                                <a href="music-albums.html">
-                                                    <i class="las la-play-circle"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="feature-list text-center">
-                                            <h6 class="font-weight-600 mb-0">Ghetto Gospel</h6>
-                                            <p class="mb-0">Erigga</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-lg-2 iq-music-box">
-                                <div class="card mb-0">
-                                    <div class="card-body p-0">
-                                        <div class="iq-thumb">
-                                            <div class="iq-music-overlay"></div>
-                                            <a href="music-albums.html">
-                                                <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album/08.png" class="img-border-radius img-fluid w-100" alt="">
-                                            </a>
-                                            <div class="overlay-music-icon">
-                                                <a href="music-albums.html">
-                                                    <i class="las la-play-circle"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="feature-list text-center">
-                                            <h6 class="font-weight-600 mb-0">YBNL</h6>
-                                            <p class="mb-0">Olamide</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-lg-2 iq-music-box">
-                                <div class="card mb-0">
-                                    <div class="card-body p-0">
-                                        <div class="iq-thumb">
-                                            <div class="iq-music-overlay"></div>
-                                            <a href="music-albums.html">
-                                                <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album/09.png" class="img-border-radius img-fluid w-100" alt="">
-                                            </a>
-                                            <div class="overlay-music-icon">
-                                                <a href="music-albums.html">
-                                                    <i class="las la-play-circle"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="feature-list text-center">
-                                            <h6 class="font-weight-600 mb-0">Somewhere Between Beauty & Magic</h6>
-                                            <p class="mb-0">Joeboy</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-lg-2 iq-music-box">
-                                <div class="card mb-0">
-                                    <div class="card-body p-0">
-                                        <div class="iq-thumb">
-                                            <div class="iq-music-overlay"></div>
-                                            <a href="music-albums.html">
-                                                <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album/08.png" class="img-border-radius img-fluid w-100" alt="">
-                                            </a>
-                                            <div class="overlay-music-icon">
-                                                <a href="music-albums.html">
-                                                    <i class="las la-play-circle"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="feature-list text-center">
-                                            <h6 class="font-weight-600 mb-0">The Evolution</h6>
-                                            <p class="mb-0">9ice</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
                         </ul>
                     </div>
+                    <style>
+                        @media (max-width: 767.98px) {
+                            .iq-music-box {
+                                flex: 0 0 50%;
+                                /* 2 items per row on mobile */
+                                max-width: 50%;
+                            }
+                        }
+
+                        @media (min-width: 768px) {
+                            .iq-music-box {
+                                flex: 0 0 20%;
+                                /* 5 items per row on larger screens */
+                                max-width: 20%;
+                            }
+                        }
+                    </style>
+
 
                 </div>
             </div>
-            <!-- <div class="col-lg-12">
+            <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <div class="header-title">
-                            <h4 class="card-title">Featured Artist</h4>
+                            <h4 class="card-title">Other Producers</h4>
                         </div>
                         <div id="feature-album-artist-slick-arrow" class="slick-aerrow-block"></div>
                     </div>
                     <div class="card-body">
                         <ul class="list-unstyled row feature-album-artist mb-0">
-                            <li class="col-lg-2  iq-music-box">
+                            @foreach($producers as $producer)
+                            <li class="col-lg-2 col-md-6 col-6 iq-music-box">
                                 <div class="iq-thumb-artist">
                                     <div class="iq-music-overlay"></div>
-                                    <a href="music-albums.html">
-                                        <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
+                                    <a href="#">
+                                        @if($user->logo !== null)
+                                        <img src="{{ config('app.env') === 'local' ? asset('producerImage/' . $user->logo) : 'https://dnasoundstudio.com/dnasoundfiles/public/producerImage/' . $user->logo }}"
+                                            class="w-100 img-fluid" alt="">
+                                        @else
+                                        <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png"
+                                            class="w-100 img-fluid" alt="">
+                                        @endif
                                     </a>
                                     <div class="overlay-music-icon">
-                                        <a href="music-albums.html">
+                                        <a href="#">
                                             <i class="las la-play-circle"></i>
                                         </a>
                                     </div>
                                 </div>
                                 <div class="feature-list text-center">
-                                    <h6 class="font-weight-600  mb-0">Ricado Banks</h6>
+                                    <h6 class="font-weight-600  mb-0">{{$producer->name}}</h6>
                                 </div>
                             </li>
-                            <li class="col-lg-2  iq-music-box">
-                                <div class="iq-thumb-artist">
-                                    <div class="iq-music-overlay"></div>
-                                    <a href="music-albums.html">
-                                        <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
-                                    </a>
-                                    <div class="overlay-music-icon">
-                                        <a href="music-albums.html">
-                                            <i class="las la-play-circle"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="feature-list text-center">
-                                    <h6 class="font-weight-600  mb-0">Ricado Banks</h6>
-                                </div>
-                            </li>
-                            <li class="col-lg-2  iq-music-box">
-                                <div class="iq-thumb-artist">
-                                    <div class="iq-music-overlay"></div>
-                                    <a href="music-albums.html">
-                                        <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
-                                    </a>
-                                    <div class="overlay-music-icon">
-                                        <a href="music-albums.html">
-                                            <i class="las la-play-circle"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="feature-list text-center">
-                                    <h6 class="font-weight-600  mb-0">Ricado Banks</h6>
-                                </div>
-                            </li>
-                            <li class="col-lg-2  iq-music-box">
-                                <div class="iq-thumb-artist">
-                                    <div class="iq-music-overlay"></div>
-                                    <a href="music-albums.html">
-                                        <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
-                                    </a>
-                                    <div class="overlay-music-icon">
-                                        <a href="music-albums.html">
-                                            <i class="las la-play-circle"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="feature-list text-center">
-                                    <h6 class="font-weight-600  mb-0">Ricado Banks</h6>
-                                </div>
-                            </li>
-                            <li class="col-lg-2  iq-music-box">
-                                <div class="iq-thumb-artist">
-                                    <div class="iq-music-overlay"></div>
-                                    <a href="music-albums.html">
-                                        <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
-                                    </a>
-                                    <div class="overlay-music-icon">
-                                        <a href="music-albums.html">
-                                            <i class="las la-play-circle"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="feature-list text-center">
-                                    <h6 class="font-weight-600  mb-0">Ricado Banks</h6>
-                                </div>
-                            </li>
-                            <li class="col-lg-2  iq-music-box">
-                                <div class="iq-thumb-artist">
-                                    <div class="iq-music-overlay"></div>
-                                    <a href="music-albums.html">
-                                        <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
-                                    </a>
-                                    <div class="overlay-music-icon">
-                                        <a href="music-albums.html">
-                                            <i class="las la-play-circle"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="feature-list text-center">
-                                    <h6 class="font-weight-600  mb-0">Ricado Banks</h6>
-                                </div>
-                            </li>
-                            <li class="col-lg-2  iq-music-box">
-                                <div class="iq-thumb-artist">
-                                    <div class="iq-music-overlay"></div>
-                                    <a href="music-albums.html">
-                                        <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
-                                    </a>
-                                    <div class="overlay-music-icon">
-                                        <a href="music-albums.html">
-                                            <i class="las la-play-circle"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="feature-list text-center">
-                                    <h6 class="font-weight-600  mb-0">Ricado Banks</h6>
-                                </div>
-                            </li>
-                            <li class="col-lg-2  iq-music-box">
-                                <div class="iq-thumb-artist">
-                                    <div class="iq-music-overlay"></div>
-                                    <a href="music-albums.html">
-                                        <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
-                                    </a>
-                                    <div class="overlay-music-icon">
-                                        <a href="music-albums.html">
-                                            <i class="las la-play-circle"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="feature-list text-center">
-                                    <h6 class="font-weight-600  mb-0">Ricado Banks</h6>
-                                </div>
-                            </li>
-                            <li class="col-lg-2  iq-music-box">
-                                <div class="iq-thumb-artist">
-                                    <div class="iq-music-overlay"></div>
-                                    <a href="music-albums.html">
-                                        <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
-                                    </a>
-                                    <div class="overlay-music-icon">
-                                        <a href="music-albums.html">
-                                            <i class="las la-play-circle"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="feature-list text-center">
-                                    <h6 class="font-weight-600  mb-0">Ricado Banks</h6>
-                                </div>
-                            </li>
-                            <li class="col-lg-2  iq-music-box">
-                                <div class="iq-thumb-artist">
-                                    <div class="iq-music-overlay"></div>
-                                    <a href="music-albums.html">
-                                        <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
-                                    </a>
-                                    <div class="overlay-music-icon">
-                                        <a href="music-albums.html">
-                                            <i class="las la-play-circle"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="feature-list text-center">
-                                    <h6 class="font-weight-600  mb-0">Ricado Banks</h6>
-                                </div>
-                            </li>
+                            @endforeach
+                         
 
                         </ul>
                     </div>
                 </div>
-            </div> -->
+            </div>
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
@@ -699,7 +472,7 @@
                             <h4 class="card-title">Trending Beats</h4>
                         </div>
                         <div class="d-flex align-items-center iq-view">
-                            <b class="mb-0 text-primary"><a href="music-albums.html">View More <i class="las la-angle-right"></i></a></b>
+                            <b class="mb-0 text-primary"><a href="#">View More <i class="las la-angle-right"></i></a></b>
                         </div>
                     </div>
                     <div class="card-body">
@@ -738,237 +511,7 @@
                                 </audio>
                             </li>
                             @endforeach
-                            <li class="col-xl-2 col-lg-3 col-md-4 iq-music-box">
-                                <div class="card">
-                                    <div class="card-body p-0">
-                                        <div class="iq-thumb">
-                                            <div class="iq-music-overlay"></div>
-                                            <a href="music-albums.html">
-                                                <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/tranding-song/02.png" class="img-border-radius img-fluid w-100" alt="">
-                                            </a>
-                                            <div class="overlay-music-icon">
-                                                <a href="music-albums.html">
-                                                    <i class="las la-play-circle"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="feature-list text-center">
-                                            <h6 class="font-weight-600  mb-0">Ginger</h6>
-                                            <p class="mb-0">Wizkid ft. Burna Boy</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-xl-2 col-lg-3 col-md-4 iq-music-box">
-                                <div class="card">
-                                    <div class="card-body p-0">
-                                        <div class="iq-thumb">
-                                            <div class="iq-music-overlay"></div>
-                                            <a href="music-albums.html">
-                                                <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/tranding-song/03.png" class="img-border-radius img-fluid w-100" alt="">
-                                            </a>
-                                            <div class="overlay-music-icon">
-                                                <a href="music-albums.html">
-                                                    <i class="las la-play-circle"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="feature-list text-center">
-                                            <h6 class="font-weight-600  mb-0">On the Low</h6>
-                                            <p class="mb-0">Burna Boy</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-xl-2 col-lg-3 col-md-4 iq-music-box">
-                                <div class="card">
-                                    <div class="card-body p-0">
-                                        <div class="iq-thumb">
-                                            <div class="iq-music-overlay"></div>
-                                            <a href="music-albums.html">
-                                                <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/tranding-song/04.png" class="img-border-radius img-fluid w-100" alt="">
-                                            </a>
-                                            <div class="overlay-music-icon">
-                                                <a href="music-albums.html">
-                                                    <i class="las la-play-circle"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="feature-list text-center">
-                                            <h6 class="font-weight-600  mb-0">FEM</h6>
-                                            <p class="mb-0">Davido</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-xl-2 col-lg-3 col-md-4 iq-music-box">
-                                <div class="card">
-                                    <div class="card-body p-0">
-                                        <div class="iq-thumb">
-                                            <div class="iq-music-overlay"></div>
-                                            <a href="music-albums.html">
-                                                <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/tranding-song/05.png" class="img-border-radius img-fluid w-100" alt="">
-                                            </a>
-                                            <div class="overlay-music-icon">
-                                                <a href="music-albums.html">
-                                                    <i class="las la-play-circle"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="feature-list text-center">
-                                            <h6 class="font-weight-600  mb-0">Champion</h6>
-                                            <p class="mb-0">Fireboy DML ft. D Smoke</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-xl-2 col-lg-3 col-md-4 iq-music-box">
-                                <div class="card">
-                                    <div class="card-body p-0">
-                                        <div class="iq-thumb">
-                                            <div class="iq-music-overlay"></div>
-                                            <a href="music-albums.html">
-                                                <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/tranding-song/06.png" class="img-border-radius img-fluid w-100" alt="">
-                                            </a>
-                                            <div class="overlay-music-icon">
-                                                <a href="music-albums.html">
-                                                    <i class="las la-play-circle"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="feature-list text-center">
-                                            <h6 class="font-weight-600  mb-0">Away</h6>
-                                            <p class="mb-0">Ayra Starr</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-xl-2 col-lg-3 col-md-4 iq-music-box">
-                                <div class="card mb-lg-0">
-                                    <div class="card-body p-0">
-                                        <div class="iq-thumb">
-                                            <div class="iq-music-overlay"></div>
-                                            <a href="music-albums.html">
-                                                <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/tranding-song/07.png" class="img-border-radius img-fluid w-100" alt="">
-                                            </a>
-                                            <div class="overlay-music-icon">
-                                                <a href="music-albums.html">
-                                                    <i class="las la-play-circle"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="feature-list text-center">
-                                            <h6 class="font-weight-600  mb-0">Duduke</h6>
-                                            <p class="mb-0">Simi</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-xl-2 col-lg-3 col-md-4 iq-music-box">
-                                <div class="card mb-lg-0">
-                                    <div class="card-body p-0">
-                                        <div class="iq-thumb">
-                                            <div class="iq-music-overlay"></div>
-                                            <a href="music-albums.html">
-                                                <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/tranding-song/08.png" class="img-border-radius img-fluid w-100" alt="">
-                                            </a>
-                                            <div class="overlay-music-icon">
-                                                <a href="music-albums.html">
-                                                    <i class="las la-play-circle"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="feature-list text-center">
-                                            <h6 class="font-weight-600  mb-0">Jerusalema</h6>
-                                            <p class="mb-0">Master KG ft. Nomcebo Zikode</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-xl-2 col-lg-3 col-md-4 iq-music-box">
-                                <div class="card mb-lg-0">
-                                    <div class="card-body p-0">
-                                        <div class="iq-thumb">
-                                            <div class="iq-music-overlay"></div>
-                                            <a href="music-albums.html">
-                                                <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/tranding-song/09.png" class="img-border-radius img-fluid w-100" alt="">
-                                            </a>
-                                            <div class="overlay-music-icon">
-                                                <a href="music-albums.html">
-                                                    <i class="las la-play-circle"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="feature-list text-center">
-                                            <h6 class="font-weight-600  mb-0">Godly</h6>
-                                            <p class="mb-0">Omah Lay</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-xl-2 col-lg-3 col-md-4 iq-music-box">
-                                <div class="card mb-md-0 mb-lg-0">
-                                    <div class="card-body p-0">
-                                        <div class="iq-thumb">
-                                            <div class="iq-music-overlay"></div>
-                                            <a href="music-albums.html">
-                                                <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/tranding-song/10.png" class="img-border-radius img-fluid w-100" alt="">
-                                            </a>
-                                            <div class="overlay-music-icon">
-                                                <a href="music-albums.html">
-                                                    <i class="las la-play-circle"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="feature-list text-center">
-                                            <h6 class="font-weight-600  mb-0">Koroba</h6>
-                                            <p class="mb-0">Tiwa Savage</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-xl-2 col-lg-3 col-md-4 iq-music-box">
-                                <div class="card mb-sm-0 mb-md-0 mb-lg-0">
-                                    <div class="card-body p-0">
-                                        <div class="iq-thumb">
-                                            <div class="iq-music-overlay"></div>
-                                            <a href="music-albums.html">
-                                                <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/tranding-song/11.png" class="img-border-radius img-fluid w-100" alt="">
-                                            </a>
-                                            <div class="overlay-music-icon">
-                                                <a href="music-albums.html">
-                                                    <i class="las la-play-circle"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="feature-list text-center">
-                                            <h6 class="font-weight-600  mb-0">In My Maserati</h6>
-                                            <p class="mb-0">Olakira</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-xl-2 col-lg-3 col-md-4 iq-music-box">
-                                <div class="card mb-0 mb-sm-0 mb-md-0 mb-lg-0">
-                                    <div class="card-body p-0">
-                                        <div class="iq-thumb">
-                                            <div class="iq-music-overlay"></div>
-                                            <a href="music-albums.html">
-                                                <img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/tranding-song/12.png" class="img-border-radius img-fluid w-100" alt="">
-                                            </a>
-                                            <div class="overlay-music-icon">
-                                                <a href="music-albums.html">
-                                                    <i class="las la-play-circle"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="feature-list text-center">
-                                            <h6 class="font-weight-600  mb-0">Jowo</h6>
-                                            <p class="mb-0">Davido</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                          
                         </ul>
                     </div>
 
@@ -993,10 +536,10 @@
                                             <div class="media align-items-center">
                                                 <div class="iq-thumb-hotsong">
                                                     <div class="iq-music-overlay"></div>
-                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/01.png" class="img-fluid avatar-60" alt="">
+                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/01.png" class="img-fluid avatar-60" alt="">
                                                     </a>
                                                     <div class="overlay-music-icon">
-                                                        <a href="music-albums.html">
+                                                        <a href="#">
                                                             <i class="las la-play-circle font-size-24"></i>
                                                         </a>
                                                     </div>
@@ -1015,10 +558,10 @@
                                             <div class="media align-items-center">
                                                 <div class="iq-thumb-hotsong">
                                                     <div class="iq-music-overlay"></div>
-                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/02.png" class="img-fluid avatar-60" alt="">
+                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/02.png" class="img-fluid avatar-60" alt="">
                                                     </a>
                                                     <div class="overlay-music-icon">
-                                                        <a href="music-albums.html">
+                                                        <a href="#">
                                                             <i class="las la-play-circle font-size-24"></i>
                                                         </a>
                                                     </div>
@@ -1037,9 +580,9 @@
                                             <div class="media align-items-center">
                                                 <div class="iq-thumb-hotsong">
                                                     <div class="iq-music-overlay"></div>
-                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/03.png" class="img-fluid avatar-60" alt=""></a>
+                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/03.png" class="img-fluid avatar-60" alt=""></a>
                                                     <div class="overlay-music-icon">
-                                                        <a href="music-albums.html">
+                                                        <a href="#">
                                                             <i class="las la-play-circle font-size-24"></i>
                                                         </a>
                                                     </div>
@@ -1058,10 +601,10 @@
                                             <div class="media align-items-center">
                                                 <div class="iq-thumb-hotsong">
                                                     <div class="iq-music-overlay"></div>
-                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/04.png" class="img-fluid avatar-60" alt="">
+                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/04.png" class="img-fluid avatar-60" alt="">
                                                     </a>
                                                     <div class="overlay-music-icon">
-                                                        <a href="music-albums.html">
+                                                        <a href="#">
                                                             <i class="las la-play-circle font-size-24"></i>
                                                         </a>
                                                     </div>
@@ -1080,10 +623,10 @@
                                             <div class="media align-items-center">
                                                 <div class="iq-thumb-hotsong">
                                                     <div class="iq-music-overlay"></div>
-                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/05.png" class="img-fluid avatar-60" alt="">
+                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/05.png" class="img-fluid avatar-60" alt="">
                                                     </a>
                                                     <div class="overlay-music-icon">
-                                                        <a href="music-albums.html">
+                                                        <a href="#">
                                                             <i class="las la-play-circle font-size-24"></i>
                                                         </a>
                                                     </div>
@@ -1102,10 +645,10 @@
                                             <div class="media align-items-center">
                                                 <div class="iq-thumb-hotsong">
                                                     <div class="iq-music-overlay"></div>
-                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/06.png" class="img-fluid avatar-60" alt="">
+                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/06.png" class="img-fluid avatar-60" alt="">
                                                     </a>
                                                     <div class="overlay-music-icon">
-                                                        <a href="music-albums.html">
+                                                        <a href="#">
                                                             <i class="las la-play-circle font-size-24"></i>
                                                         </a>
                                                     </div>
@@ -1124,10 +667,10 @@
                                             <div class="media align-items-center">
                                                 <div class="iq-thumb-hotsong">
                                                     <div class="iq-music-overlay"></div>
-                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/07.png" class="img-fluid avatar-60" alt="">
+                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/07.png" class="img-fluid avatar-60" alt="">
                                                     </a>
                                                     <div class="overlay-music-icon">
-                                                        <a href="music-albums.html">
+                                                        <a href="#">
                                                             <i class="las la-play-circle font-size-24"></i>
                                                         </a>
                                                     </div>
@@ -1146,10 +689,10 @@
                                             <div class="media align-items-center">
                                                 <div class="iq-thumb-hotsong">
                                                     <div class="iq-music-overlay"></div>
-                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/08.png" class="img-fluid avatar-60" alt="">
+                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/08.png" class="img-fluid avatar-60" alt="">
                                                     </a>
                                                     <div class="overlay-music-icon">
-                                                        <a href="music-albums.html">
+                                                        <a href="#">
                                                             <i class="las la-play-circle font-size-24"></i>
                                                         </a>
                                                     </div>
@@ -1168,10 +711,10 @@
                                             <div class="media align-items-center">
                                                 <div class="iq-thumb-hotsong">
                                                     <div class="iq-music-overlay"></div>
-                                                    <a href="music-albums.html"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/09.png" class="img-fluid avatar-60" alt="">
+                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/09.png" class="img-fluid avatar-60" alt="">
                                                     </a>
                                                     <div class="overlay-music-icon">
-                                                        <a href="music-albums.html">
+                                                        <a href="#">
                                                             <i class="las la-play-circle font-size-24"></i>
                                                         </a>
                                                     </div>
