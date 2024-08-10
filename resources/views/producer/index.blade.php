@@ -441,7 +441,7 @@
                                     <div class="iq-music-overlay"></div>
                                     <a href="#">
                                         @if($user->logo !== null)
-                                        <img src="{{ config('app.env') === 'local' ? asset('producerImage/' . $user->logo) : 'https://dnasoundstudio.com/dnasoundfiles/public/producerImage/' . $user->logo }}"
+                                        <img src="{{ config('app.env') === 'local' ? asset('producerImage/' . $producer->logo) : 'https://dnasoundstudio.com/dnasoundfiles/public/producerImage/' . $producer->logo }}"
                                             class="w-100 img-fluid" alt="">
                                         @else
                                         <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png"
