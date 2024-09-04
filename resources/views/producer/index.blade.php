@@ -324,7 +324,7 @@
                         </span>
                     </div>
                     <div class="album__title">
-                        <h3><a href="/beat/beat-details/{{$beat->uuid}}">Like That</a></h3>
+                        <h3><a href="/beat/beat-details/#">Like That</a></h3>
                         <span><a href="#">Stefflon Don</a></span>
                     </div>
                 </div>
