@@ -170,7 +170,7 @@
 	<!-- player -->
 	<div class="player">
 		<div class="player__cover">
-			<img src="img/covers/cover.svg" alt="">
+			<img src="dna/img/covers/cover.svg" alt="">
 		</div>
 
 		<div class="player__content">
