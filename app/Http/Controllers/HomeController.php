@@ -62,23 +62,16 @@ class HomeController extends Controller
 
         $data['active'] = 'dashboard';
         $data['beats']  = Beat::where('user_id', $user->uuid)->latest()->get();
-        $data['trending']  = Beat::latest()->get();
-        $data['new'] = Beat::latest()->first();
+        $data['top']  = Beat::inRandomOrder()->take(5)->get();
+        $data['trending']  = Beat::latest()->take(5)->get();
+        $data['new'] = Beat::latest()->inRandomOrder()->first();
         $data['producers'] = User::latest()->get();
-        
-        $storage = $user->storage;
 
-        $totalSize = $user->used_storage;
-
-        // Convert total size to GB and calculate remaining storage in GB
-        $maxStorage = $user->storage * 1024 * 1024 * 1024; // User's max storage in bytes
-        $remainingStorageBytes = $maxStorage - $totalSize;
-    
-        $data['remainingStorageGB'] = number_format($remainingStorageBytes / (1024 * 1024 * 1024), 2);
-        $data['maxStorage'] = number_format($totalSize / (1024 * 1024 * 1024), 2);
-    
-
-        return response()->view('producer.index', $data);
+        if ($user->user_type == 'producer') {
+            return response()->view('producer.index', $data);
+        } else {
+            return response()->view('dashboard.index', $data);
+        }
     }
 
     public function contactus()
@@ -93,24 +86,54 @@ class HomeController extends Controller
         return response()->view('dashboard.contactus', $data);
     }
 
-    public function updateProfile(Request $request) {
+    public function updateProfile(Request $request)
+    {
         $data = $request->all();
-       if($request->has('logo') && $request->logo !== null) {
-        $image = $request->logo;
-        $imageName = $image->hashName();
-        $image->move(public_path('producerImage'),$imageName);
-        $data['logo'] = $imageName;
-       }
+        if ($request->has('logo') && $request->logo !== null) {
+            $image = $request->logo;
+            $imageName = $image->hashName();
+            $image->move(public_path('producerImage'), $imageName);
+            $data['logo'] = $imageName;
+        }
 
-       $user = Auth::user();
-       $user->update($data);
-       return redirect()->back()->with('message', "Profile Updated Successfully!");
-       
+        $user = Auth::user();
+        $user->update($data);
+        return redirect()->back()->with('message', "Profile Updated Successfully!");
     }
 
-    public function profile() {
-        $data['user'] = Auth::user();
-        
-        return view('producer.profile',$data);
+    public function profile()
+    {
+        $data['user'] = $user =  Auth::user();
+        $data['beats']  = Beat::where('user_id', $user->uuid)->latest()->get();
+
+        $storage = $user->storage;
+        $totalSize = $user->used_storage;
+
+        // Convert total size to GB and calculate remaining storage in GB
+        $maxStorage = $user->storage * 1024 * 1024 * 1024; // User's max storage in bytes
+        $remainingStorageBytes = $maxStorage - $totalSize;
+
+        $data['remainingStorageGB'] = number_format($remainingStorageBytes / (1024 * 1024 * 1024), 2);
+        $data['maxStorage'] = number_format($totalSize / (1024 * 1024 * 1024), 2);
+
+        if ($user->user_type == 'producer') {
+            return response()->view('producer.profile', $data);
+        } else {
+            return response()->view('dashboard.profile', $data);
+        }
+
+    }
+
+    public function producers()
+    {
+        $data['user'] = $user =  Auth::user();
+        $data['beats']  = Beat::where('user_id', $user->uuid)->latest()->get();
+        $data['producers'] = User::latest()->get();
+        if ($user->user_type == 'producer') {
+            return response()->view('producer.producers', $data);
+        } else {
+            return response()->view('dashboard.producers', $data);
+        }
+      
     }
 }

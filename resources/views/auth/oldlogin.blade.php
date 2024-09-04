@@ -3,32 +3,63 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <title>Login Veenode SME</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <!-- BEGIN GLOBAL MANDATORY STYLES -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
-    <link href="{{ asset('adminasset/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('adminasset/assets/css/plugins.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('adminasset/assets/css/authentication/form-1.css')}}" rel="stylesheet" type="text/css" />
-    <!-- END GLOBAL MANDATORY STYLES -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('adminasset/assets/css/forms/theme-checkbox-radio.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('adminasset/assets/css/forms/switches.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Telnetting.">
+    <meta name="author" content="Inovatik">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+    <meta property="og:site_name" content="" /> <!-- website name -->
+    <meta property="og:site" content="" /> <!-- website link -->
+    <meta property="og:title" content="" /> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>Log In - DNASOUNDSTUDIO</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext"
+        rel="stylesheet">
+    <link href="landing/css/bootstrap.css" rel="stylesheet">
+    <link href="landing/css/fontawesome-all.css" rel="stylesheet">
+    <link href="landing/css/swiper.css" rel="stylesheet">
+    <link href="landing/css/magnific-popup.css" rel="stylesheet">
+    <link href="landing/css/styles.css" rel="stylesheet">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="images/favicon.png">
 </head>
 
-<body class="form">
+<body data-spy="scroll" data-target=".fixed-top"
+    style='background:url("assets/images/ds3.jpg");background-repeat:no-repeat;background-size:cover;'>
 
-    <div class="form-container">
-        <div class="form-form">
-            <div class="form-form-wrap">
-                <div class="form-container">
-                    <div class="form-content">
+    <!-- Preloader -->
+    <div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
 
-                        <h1 class="">Login</h1>
-                        <p class="signup-link">Yet to have an account? <a href="/register">Sign Up</a></p>
-                        <form class="text-left" action='{{ route("login") }}' method='post'>@csrf
-                            <div class="form">
+
+
+
+    <!-- Header -->
+    <header id="header" class="ex-2-header">
+        <div class="container" style='opacity:0.9'>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-container">
+                        <h3 style="color: #000C40">Sign In. 🤗</h3>
+
+                        <div class="form-container">
+                            <form action='{{ route("login") }}' method='post'>@csrf
                                 @if($errors->any())
                                 <div class="alert alert-danger">
                                     <p><strong>Opps Something went wrong</strong></p>
@@ -39,75 +70,51 @@
                                     </ul>
                                 </div>
                                 @endif
-
-
-                             
-                                <div id="email-field" class="field-wrapper input">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="feather feather-at-sign">
-                                        <circle cx="12" cy="12" r="4"></circle>
-                                        <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
-                                    </svg>
-                                    <input id="email" name="email" type="text" value="" placeholder="Email">
+                                <div class="form-group">
+                                    <input type="email" name='email' class="form-control-input" id="lemail" required>
+                                    <label class="label-control" for="lemail">Email</label>
+                                    <div class="help-block with-errors"></div>
                                 </div>
-                              
-                                <div id="password-field" class="field-wrapper input mb-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="feather feather-lock">
-                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                                    </svg>
-                                    <input id="password" name="password" type="password" value=""
-                                        placeholder="Password">
+                                <div class="form-group">
+                                    <input type="password" name='password' class="form-control-input" id="lpassword"
+                                        required>
+                                    <label class="label-control" for="lpassword">Password</label>
+                                    <div class="help-block with-errors"></div>
                                 </div>
-                               
-                                <div class="field-wrapper terms_condition">
-                                    <div class="n-chk">
-                                        <label class="new-control">
-                                          
-                                            <span class="new-control-indicator"></span><span>Forgot your password? <a
-                                                    href="forgot-password">Click here </a> to reset it.</span>
-                                        </label>
-                                    </div>
+                                <p class="text-dark" style="text-align: center !important;"><strong> Don't have an
+                                        account yet?</strong> <a style='color:red' class="white"
+                                        href="{{ route('register') }}">
+                                        <strong> Sign Up</strong></a></p>
+
+                                <div class="form-group">
+                                    <button type="submit" class="form-control-submit-button">LOG IN</button>
                                 </div>
-                                <div class="d-sm-flex justify-content-between">
-                                    <div class="field-wrapper toggle-pass">
-                                        <p class="d-inline-block">Show Password</p>
-                                        <label class="switch s-primary">
-                                            <input type="checkbox" id="toggle-password" class="d-none">
-                                            <span class="slider round"></span>
-                                        </label>
-                                    </div>
-                                    <div class="field-wrapper">
-                                        <button type="submit" class="btn btn-primary" value="">Login</button>
-                                    </div>
+                                <div class="form-message">
+                                    <div id="lmsgSubmit" class="h3 text-center hidden"></div>
                                 </div>
-
-                            </div>
-                        </form>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="form-image mt-5">
-            <img src='growth/images/laptop.jpg'>
-            {{-- <div class="l-image">
-            </div> --}}
-        </div>
-    </div>
+                            </form>
 
 
-    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-    <script src="{{ asset('adminasset/assets/js/libs/jquery-3.1.1.min.js')}}"></script>
-    <script src="{{ asset('adminasset/bootstrap/js/popper.min.js')}}"></script>
-    <script src="{{ asset('adminasset/bootstrap/js/bootstrap.min.js')}}"></script>
+                        </div> <!-- end of form container -->
+                        <!-- end of sign up form -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
 
-    <!-- END GLOBAL MANDATORY SCRIPTS -->
-    <script src="{{ asset('adminasset/assets/js/authentication/form-1.js')}}"></script>
 
+            </div> <!-- end of container -->
+    </header> <!-- end of ex-header -->
+    <!-- end of header -->
+
+
+    <!-- Scripts -->
+    <script src="landing/js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="landing/js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="landing/js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="landing/js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="landing/js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="landing/js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="landing/js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="landing/js/scripts.js"></script> <!-- Custom scripts -->
 </body>
 
 </html>

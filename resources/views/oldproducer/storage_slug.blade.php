@@ -75,7 +75,13 @@
                     </div>
                   
                     <a class='btn btn-warning' href='/create-beat'> Create Beat</a>
-                    <p class='m-2 text-primary'><a  class='btn btn-light-secondary' href='/user-storage'>/Home</a>/...<a href='/user-storage/{{ $previous_folder->uuid ?? ""}}'>/{{ $previous_folder->name ?? "" }}</a><a href='/user-storage/{{ $current_folder->uuid}}'>/{{ $current_folder->name }}</a></p>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb iq-bg-danger mb-0">
+                           <li class="breadcrumb-item"><a href="/user-storage" class="text-danger"><i class="ri-home-4-line mr-1 float-left"></i>Home</a></li>
+                           <li class="breadcrumb-item"><a  href='/user-storage/{{ $previous_folder->uuid ?? ""}}' class="text-danger">...</a></li>
+                           <li class="breadcrumb-item active" aria-current="page"><a class='text-danger' href='/user-storage/{{ $previous_folder->uuid ?? ""}}'>{{ $current_folder->name }}</li>
+                        </ol>
+                     </nav>
                 </div>
                
             </div>

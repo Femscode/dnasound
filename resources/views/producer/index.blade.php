@@ -4,795 +4,1156 @@
 
 @endsection
 
-@section('content')
-<div class="content-page">
+@section('main')
+<main class="main">
     <div class="container-fluid">
-        <div class="row">
-            <div class="card-body iq-total-content">
-                <div class="top-block d-flex align-items-center justify-content-between">
-                    <p class="mb-1">Available Storage</p>
+        <!-- slider -->
+        <section class="row">
+            <div class="col-12">
+                <div class="hero owl-carousel" id="hero">
+                    <div class="hero__slide" data-bg="/dna/img/home/slide1.jpg">
+                        <h1 class="hero__title">DNA Sound Studio</h1>
+                        <p class="hero__text">Connecting Music Stars, Producers, and Artists.</p>
+                        <div class="hero__btns">
+                            <a href="#" class="hero__btn hero__btn--green">Get Started</a>
+                            <a href="#" class="hero__btn">About Us</a>
+                        </div>
+                    </div>
 
+                    <div class="hero__slide" data-bg="/dna/img/home/slide2.jpg">
+                        <h2 class="hero__title">A vibrant marketplace </h2>
+                        <p class="hero__text">Whether you're a producer, artist, or music enthusiast, join our dynamic community to elevate your creative journey and connect with industry talent.</p>
+                        <div class="hero__btns">
+                            <a href="#" class="hero__btn hero__btn--green">Access Storage</a>
+                            <a href="http://www.youtube.com/watch?v=0O2aH4XLbto" class="hero__btn hero__btn--video open-video"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M16,10.27,11,7.38A2,2,0,0,0,8,9.11v5.78a2,2,0,0,0,1,1.73,2,2,0,0,0,2,0l5-2.89a2,2,0,0,0,0-3.46ZM15,12l-5,2.89V9.11L15,12ZM12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" />
+                                </svg> Watch video</a>
+                        </div>
+                    </div>
+
+                    <div class="hero__slide" data-bg="/dna/img/home/slide3.jpg">
+                        <h2 class="hero__title">Grow your music business today!</h2>
+                        <p class="hero__text">Join us in making the every beat count. We are proud to be the link every producer and music artist needs.</p>
+                        <div class="hero__btns">
+                            <a href="#" class="hero__btn">About Us</a>
+                        </div>
+                    </div>
                 </div>
-                <h4><span class="counter" style="visibility: visible;">{{$remainingStorageGB}}GB</span> / 5GB</h4>
-                <div class="d-flex align-items-center justify-content-between mt-3 position-relative">
-                    <div class="iq-progress-bar progress-4 bg-warning-light mt-3 iq-progress-bar-icon">
-                        <span class="bg-warning" data-percent="100" style="transition: width 2s; width: 34%;">
-                            <span class="progress-text text-warning">100%</span>
+
+                <button class="main__nav main__nav--hero main__nav--prev" data-nav="#hero" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M17,11H9.41l3.3-3.29a1,1,0,1,0-1.42-1.42l-5,5a1,1,0,0,0-.21.33,1,1,0,0,0,0,.76,1,1,0,0,0,.21.33l5,5a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L9.41,13H17a1,1,0,0,0,0-2Z" />
+                    </svg></button>
+                <button class="main__nav main__nav--hero main__nav--next" data-nav="#hero" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z" />
+                    </svg></button>
+            </div>
+        </section>
+        <!-- end slider -->
+
+        <!-- releases -->
+        @if(count($beats) > 1)
+        <section class="row row--grid">
+            <!-- title -->
+            <div class="col-12">
+                <div class="main__title">
+                    <h2>My Beats</h2>
+
+                    <a href="/beat/my-beats" class="main__link">See all <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z" />
+                        </svg></a>
+                </div>
+            </div>
+            <!-- end title -->
+
+            <div class="col-6 col-sm-4 col-lg-2">
+                <div class="album">
+                    <div class="album__cover">
+                        <img src="/dna/img/covers/cover1.jpg" alt="">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                            </svg></a>
+                        <span class="album__stat">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                </svg> 22</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                </svg> 19 503</span>
                         </span>
                     </div>
-                    <div id="total-chart-04" class="ml-4"></div>
-                </div>
-                <a class="btn btn-warning text-white rounded-normal">Upgrade Plan</a>
-            </div>
-            <div class="col-lg-12">
-                <div class="card iq-realease">
-                    <div class="card-header d-flex justify-content-between border-0">
-                        <div class="header-title">
-                            <h4 class="card-title">Trending Beats</h4>
-                        </div>
-                    </div>
-                    <div class="card-body  iq-realeses-back">
-                        <div class="row">
-                            <div class="col-lg-5 iq-realese-box ">
-                                <div class="iq-music-img">
-                                    <div class="equalizer">
-                                        <span class="bar bar-1"></span>
-                                        <span class="bar bar-2"></span>
-                                        <span class="bar bar-3"></span>
-                                        <span class="bar bar-4"></span>
-                                        <span class="bar bar-5"></span>
-                                    </div>
-                                </div>
-                                <div class="player1 row">
-                                    <div class="details1 music-list col-6 col-sm-6 col-lg-6">
-                                        <div class="now-playing1"></div>
-                                        <div class="track-art1"></div>
-                                        <div>
-                                            <div class="track-name1">{{ $new->title }} </div>
-                                            <div class="track-artist1">{{$new->author->name ?? ""}}</div>
-                                        </div>
-                                    </div>
-                                    <div class="buttons1 col-6 col-sm-2 col-lg-3">
-                                        <div class="prev-track1" onclick="prevTrack1()"><i class="fa fa-step-backward fa-2x"></i></div>
-                                        <a onclick="playAudio(this, '{{ asset('beatFiles/' . $new->file) }}')"><i class="fa fa-play-circle fa-3x"></i></a>
-                                        <div class="next-track1" onclick="nextTrack1()"><i class="fa fa-step-forward fa-2x"></i></div>
-                                    </div>
-                                    <audio class="audio-player" style="display:none;">
-                                        <source src="{{asset('beatFiles/258PcWacKXEKO7cUhvj95PR5WD8ROy62O7RpVzjA.mp3')}}" type="audio/mpeg">
-                                        Your browser does not support the audio element.
-                                    </audio>
-                                </div>
-                            </div>
-                            <div class="col-lg-7">
-                                <ul class="list-unstyled iq-song-slide mb-0 realeases-banner">
-                                    @foreach($trending as $beat)
-                                    <li class="row">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="media align-items-center col-10 col-md-5">
-                                                <div class="iq-realese-song ">
-                                                    <a href="#">
-                                                        @if($beat->image !== null)
-                                                        <img src="{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}"
-                                                            class="img-border-radius avatar-60 img-fluid" alt="">
-                                                        @else
-                                                        <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png"
-                                                            class="img-border-radius avatar-60 img-fluid" alt="">
-                                                        @endif
-
-
-                                                    </a>
-                                                </div>
-                                                <div class="media-body text-white ml-3">
-                                                    <p class="mb-0 iq-music-title">{{$beat->title}}</p>
-                                                    <small>{{$beat->author->name ?? ""}}</small>
-                                                </div>
-                                            </div>
-                                            <p class="mb-0 col-md-2 iq-m-time">7:18</p>
-                                            <p class="mb-0 col-md-2 iq-m-icon"><i class="lar la-star font-size-20"></i></p>
-                                            <p class="mb-0 col-2 col-md-2">
-                                                <i class="las la-play-circle font-size-32"
-                                                    onclick="playAudio(this, '{{ (config('app.env') === 'local') ? asset('beatFiles/' . $beat->file) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatFiles/' . $beat->file }}')">
-                                                </i>
-
-
-                                                <!-- <i class="las la-play-circle font-size-32" onclick="playAudio(this, '{{ asset('beatFiles/' . $beat->file) }}')"></i> -->
-                                            </p>
-                                            <div class="card-header-toolbar iq-music-drop d-flex align-items-center col-md-1">
-                                                <div class="dropdown">
-                                                    <span class="dropdown-toggle text-primary" id="dropdownMenuButton7" data-toggle="dropdown" aria-expanded="false" role="button">
-                                                        <i class="ri-more-2-fill text-primary"></i>
-                                                    </span>
-                                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton7" style="">
-                                                        <a class="dropdown-item" href="#"><i class="ri-eye-fill mr-2"></i>View</a>
-                                                        <a class="dropdown-item" href="#"><i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
-                                                        <a class="dropdown-item" href="#"><i class="ri-file-download-fill mr-2"></i>Download</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Hidden audio player -->
-                                        <audio class="audio-player" style="display:none;">
-                                            <source
-                                                src="{{ config('app.env') === 'local' ? asset('beatFiles/'.$beat->file) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatFiles/'.$beat->file }}"
-                                                type="audio/mpeg">
-
-
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </li>
-                                    @endforeach
-
-                                    <li class="row">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="media align-items-center col-10 col-md-5">
-                                                <div class="iq-realese-song ">
-                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/02.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
-                                                </div>
-                                                <div class="media-body text-white ml-3">
-                                                    <p class="mb-0 iq-music-title">Cold Outside</p>
-                                                    <small>Peruzzi </small>
-                                                </div>
-                                            </div>
-                                            <p class="mb-0 col-md-2 iq-m-time">5:45</p>
-                                            <p class="mb-0 col-md-2 iq-m-icon"><i class="lar la-star font-size-20"></i></p>
-                                            <p class="mb-0 col-2 col-md-2"><i class="las la-play-circle font-size-32"></i></p>
-                                            <div class="card-header-toolbar iq-music-drop  d-flex align-items-center col-md-1">
-                                                <div class="dropdown">
-                                                    <span class="dropdown-toggle text-primary" id="dropdownMenuButton2" data-toggle="dropdown" aria-expanded="false" role="button">
-                                                        <i class="ri-more-2-fill text-primary"></i>
-                                                    </span>
-                                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton2" style="">
-                                                        <a class="dropdown-item" href="#"><i class="ri-eye-fill mr-2"></i>View</a>
-                                                        <a class="dropdown-item" href="#"><i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
-                                                        <a class="dropdown-item" href="#"><i class="ri-file-download-fill mr-2"></i>Download</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="active row">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="media align-items-center col-10 col-md-5">
-                                                <div class="iq-realese-song ">
-                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/03.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
-                                                </div>
-                                                <div class="media-body text-white ml-3">
-                                                    <p class="mb-0 iq-music-title">Oti Lo</p>
-                                                    <small>Olalomi Portable</small>
-                                                </div>
-                                            </div>
-                                            <p class="mb-0 col-md-2 iq-m-time">7:52</p>
-                                            <p class="mb-0 col-md-2 iq-m-icon"><i class="lar la-star font-size-20"></i></p>
-                                            <p class="mb-0 col-2 col-md-2"><i class="las la-play-circle font-size-32"></i></p>
-                                            <div class="card-header-toolbar iq-music-drop d-flex align-items-center col-md-1">
-                                                <div class="dropdown">
-                                                    <span class="dropdown-toggle text-primary" id="dropdownMenuButton3" data-toggle="dropdown" aria-expanded="false" role="button">
-                                                        <i class="ri-more-2-fill text-primary"></i>
-                                                    </span>
-                                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton3" style="">
-                                                        <a class="dropdown-item" href="#"><i class="ri-eye-fill mr-2"></i>View</a>
-                                                        <a class="dropdown-item" href="#"><i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
-                                                        <a class="dropdown-item" href="#"><i class="ri-file-download-fill mr-2"></i>Download</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="row">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="media align-items-center col-10 col-md-5">
-                                                <div class="iq-realese-song ">
-                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/04.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
-                                                </div>
-                                                <div class="media-body text-white ml-3">
-                                                    <p class="mb-0 iq-music-title">Juice </p>
-                                                    <small>DJ Chicken</small>
-                                                </div>
-                                            </div>
-                                            <p class="mb-0 col-md-2 iq-m-time">6:18</p>
-                                            <p class="mb-0 col-md-2 iq-m-icon"><i class="lar la-star font-size-20"></i></p>
-                                            <p class="mb-0 col-2 col-md-2"><i class="las la-play-circle font-size-32"></i></p>
-                                            <div class="card-header-toolbar iq-music-drop d-flex align-items-center col-md-1">
-                                                <div class="dropdown">
-                                                    <span class="dropdown-toggle text-primary" id="dropdownMenuButton4" data-toggle="dropdown" aria-expanded="false" role="button">
-                                                        <i class="ri-more-2-fill text-primary"></i>
-                                                    </span>
-                                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton4" style="">
-                                                        <a class="dropdown-item" href="#"><i class="ri-eye-fill mr-2"></i>View</a>
-                                                        <a class="dropdown-item" href="#"><i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
-                                                        <a class="dropdown-item" href="#"><i class="ri-file-download-fill mr-2"></i>Download</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="row">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="media align-items-center col-10 col-md-5">
-                                                <div class="iq-realese-song ">
-                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/05.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
-                                                </div>
-                                                <div class="media-body text-white ml-3">
-                                                    <p class="mb-0 iq-music-title">Hmmmm..</p>
-                                                    <small>Chris Brown & Davido</small>
-                                                </div>
-                                            </div>
-                                            <p class="mb-0 col-md-2  iq-m-time">9:00</p>
-                                            <p class="mb-0 col-md-2  iq-m-icon"><i class="lar la-star font-size-20"></i></p>
-                                            <p class="mb-0 col-2 col-md-2"><i class="las la-play-circle font-size-32"></i></p>
-                                            <div class="card-header-toolbar iq-music-drop d-flex align-items-center col-md-1">
-                                                <div class="dropdown">
-                                                    <span class="dropdown-toggle text-primary" id="dropdownMenuButton5" data-toggle="dropdown" aria-expanded="false" role="button">
-                                                        <i class="ri-more-2-fill text-primary"></i>
-                                                    </span>
-                                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton5" style="">
-                                                        <a class="dropdown-item" href="#"><i class="ri-eye-fill mr-2"></i>View</a>
-                                                        <a class="dropdown-item" href="#"><i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
-                                                        <a class="dropdown-item" href="#"><i class="ri-file-download-fill mr-2"></i>Download</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="row">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="media align-items-center col-10 col-md-5">
-                                                <div class="iq-realese-song ">
-                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/06.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
-                                                </div>
-                                                <div class="media-body text-white ml-3">
-                                                    <p class="mb-0 iq-music-title">Christ All</p>
-                                                    <small>Bidemi Olaoba</small>
-                                                </div>
-                                            </div>
-                                            <p class="mb-0 col-md-2  iq-m-time">6:52</p>
-                                            <p class="mb-0 col-md-2  iq-m-icon"><i class="lar la-star font-size-20"></i></p>
-                                            <p class="mb-0 col-2 col-md-2"><i class="las la-play-circle font-size-32"></i></p>
-                                            <div class="card-header-toolbar iq-music-drop d-flex align-items-center col-md-1">
-                                                <div class="dropdown">
-                                                    <span class="dropdown-toggle text-primary" id="dropdownMenuButton6" data-toggle="dropdown" aria-expanded="false" role="button">
-                                                        <i class="ri-more-2-fill text-primary"></i>
-                                                    </span>
-                                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton6" style="">
-                                                        <a class="dropdown-item" href="#"><i class="ri-eye-fill mr-2"></i>View</a>
-                                                        <a class="dropdown-item" href="#"><i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
-                                                        <a class="dropdown-item" href="#"><i class="ri-file-download-fill mr-2"></i>Download</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="row">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="media align-items-center col-10 col-md-5">
-                                                <div class="iq-realese-song ">
-                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/07.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
-                                                </div>
-                                                <div class="media-body text-white ml-3">
-                                                    <p class="mb-0 iq-music-title">Morenidimu </p>
-                                                    <small>Afolabi Samson</small>
-                                                </div>
-                                            </div>
-                                            <p class="mb-0 col-md-2 iq-m-time">7:18</p>
-                                            <p class="mb-0 col-md-2  iq-m-icon"><i class="lar la-star font-size-20"></i></p>
-                                            <p class="mb-0 col-2 col-md-2"><i class="las la-play-circle font-size-32"></i></p>
-                                            <div class="card-header-toolbar iq-music-drop d-flex align-items-center col-md-1">
-                                                <div class="dropdown">
-                                                    <span class="dropdown-toggle text-primary" id="dropdownMenuButton7" data-toggle="dropdown" aria-expanded="false" role="button">
-                                                        <i class="ri-more-2-fill text-primary"></i>
-                                                    </span>
-                                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton7" style="">
-                                                        <a class="dropdown-item" href="#"><i class="ri-eye-fill mr-2"></i>View</a>
-                                                        <a class="dropdown-item" href="#"><i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
-                                                        <a class="dropdown-item" href="#"><i class="ri-file-download-fill mr-2"></i>Download</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="row">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="media align-items-center col-10 col-md-5">
-                                                <div class="iq-realese-song ">
-                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/08.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
-                                                </div>
-                                                <div class="media-body text-white ml-3">
-                                                    <p class="mb-0 iq-music-title">Kokoro Igbala</p>
-                                                    <small>Tope Alabi</small>
-                                                </div>
-                                            </div>
-                                            <p class="mb-0 col-md-2 iq-m-time">8:40</p>
-                                            <p class="mb-0 col-md-2 iq-m-icon"><i class="lar la-star font-size-20"></i></p>
-                                            <p class="mb-0 col-2 col-md-2"><i class="las la-play-circle font-size-32"></i></p>
-                                            <div class="card-header-toolbar iq-music-drop d-flex align-items-center col-md-1">
-                                                <div class="dropdown">
-                                                    <span class="dropdown-toggle text-primary" id="dropdownMenuButton8" data-toggle="dropdown" aria-expanded="false" role="button">
-                                                        <i class="ri-more-2-fill text-primary"></i>
-                                                    </span>
-                                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton8" style="">
-                                                        <a class="dropdown-item" href="#"><i class="ri-eye-fill mr-2"></i>View</a>
-                                                        <a class="dropdown-item" href="#"><i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
-                                                        <a class="dropdown-item" href="#"><i class="ri-file-download-fill mr-2"></i>Download</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="row">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="media align-items-center col-10 col-md-5">
-                                                <div class="iq-realese-song ">
-                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/realease-song/09.png" class="img-border-radius avatar-60 img-fluid" alt=""></a>
-                                                </div>
-                                                <div class="media-body text-white ml-3">
-                                                    <p class="mb-0">Come Off It</p>
-                                                    <small>David Titus</small>
-                                                </div>
-                                            </div>
-                                            <p class="mb-0 col-md-2 iq-m-time">9:52</p>
-                                            <p class="mb-0 col-md-2 iq-m-icon"><i class="lar la-star font-size-20"></i></p>
-                                            <p class=" mb-0 col-2 col-md-2"><i class="las la-play-circle font-size-32"></i></p>
-                                            <div class="card-header-toolbar iq-music-drop d-flex align-items-center col-md-1">
-                                                <div class="dropdown">
-                                                    <span class="dropdown-toggle text-primary" id="dropdownMenuButton9" data-toggle="dropdown" aria-expanded="false" role="button">
-                                                        <i class="ri-more-2-fill text-primary"></i>
-                                                    </span>
-                                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton9" style="">
-                                                        <a class="dropdown-item" href="#"><i class="ri-eye-fill mr-2"></i>View</a>
-                                                        <a class="dropdown-item" href="#"><i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
-                                                        <a class="dropdown-item" href="#"><i class="ri-file-download-fill mr-2"></i>Download</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="album__title">
+                        <h3><a href="#">Space Melody</a></h3>
+                        <span><a href="#">VIZE</a> & <a href="#">Alan Walker</a> & <a href="#">Leony</a></span>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                        <div class="header-title">
-                            <h4 class="card-title">My Beats</h4>
-                            <a href='/create-beat' class='btn btn-primary btn-sm'>Create New Beat</a>
-                        </div>
-                        <div id="feature-album-slick-arrow" class="slick-aerrow-block"></div>
+            @foreach($beats as $beat)
+
+            <div class="col-6 col-sm-4 col-lg-2">
+                <div class="album">
+                    <div class="album__cover ">
+                        @if($beat->image !== null)
+                        <img src="{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}"
+                            alt="">
+                        @else
+                        <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png"
+                            alt="">
+                        @endif
+                        <!-- <img src="/dna/img/covers/cover2.jpg" alt=""> -->
+                        <span class="main__list main__list--playlist main__list--dashbox">
+                            <a data-playlist data-title="{{$beat->title}}" data-artist="{{$beat->author->name}}" href="{{ asset('beatfiles/' . $beat->file) }}">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                                </svg></a></span>
+                        <span class="album__stat">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                </svg> 7</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                </svg> 4 731</span>
+                        </span>
                     </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled row iq-box-hover mb-0">
-                            @foreach($beats as $beat)
-                            <li class="col-xl-2 col-lg-3 col-md-4 iq-music-box">
-                                <div class="card mb-0">
-                                    <div class="card-body p-0">
-                                        <div class="iq-thumb">
-                                            <div class="iq-music-overlay"></div>
-                                            <a href="#">
-                                                @if($beat->image !== null)
-                                                <img src="{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}"
-                                                    class="img-border-radius img-fluid w-100" alt="">
-                                                @else
-                                                <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png"
-                                                    class="img-border-radius img-fluid w-100" alt="">
-                                                @endif
-                                            </a>
-                                            <div class="overlay-music-icon">
-                                                <i class="las la-play-circle font-size-32"
-                                                    onclick="playAudio(this, '{{ (config('app.env') === 'local') ? asset('beatFiles/' . $beat->file) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatFiles/' . $beat->file }}')">
-                                                </i>
-                                            </div>
-                                        </div>
-                                        <div class="feature-list text-center">
-                                            <h6 class="font-weight-600 mb-0">{{$beat->title}}</h6>
-                                            <p class="mb-0">{{$beat->author->name ?? ""}}</p>
-                                            <div class='actions'>
-                                                <a href='#' class='las la-eye'></a>
-                                                <a href='#' class='las la-edit'></a>
-                                                <a href='/delete-beat/{{$beat->uuid}}' onclick="return confirm('Are you sure you want to delete this beat?')" class='las la-trash'></a>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="album__title">
+                        <h3><a href="/beat/beat-details/{{$beat->uuid}}">{{$beat->title}}</a></h3>
+                        <span><a href="#">{{$beat->author->name ?? ""}}</a></span>
+                    </div>
+                </div>
+            </div>
+
+            @endforeach
+
+            <div class="col-6 col-sm-4 col-lg-2">
+                <div class="album">
+                    <div class="album__cover">
+                        <img src="/dna/img/covers/cover3.jpg" alt="">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                            </svg></a>
+                        <span class="album__stat">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                </svg> 16</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                </svg> 300k</span>
+                        </span>
+                    </div>
+                    <div class="album__title">
+                        <h3><a href="#">I Love My Country</a></h3>
+                        <span><a href="#">Florida Georgia</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+                <div class="album">
+                    <div class="album__cover">
+                        <img src="/dna/img/covers/cover4.jpg" alt="">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                            </svg></a>
+                        <span class="album__stat">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                </svg> 16</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                </svg> 100k</span>
+                        </span>
+                    </div>
+                    <div class="album__title">
+                        <h3><a href="#">Toosie Slide</a></h3>
+                        <span><a href="#">Drake</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+                <div class="album">
+                    <div class="album__cover">
+                        <img src="/dna/img/covers/cover5.jpg" alt="">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                            </svg></a>
+                        <span class="album__stat">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                </svg> 11</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                </svg> 1 279</span>
+                        </span>
+                    </div>
+                    <div class="album__title">
+                        <h3><a href="#">Got What I Got</a></h3>
+                        <span><a href="#">Jason Aldean</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+                <div class="album">
+                    <div class="album__cover">
+                        <img src="/dna/img/covers/cover6.jpg" alt="">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                            </svg></a>
+                        <span class="album__stat">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                </svg> 14</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                </svg> 9 045</span>
+                        </span>
+                    </div>
+                    <div class="album__title">
+                        <h3><a href="#">Supalonely</a></h3>
+                        <span><a href="#">BENEE Featuring</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+                <div class="album">
+                    <div class="album__cover">
+                        <img src="/dna/img/covers/cover7.jpg" alt="">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                            </svg></a>
+                        <span class="album__stat">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                </svg> 16</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                </svg> 500k</span>
+                        </span>
+                    </div>
+                    <div class="album__title">
+                        <h3><a href="#">Girls In The Hood</a></h3>
+                        <span><a href="#">Megan Thee</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+                <div class="album">
+                    <div class="album__cover">
+                        <img src="/dna/img/covers/cover8.jpg" alt="">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                            </svg></a>
+                        <span class="album__stat">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                </svg> 8</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                </svg> 56 042</span>
+                        </span>
+                    </div>
+                    <div class="album__title">
+                        <h3><a href="#">Got It On Me</a></h3>
+                        <span><a href="#">Summer Walker</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+                <div class="album">
+                    <div class="album__cover">
+                        <img src="/dna/img/covers/cover9.jpg" alt="">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                            </svg></a>
+                        <span class="album__stat">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                </svg> 24</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                </svg> 100k</span>
+                        </span>
+                    </div>
+                    <div class="album__title">
+                        <h3><a href="#">Righteous</a></h3>
+                        <span><a href="#">Juice WRLD</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+                <div class="album">
+                    <div class="album__cover">
+                        <img src="/dna/img/covers/cover10.jpg" alt="">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                            </svg></a>
+                        <span class="album__stat">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                </svg> 16</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                </svg> 2 482</span>
+                        </span>
+                    </div>
+                    <div class="album__title">
+                        <h3><a href="#">Walk Em Down</a></h3>
+                        <span><a href="#">NLE Choppa</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+                <div class="album">
+                    <div class="album__cover">
+                        <img src="/dna/img/covers/cover11.jpg" alt="">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                            </svg></a>
+                        <span class="album__stat">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                </svg> 19</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                </svg> 50k</span>
+                        </span>
+                    </div>
+                    <div class="album__title">
+                        <h3><a href="/beat/beat-details/{{$beat->uuid}}">Like That</a></h3>
+                        <span><a href="#">Stefflon Don</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+                <div class="album">
+                    <div class="album__cover">
+                        <img src="/dna/img/covers/cover12.jpg" alt="">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                            </svg></a>
+                        <span class="album__stat">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                </svg> 16</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                </svg> 75k</span>
+                        </span>
+                    </div>
+                    <div class="album__title">
+                        <h3><a href="#">One Big Country</a></h3>
+                        <span><a href="#">LOCASH</a></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        @endif
+        <!-- <section class="row row--grid">
+            <div class="col-12">
+                <div class="main__title">
+                    <h2>New Releases</h2>
+
+                    <a href="#" class="main__link">See all <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z" />
+                        </svg></a>
+                </div>
+            </div>
+            @foreach($trending as $beat)
+            <div class="col-6 col-sm-4 col-lg-2">
+                <div class="album">
+                    <div class="album__cover">
+                    @if($beat->image !== null)
+                        <img src="{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}"
+                            alt="">
+                        @else
+                        <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png"
+                           alt="">
+                        @endif
+                        <span class="main__list main__list--playlist main__list--dashbox">
+                        <a data-playlist data-title="{{$beat->title}}" data-artist="{{$beat->author->name}}" href="{{ asset('beatfiles/' . $beat->file) }}" >
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                            </svg></a></span>
+                        <span class="album__stat">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                </svg> 22</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                </svg> 19 503</span>
+                        </span>
+                    </div>
+                    <div class="album__title">
+                        <h3><a href="/beat/beat-details/{{$beat->uuid}}">{{$beat->title}}</a></h3>
+                        <span><a href="#">{{$beat->author->name}}</a> & <a href="#">Alan Walker</a> & <a href="#">Leony</a></span>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+
+            <div class="col-6 col-sm-4 col-lg-2">
+                <div class="album">
+                    <div class="album__cover">
+                        <img src="/dna/img/covers/cover2.jpg" alt="">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                            </svg></a>
+                        <span class="album__stat">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                </svg> 7</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                </svg> 4 731</span>
+                        </span>
+                    </div>
+                    <div class="album__title">
+                        <h3><a href="#">Said Sum</a></h3>
+                        <span><a href="#">Moneybagg</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+                <div class="album">
+                    <div class="album__cover">
+                        <img src="/dna/img/covers/cover3.jpg" alt="">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                            </svg></a>
+                        <span class="album__stat">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                </svg> 16</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                </svg> 300k</span>
+                        </span>
+                    </div>
+                    <div class="album__title">
+                        <h3><a href="#">I Love My Country</a></h3>
+                        <span><a href="#">Florida Georgia</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+                <div class="album">
+                    <div class="album__cover">
+                        <img src="/dna/img/covers/cover4.jpg" alt="">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                            </svg></a>
+                        <span class="album__stat">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                </svg> 16</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                </svg> 100k</span>
+                        </span>
+                    </div>
+                    <div class="album__title">
+                        <h3><a href="#">Toosie Slide</a></h3>
+                        <span><a href="#">Drake</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+                <div class="album">
+                    <div class="album__cover">
+                        <img src="/dna/img/covers/cover5.jpg" alt="">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                            </svg></a>
+                        <span class="album__stat">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                </svg> 11</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                </svg> 1 279</span>
+                        </span>
+                    </div>
+                    <div class="album__title">
+                        <h3><a href="#">Got What I Got</a></h3>
+                        <span><a href="#">Jason Aldean</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+                <div class="album">
+                    <div class="album__cover">
+                        <img src="/dna/img/covers/cover6.jpg" alt="">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                            </svg></a>
+                        <span class="album__stat">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                </svg> 14</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                </svg> 9 045</span>
+                        </span>
+                    </div>
+                    <div class="album__title">
+                        <h3><a href="#">Supalonely</a></h3>
+                        <span><a href="#">BENEE Featuring</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+                <div class="album">
+                    <div class="album__cover">
+                        <img src="/dna/img/covers/cover7.jpg" alt="">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                            </svg></a>
+                        <span class="album__stat">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                </svg> 16</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                </svg> 500k</span>
+                        </span>
+                    </div>
+                    <div class="album__title">
+                        <h3><a href="#">Girls In The Hood</a></h3>
+                        <span><a href="#">Megan Thee</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+                <div class="album">
+                    <div class="album__cover">
+                        <img src="/dna/img/covers/cover8.jpg" alt="">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                            </svg></a>
+                        <span class="album__stat">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                </svg> 8</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                </svg> 56 042</span>
+                        </span>
+                    </div>
+                    <div class="album__title">
+                        <h3><a href="#">Got It On Me</a></h3>
+                        <span><a href="#">Summer Walker</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+                <div class="album">
+                    <div class="album__cover">
+                        <img src="/dna/img/covers/cover9.jpg" alt="">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                            </svg></a>
+                        <span class="album__stat">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                </svg> 24</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                </svg> 100k</span>
+                        </span>
+                    </div>
+                    <div class="album__title">
+                        <h3><a href="#">Righteous</a></h3>
+                        <span><a href="#">Juice WRLD</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+                <div class="album">
+                    <div class="album__cover">
+                        <img src="/dna/img/covers/cover10.jpg" alt="">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                            </svg></a>
+                        <span class="album__stat">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                </svg> 16</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                </svg> 2 482</span>
+                        </span>
+                    </div>
+                    <div class="album__title">
+                        <h3><a href="#">Walk Em Down</a></h3>
+                        <span><a href="#">NLE Choppa</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+                <div class="album">
+                    <div class="album__cover">
+                        <img src="/dna/img/covers/cover11.jpg" alt="">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                            </svg></a>
+                        <span class="album__stat">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                </svg> 19</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                </svg> 50k</span>
+                        </span>
+                    </div>
+                    <div class="album__title">
+                        <h3><a href="#">Like That</a></h3>
+                        <span><a href="#">Stefflon Don</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+                <div class="album">
+                    <div class="album__cover">
+                        <img src="/dna/img/covers/cover12.jpg" alt="">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                            </svg></a>
+                        <span class="album__stat">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                </svg> 16</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                </svg> 75k</span>
+                        </span>
+                    </div>
+                    <div class="album__title">
+                        <h3><a href="#">One Big Country</a></h3>
+                        <span><a href="#">LOCASH</a></span>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+
+        <!-- end releases -->
+
+        <!-- events -->
+        <!-- <section class="row row--grid">
+           
+            <div class="col-12">
+                <div class="main__title">
+                    <h2>Upcoming Events</h2>
+
+                    <a href="events.html" class="main__link">See all <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z" />
+                        </svg></a>
+                </div>
+            </div>
+           
+
+            <div class="col-12">
+                <div class="main__carousel-wrap">
+                    <div class="main__carousel main__carousel--events owl-carousel" id="events">
+                        <div class="event" data-bg="/dna/img/events/event1.jpg">
+                            <a href="#modal-ticket" class="event__ticket open-modal"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M9,10a1,1,0,0,0-1,1v2a1,1,0,0,0,2,0V11A1,1,0,0,0,9,10Zm12,1a1,1,0,0,0,1-1V6a1,1,0,0,0-1-1H3A1,1,0,0,0,2,6v4a1,1,0,0,0,1,1,1,1,0,0,1,0,2,1,1,0,0,0-1,1v4a1,1,0,0,0,1,1H21a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1,1,1,0,0,1,0-2ZM20,9.18a3,3,0,0,0,0,5.64V17H10a1,1,0,0,0-2,0H4V14.82A3,3,0,0,0,4,9.18V7H8a1,1,0,0,0,2,0H20Z" />
+                                </svg> Buy ticket</a>
+                            <span class="event__date">March 14, 2021</span>
+                            <span class="event__time">8:00 pm</span>
+                            <h3 class="event__title"><a href="event.html">Sorry Babushka</a></h3>
+                            <p class="event__address">1 East Plumb Branch St.Saint Petersburg, FL 33702</p>
+                        </div>
+
+                        <div class="event" data-bg="/dna/img/events/event2.jpg">
+                            <a href="#modal-ticket" class="event__ticket open-modal"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M9,10a1,1,0,0,0-1,1v2a1,1,0,0,0,2,0V11A1,1,0,0,0,9,10Zm12,1a1,1,0,0,0,1-1V6a1,1,0,0,0-1-1H3A1,1,0,0,0,2,6v4a1,1,0,0,0,1,1,1,1,0,0,1,0,2,1,1,0,0,0-1,1v4a1,1,0,0,0,1,1H21a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1,1,1,0,0,1,0-2ZM20,9.18a3,3,0,0,0,0,5.64V17H10a1,1,0,0,0-2,0H4V14.82A3,3,0,0,0,4,9.18V7H8a1,1,0,0,0,2,0H20Z" />
+                                </svg> Buy ticket</a>
+                            <span class="event__date">March 16, 2021</span>
+                            <span class="event__time">7:00 pm</span>
+                            <h3 class="event__title"><a href="event.html">Big Daddy</a></h3>
+                            <p class="event__address">71 Pilgrim Avenue Chevy Chase, MD 20815</p>
+                        </div>
+
+                        <div class="event" data-bg="/dna/img/events/event3.jpg">
+                            <span class="event__out">Sold out</span>
+                            <span class="event__date">March 23, 2021</span>
+                            <span class="event__time">9:30 pm</span>
+                            <h3 class="event__title"><a href="event.html">Rocky Pub</a></h3>
+                            <p class="event__address">514 S. Magnolia St. Orlando, FL 32806</p>
+                        </div>
+
+                        <div class="event" data-bg="/dna/img/events/event4.jpg">
+                            <a href="#modal-ticket" class="event__ticket open-modal"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M9,10a1,1,0,0,0-1,1v2a1,1,0,0,0,2,0V11A1,1,0,0,0,9,10Zm12,1a1,1,0,0,0,1-1V6a1,1,0,0,0-1-1H3A1,1,0,0,0,2,6v4a1,1,0,0,0,1,1,1,1,0,0,1,0,2,1,1,0,0,0-1,1v4a1,1,0,0,0,1,1H21a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1,1,1,0,0,1,0-2ZM20,9.18a3,3,0,0,0,0,5.64V17H10a1,1,0,0,0-2,0H4V14.82A3,3,0,0,0,4,9.18V7H8a1,1,0,0,0,2,0H20Z" />
+                                </svg> Buy ticket</a>
+                            <span class="event__date">March 30, 2021</span>
+                            <span class="event__time">6:00 pm</span>
+                            <h3 class="event__title"><a href="event.html">Big Club</a></h3>
+                            <p class="event__address">123 6th St. Melbourne, FL 32904</p>
+                        </div>
+
+                        <div class="event" data-bg="/dna/img/events/event5.jpg">
+                            <span class="event__out">Sold out</span>
+                            <span class="event__date">March 30, 2021</span>
+                            <span class="event__time">10:00 pm</span>
+                            <h3 class="event__title"><a href="event.html">Big Daddy</a></h3>
+                            <p class="event__address">71 Pilgrim Avenue Chevy Chase, MD 20815</p>
+                        </div>
+
+                        <div class="event" data-bg="/dna/img/events/event6.jpg">
+                            <a href="#modal-ticket" class="event__ticket open-modal"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M9,10a1,1,0,0,0-1,1v2a1,1,0,0,0,2,0V11A1,1,0,0,0,9,10Zm12,1a1,1,0,0,0,1-1V6a1,1,0,0,0-1-1H3A1,1,0,0,0,2,6v4a1,1,0,0,0,1,1,1,1,0,0,1,0,2,1,1,0,0,0-1,1v4a1,1,0,0,0,1,1H21a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1,1,1,0,0,1,0-2ZM20,9.18a3,3,0,0,0,0,5.64V17H10a1,1,0,0,0-2,0H4V14.82A3,3,0,0,0,4,9.18V7H8a1,1,0,0,0,2,0H20Z" />
+                                </svg> Buy ticket</a>
+                            <span class="event__date">March 31, 2021</span>
+                            <span class="event__time">6:30 pm</span>
+                            <h3 class="event__title"><a href="event.html">Rocky Pub</a></h3>
+                            <p class="event__address">514 S. Magnolia St. Orlando, FL 32806</p>
+                        </div>
+                    </div>
+
+                    <button class="main__nav main__nav--prev" data-nav="#events" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M17,11H9.41l3.3-3.29a1,1,0,1,0-1.42-1.42l-5,5a1,1,0,0,0-.21.33,1,1,0,0,0,0,.76,1,1,0,0,0,.21.33l5,5a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L9.41,13H17a1,1,0,0,0,0-2Z" />
+                        </svg></button>
+                    <button class="main__nav main__nav--next" data-nav="#events" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z" />
+                        </svg></button>
+                </div>
+            </div>
+        </section> -->
+        <!-- end events -->
+
+        <!-- articts -->
+        <section class="row row--grid">
+            <!-- title -->
+            <div class="col-12">
+                <div class="main__title">
+                    <h2>Producers</h2>
+
+                    <a href="#" class="main__link">See all <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z" />
+                        </svg></a>
+                </div>
+            </div>
+            <!-- end title -->
+
+            <div class="col-12">
+                <div class="main__carousel-wrap">
+                    <div class="main__carousel main__carousel--artists owl-carousel" id="artists">
+                        @foreach($producers as $user)
+                        <a href="#" class="artist">
+                            <div class="artist__cover">
+                                @if($user->logo !== null)
+                                <img src="{{ config('app.env') === 'local' ? asset('producerImage/' . $user->logo) : 'https://dnasoundstudio.com/dnasoundfiles/public/producerImage/' . $user->logo }}"
+                                    alt="">
+                                @else
+                                <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png"
+                                    alt="">
+                                @endif
+                            </div>
+                            <h3 class="artist__title">{{$user->name}}</h3>
+                        </a>
+                        @endforeach
+
+                        <a href="#" class="artist">
+                            <div class="artist__cover">
+                                <img src="/dna/img/artists/artist2.jpg" alt="">
+                            </div>
+                            <h3 class="artist__title">Jason Aldean</h3>
+                        </a>
+
+                        <a href="#" class="artist">
+                            <div class="artist__cover">
+                                <img src="/dna/img/artists/artist3.jpg" alt="">
+                            </div>
+                            <h3 class="artist__title">John Doe</h3>
+                        </a>
+
+                        <a href="#" class="artist">
+                            <div class="artist__cover">
+                                <img src="/dna/img/artists/artist4.jpg" alt="">
+                            </div>
+                            <h3 class="artist__title">Megan Thee</h3>
+                        </a>
+
+                        <a href="#" class="artist">
+                            <div class="artist__cover">
+                                <img src="/dna/img/artists/artist5.jpg" alt="">
+                            </div>
+                            <h3 class="artist__title">Stefflon Don</h3>
+                        </a>
+
+                        <a href="#" class="artist">
+                            <div class="artist__cover">
+                                <img src="/dna/img/artists/artist6.jpg" alt="">
+                            </div>
+                            <h3 class="artist__title">Juice WRLD</h3>
+                        </a>
+
+                        <a href="#" class="artist">
+                            <div class="artist__cover">
+                                <img src="/dna/img/artists/artist7.jpg" alt="">
+                            </div>
+                            <h3 class="artist__title">LOCASH</h3>
+                        </a>
+
+                        <a href="#" class="artist">
+                            <div class="artist__cover">
+                                <img src="/dna/img/artists/artist8.jpg" alt="">
+                            </div>
+                            <h3 class="artist__title">NLE Choppa</h3>
+                        </a>
+                    </div>
+
+                    <button class="main__nav main__nav--prev" data-nav="#artists" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M17,11H9.41l3.3-3.29a1,1,0,1,0-1.42-1.42l-5,5a1,1,0,0,0-.21.33,1,1,0,0,0,0,.76,1,1,0,0,0,.21.33l5,5a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L9.41,13H17a1,1,0,0,0,0-2Z" />
+                        </svg></button>
+                    <button class="main__nav main__nav--next" data-nav="#artists" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z" />
+                        </svg></button>
+                </div>
+            </div>
+        </section>
+        <!-- end articts -->
+
+        <section class="row row--grid">
+            <div class="col-12 col-md-6 col-xl-6">
+                <div class="row row--grid">
+                    <!-- title -->
+                    <div class="col-12">
+                        <div class="main__title">
+                            <h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M21.65,2.24a1,1,0,0,0-.8-.23l-13,2A1,1,0,0,0,7,5V15.35A3.45,3.45,0,0,0,5.5,15,3.5,3.5,0,1,0,9,18.5V10.86L20,9.17v4.18A3.45,3.45,0,0,0,18.5,13,3.5,3.5,0,1,0,22,16.5V3A1,1,0,0,0,21.65,2.24ZM5.5,20A1.5,1.5,0,1,1,7,18.5,1.5,1.5,0,0,1,5.5,20Zm13-2A1.5,1.5,0,1,1,20,16.5,1.5,1.5,0,0,1,18.5,18ZM20,7.14,9,8.83v-3L20,4.17Z" />
+                                </svg><a href="#">Top Beats</a></h2>
+                        </div>
+                    </div>
+                    <!-- end title -->
+
+                    <div class="col-12">
+                        <ul class="main__list">
+                            @foreach($top as $key => $beat)
+                            <li class="single-item">
+
+                                <span class="single-item__rate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M12.71,12.54a1,1,0,0,0-1.42,0l-3,3A1,1,0,0,0,9.71,17L12,14.66,14.29,17a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Zm-3-1.08L12,9.16l2.29,2.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42l-3-3a1,1,0,0,0-1.42,0l-3,3a1,1,0,0,0,1.42,1.42Z" />
+                                    </svg>{{++$key}}</span>
+                                <a data-link data-playlist data-title="{{$beat->title}}" data-artist="{{$beat->author->name}}" href="{{ asset('beatfiles/' . $beat->file) }}" class="single-item__cover">
+                                    @if($beat->image !== null)
+                                    <img src="{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}"
+                                        alt="">
+                                    @else
+                                    <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png"
+                                        alt="">
+                                    @endif
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
+                                    </svg>
+                                </a>
+                                <div class="single-item__title">
+                                    <h4><a href="#">{{$beat->title}}</a></h4>
+                                    <span><a href="#">{{$beat->author->name ?? ""}}</a></span>
                                 </div>
-                                <!-- Hidden audio player -->
-                                <audio class="audio-player" style="display:none;">
-                                    <source src="" type="audio/mpeg">
-                                    Your browser does not support the audio element.
-                                </audio>
+                                <span class="single-item__time">2:35</span>
+                            </li>
+
+                            @endforeach
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-6">
+                <div class="row row--grid">
+                    <!-- title -->
+                    <div class="col-12">
+                        <div class="main__title">
+                            <h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M19.12,2.21A1,1,0,0,0,18.26,2l-8,2A1,1,0,0,0,9.5,5V15.35A3.45,3.45,0,0,0,8,15a3.5,3.5,0,1,0,3.5,3.5V10.78L18.74,9l.07,0L19,8.85l.15-.1a.93.93,0,0,0,.13-.15.78.78,0,0,0,.1-.15.55.55,0,0,0,.06-.18.58.58,0,0,0,0-.19.24.24,0,0,0,0-.08V3A1,1,0,0,0,19.12,2.21ZM8,20a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,8,20ZM17.5,7.22l-6,1.5V5.78l6-1.5Z" />
+                                </svg><a href="#">Latest</a></h2>
+                        </div>
+                    </div>
+                    <!-- end title -->
+
+                    <div class="col-12">
+                        <ul class="main__list">
+                            @foreach($trending as $key => $beat)
+                            <li class="single-item">
+
+
+                                <a data-link data-playlist data-title="{{$beat->title}}" data-artist="{{$beat->author->name}}" href="{{ asset('beatfiles/' . $beat->file) }}" class="single-item__cover">
+                                    @if($beat->image !== null)
+                                    <img src="{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}"
+                                        alt="">
+                                    @else
+                                    <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png"
+                                        alt="">
+                                    @endif
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
+                                    </svg>
+                                </a>
+                                <div class="single-item__title">
+                                    <h4><a href="#">{{$beat->title}}</a></h4>
+                                    <span><a href="#">{{$beat->author->name ?? ""}}</a></span>
+                                </div>
+                                <span class="single-item__time">2:35</span>
                             </li>
                             @endforeach
                         </ul>
                     </div>
-                    <style>
-                        @media (max-width: 767.98px) {
-                            .iq-music-box {
-                                flex: 0 0 50%;
-                                /* 2 items per row on mobile */
-                                max-width: 50%;
-                            }
-                        }
-
-                        @media (min-width: 768px) {
-                            .iq-music-box {
-                                flex: 0 0 20%;
-                                /* 5 items per row on larger screens */
-                                max-width: 20%;
-                            }
-                        }
-                    </style>
-
-
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                        <div class="header-title">
-                            <h4 class="card-title">Other Producers</h4>
-                        </div>
-                        <div id="feature-album-artist-slick-arrow" class="slick-aerrow-block"></div>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled row feature-album-artist mb-0">
-                            @foreach($producers as $producer)
-                            <li class="col-lg-2 col-md-6 col-6 iq-music-box">
-                                <div class="iq-thumb-artist">
-                                    <div class="iq-music-overlay"></div>
-                                    <a href="#">
-                                        @if($user->logo !== null)
-                                        <img src="{{ config('app.env') === 'local' ? asset('producerImage/' . $producer->logo) : 'https://dnasoundstudio.com/dnasoundfiles/public/producerImage/' . $producer->logo }}"
-                                            class="w-100 img-fluid" alt="">
-                                        @else
-                                        <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png"
-                                            class="w-100 img-fluid" alt="">
-                                        @endif
-                                    </a>
-                                    <div class="overlay-music-icon">
-                                        <a href="#">
-                                            <i class="las la-play-circle"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="feature-list text-center">
-                                    <h6 class="font-weight-600  mb-0">{{$producer->name}}</h6>
-                                </div>
-                            </li>
-                            @endforeach
-                         
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-header d-flex justify-content-between">
-                        <div class="header-title">
-                            <h4 class="card-title">Trending Beats</h4>
-                        </div>
-                        <div class="d-flex align-items-center iq-view">
-                            <b class="mb-0 text-primary"><a href="#">View More <i class="las la-angle-right"></i></a></b>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled row iq-box-hover mb-0">
-                            @foreach($trending as $beat)
-                            <li class="col-xl-2 col-lg-3 col-md-4 iq-music-box">
-                                <div class="card">
-                                    <div class="card-body p-0">
-                                        <div class="iq-thumb">
-                                            <div class="iq-music-overlay"></div>
-                                            <a href="#">
-                                                @if($beat->image !== null)
-                                                <img src="{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}"
-                                                    class="img-border-radius img-fluid w-100" alt="">
-                                                @else
-                                                <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png"
-                                                    class="img-border-radius img-fluid w-100" alt="">
-                                                @endif
-
-                                            </a>
-                                            <div class="overlay-music-icon">
-                                                <i class="las la-play-circle font-size-32"
-                                                    onclick="playAudio(this, '{{ (config('app.env') === 'local') ? asset('beatFiles/' . $beat->file) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatFiles/' . $beat->file }}')">
-                                                </i>
-                                            </div>
-                                        </div>
-                                        <div class="feature-list text-center">
-                                            <h6 class="font-weight-600  mb-0">{{$beat->title}}</h6>
-                                            <p class="mb-0">{{$beat->author->name ?? ""}}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <audio class="audio-player" style="display:none;">
-                                    <source src="" type="audio/mpeg">
-                                    Your browser does not support the audio element.
-                                </audio>
-                            </li>
-                            @endforeach
-                          
-                        </ul>
-                    </div>
-
                 </div>
             </div>
 
-            <!-- <div class="col-lg-12">
-                <div class="row">
+        </section>
 
-                    <div class="card card-block card-stretch card-height">
-                        <div class="card-header d-flex justify-content-between align-items-center">
-                            <div class="header-title">
-                                <h4 class="card-title">Purchased Beat</h4>
-                            </div>
-                            <div id="hot-song-slick-arrow" class="slick-aerrow-block"></div>
+
+        <!-- end podcasts -->
+
+        <!-- store -->
+        <!-- <section class="row row--grid">
+           
+            <div class="col-12">
+                <div class="main__title">
+                    <h2>Products</h2>
+
+                    <a href="store.html" class="main__link">See all <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z" />
+                        </svg></a>
+                </div>
+            </div>
+           
+
+            <div class="col-12">
+                <div class="main__carousel-wrap">
+                    <div class="main__carousel main__carousel--store owl-carousel" id="store">
+                        <div class="product">
+                            <a href="#" class="product__img">
+                                <img src="/dna/img/store/item1.jpg" alt="">
+                            </a>
+                            <h3 class="product__title"><a href="product.html">Vinyl Player</a></h3>
+                            <span class="product__price">$1 099</span>
+                            <span class="product__new">New</span>
                         </div>
-                        <div class="card-body">
-                            <ul class="list-unstyled row hot-songs mb-0">
-                                <li class="col-lg-12">
-                                    <div class="card card-transparent">
-                                        <div class="card-body p-0">
-                                            <div class="media align-items-center">
-                                                <div class="iq-thumb-hotsong">
-                                                    <div class="iq-music-overlay"></div>
-                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/01.png" class="img-fluid avatar-60" alt="">
-                                                    </a>
-                                                    <div class="overlay-music-icon">
-                                                        <a href="#">
-                                                            <i class="las la-play-circle font-size-24"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="media-body ml-3">
-                                                    <h6 class="mb-0 iq-song-title">God Whispered Your Name</h6>
-                                                    <small>Maggie Rogers</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="col-lg-12">
-                                    <div class="card card-transparent">
-                                        <div class="card-body p-0">
-                                            <div class="media align-items-center">
-                                                <div class="iq-thumb-hotsong">
-                                                    <div class="iq-music-overlay"></div>
-                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/02.png" class="img-fluid avatar-60" alt="">
-                                                    </a>
-                                                    <div class="overlay-music-icon">
-                                                        <a href="#">
-                                                            <i class="las la-play-circle font-size-24"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="media-body ml-3">
-                                                    <h6 class="mb-0 iq-song-title">Mood Swings</h6>
-                                                    <small>Maren Morris</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="col-lg-12">
-                                    <div class="card card-transparent mb-0 mb-lg-0">
-                                        <div class="card-body p-0">
-                                            <div class="media align-items-center">
-                                                <div class="iq-thumb-hotsong">
-                                                    <div class="iq-music-overlay"></div>
-                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/03.png" class="img-fluid avatar-60" alt=""></a>
-                                                    <div class="overlay-music-icon">
-                                                        <a href="#">
-                                                            <i class="las la-play-circle font-size-24"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="media-body ml-3">
-                                                    <h6 class="mb-0 iq-song-title">Something Special</h6>
-                                                    <small>Rico Nasty</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="col-lg-12">
-                                    <div class="card card-transparent">
-                                        <div class="card-body p-0">
-                                            <div class="media align-items-center">
-                                                <div class="iq-thumb-hotsong">
-                                                    <div class="iq-music-overlay"></div>
-                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/04.png" class="img-fluid avatar-60" alt="">
-                                                    </a>
-                                                    <div class="overlay-music-icon">
-                                                        <a href="#">
-                                                            <i class="las la-play-circle font-size-24"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="media-body ml-3">
-                                                    <h6 class="mb-0 iq-song-title">Tell Me U Luv Me</h6>
-                                                    <small>Kali Uchis</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="col-lg-12">
-                                    <div class="card card-transparent">
-                                        <div class="card-body p-0">
-                                            <div class="media align-items-center">
-                                                <div class="iq-thumb-hotsong">
-                                                    <div class="iq-music-overlay"></div>
-                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/05.png" class="img-fluid avatar-60" alt="">
-                                                    </a>
-                                                    <div class="overlay-music-icon">
-                                                        <a href="#">
-                                                            <i class="las la-play-circle font-size-24"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="media-body ml-3">
-                                                    <h6 class="mb-0 iq-song-title">Fighting Demons</h6>
-                                                    <small>Juice WRLD</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="col-lg-12">
-                                    <div class="card card-transparent mb-0 mb-lg-0">
-                                        <div class="card-body p-0">
-                                            <div class="media align-items-center">
-                                                <div class="iq-thumb-hotsong">
-                                                    <div class="iq-music-overlay"></div>
-                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/06.png" class="img-fluid avatar-60" alt="">
-                                                    </a>
-                                                    <div class="overlay-music-icon">
-                                                        <a href="#">
-                                                            <i class="las la-play-circle font-size-24"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="media-body ml-3">
-                                                    <h6 class="mb-0">Up Up And Away</h6>
-                                                    <small>Black Eyed Peas</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="col-lg-12">
-                                    <div class="card card-transparent">
-                                        <div class="card-body p-0">
-                                            <div class="media align-items-center">
-                                                <div class="iq-thumb-hotsong">
-                                                    <div class="iq-music-overlay"></div>
-                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/07.png" class="img-fluid avatar-60" alt="">
-                                                    </a>
-                                                    <div class="overlay-music-icon">
-                                                        <a href="#">
-                                                            <i class="las la-play-circle font-size-24"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="media-body ml-3">
-                                                    <h6 class="mb-0 iq-song-title">Fighting Demons</h6>
-                                                    <small>Juice WRLD</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="col-lg-12">
-                                    <div class="card card-transparent">
-                                        <div class="card-body p-0">
-                                            <div class="media align-items-center">
-                                                <div class="iq-thumb-hotsong">
-                                                    <div class="iq-music-overlay"></div>
-                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/08.png" class="img-fluid avatar-60" alt="">
-                                                    </a>
-                                                    <div class="overlay-music-icon">
-                                                        <a href="#">
-                                                            <i class="las la-play-circle font-size-24"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="media-body ml-3">
-                                                    <h6 class="mb-0 iq-song-title">More Than My Hometown </h6>
-                                                    <small>Keith Urban</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="col-lg-12">
-                                    <div class="card card-transparent mb-0 mb-lg-0">
-                                        <div class="card-body p-0">
-                                            <div class="media align-items-center">
-                                                <div class="iq-thumb-hotsong">
-                                                    <div class="iq-music-overlay"></div>
-                                                    <a href="#"><img src="https://dnasoundstudio.com/producers/assets//images/music-dashboard/hot-songs/09.png" class="img-fluid avatar-60" alt="">
-                                                    </a>
-                                                    <div class="overlay-music-icon">
-                                                        <a href="#">
-                                                            <i class="las la-play-circle font-size-24"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="media-body ml-3">
-                                                    <h6 class="mb-0 iq-song-title">3 Headed Goat</h6>
-                                                    <small>Clairo</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+
+                        <div class="product">
+                            <a href="#" class="product__img">
+                                <img src="/dna/img/store/item2.jpg" alt="">
+                            </a>
+                            <h3 class="product__title"><a href="product.html">Microphone R4</a></h3>
+                            <span class="product__price">$799</span>
+                        </div>
+
+                        <div class="product">
+                            <a href="#" class="product__img">
+                                <img src="/dna/img/store/item3.jpg" alt="">
+                            </a>
+                            <h3 class="product__title"><a href="product.html">Music Blank</a></h3>
+                            <span class="product__price">$3.99</span>
+                            <span class="product__new">New</span>
+                        </div>
+
+                        <div class="product">
+                            <a href="#" class="product__img">
+                                <img src="/dna/img/store/item4.jpg" alt="">
+                            </a>
+                            <h3 class="product__title"><a href="product.html">Headphones ZR-991</a></h3>
+                            <span class="product__price">$199</span>
+                        </div>
+
+                        <div class="product">
+                            <a href="#" class="product__img">
+                                <img src="/dna/img/store/item5.jpg" alt="">
+                            </a>
+                            <h3 class="product__title"><a href="product.html">Piano</a></h3>
+                            <span class="product__price">$11 899</span>
+                        </div>
+
+                        <div class="product">
+                            <a href="#" class="product__img">
+                                <img src="/dna/img/store/item6.jpg" alt="">
+                            </a>
+                            <h3 class="product__title"><a href="product.html">Vinyl Player</a></h3>
+                            <span class="product__price">$2 499</span>
+                        </div>
+
+                        <div class="product">
+                            <a href="#" class="product__img">
+                                <img src="/dna/img/store/item7.jpg" alt="">
+                            </a>
+                            <h3 class="product__title"><a href="product.html">Guitar</a></h3>
+                            <span class="product__price">$299</span>
+                        </div>
+
+                        <div class="product">
+                            <a href="#" class="product__img">
+                                <img src="/dna/img/store/item8.jpg" alt="">
+                            </a>
+                            <h3 class="product__title"><a href="product.html">Microphone R4s</a></h3>
+                            <span class="product__price">$199</span>
                         </div>
                     </div>
 
+                    <button class="main__nav main__nav--prev" data-nav="#store" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M17,11H9.41l3.3-3.29a1,1,0,1,0-1.42-1.42l-5,5a1,1,0,0,0-.21.33,1,1,0,0,0,0,.76,1,1,0,0,0,.21.33l5,5a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L9.41,13H17a1,1,0,0,0,0-2Z" />
+                        </svg></button>
+                    <button class="main__nav main__nav--next" data-nav="#store" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z" />
+                        </svg></button>
                 </div>
-            </div> -->
-        </div>
+            </div>
+        </section> -->
+        <!-- end store -->
+
+        <!-- news -->
+        <section class="row row--grid">
+            <!-- title -->
+            <div class="col-12">
+                <div class="main__title">
+                    <h2>News</h2>
+
+                    <a href="news.html" class="main__link">See all <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z" />
+                        </svg></a>
+                </div>
+            </div>
+            <!-- end title -->
+
+            <!-- video post -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="post">
+                    <a href="article.html" class="post__img">
+                        <img src="/dna/img/posts/1.jpg" alt="">
+                    </a>
+
+                    <a href="http://www.youtube.com/watch?v=0O2aH4XLbto" class="post__video open-video">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M16,10.27,11,7.38A2,2,0,0,0,8,9.11v5.78a2,2,0,0,0,1,1.73,2,2,0,0,0,2,0l5-2.89a2,2,0,0,0,0-3.46ZM15,12l-5,2.89V9.11L15,12ZM12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" />
+                        </svg> Watch backstage
+                    </a>
+
+                    <div class="post__content">
+                        <a href="#" class="post__category">Music</a>
+                        <h3 class="post__title"><a href="article.html">Watch Artist Burna Performance at ...</a></h3>
+                        <div class="post__meta">
+                            <span class="post__date"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M12,2A10,10,0,1,0,22,12,10.01114,10.01114,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.00917,8.00917,0,0,1,12,20ZM14.09814,9.63379,13,10.26807V7a1,1,0,0,0-2,0v5a1.00025,1.00025,0,0,0,1.5.86621l2.59814-1.5a1.00016,1.00016,0,1,0-1-1.73242Z" />
+                                </svg> 2 hours ago</span>
+                            <span class="post__comments"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M13,11H7a1,1,0,0,0,0,2h6a1,1,0,0,0,0-2Zm4-4H7A1,1,0,0,0,7,9H17a1,1,0,0,0,0-2Zm2-5H5A3,3,0,0,0,2,5V15a3,3,0,0,0,3,3H16.59l3.7,3.71A1,1,0,0,0,21,22a.84.84,0,0,0,.38-.08A1,1,0,0,0,22,21V5A3,3,0,0,0,19,2Zm1,16.59-2.29-2.3A1,1,0,0,0,17,16H5a1,1,0,0,1-1-1V5A1,1,0,0,1,5,4H19a1,1,0,0,1,1,1Z" />
+                                </svg> 61</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end video post -->
+
+            <!-- post -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="post">
+                    <a href="article.html" class="post__img">
+                        <img src="/dna/img/posts/2.jpg" alt="">
+                    </a>
+
+                    <div class="post__content">
+                        <a href="#" class="post__category">Music</a>
+                        <h3 class="post__title"><a href="article.html">DJ Cuppy featured on the new trending movie SUPACELL!</a></h3>
+                        <div class="post__meta">
+                            <span class="post__date"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M12,2A10,10,0,1,0,22,12,10.01114,10.01114,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.00917,8.00917,0,0,1,12,20ZM14.09814,9.63379,13,10.26807V7a1,1,0,0,0-2,0v5a1.00025,1.00025,0,0,0,1.5.86621l2.59814-1.5a1.00016,1.00016,0,1,0-1-1.73242Z" />
+                                </svg> 3 hours ago</span>
+                            <span class="post__comments"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M13,11H7a1,1,0,0,0,0,2h6a1,1,0,0,0,0-2Zm4-4H7A1,1,0,0,0,7,9H17a1,1,0,0,0,0-2Zm2-5H5A3,3,0,0,0,2,5V15a3,3,0,0,0,3,3H16.59l3.7,3.71A1,1,0,0,0,21,22a.84.84,0,0,0,.38-.08A1,1,0,0,0,22,21V5A3,3,0,0,0,19,2Zm1,16.59-2.29-2.3A1,1,0,0,0,17,16H5a1,1,0,0,1-1-1V5A1,1,0,0,1,5,4H19a1,1,0,0,1,1,1Z" />
+                                </svg> 18</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end post -->
+
+            <!-- post -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="post">
+                    <a href="article.html" class="post__img">
+                        <img src="/dna/img/posts/3.jpg" alt="">
+                    </a>
+
+                    <div class="post__content">
+                        <a href="#" class="post__category">Features</a>
+                        <h3 class="post__title"><a href="article.html">Why should you choose DNA Sound Studio?</a></h3>
+                        <div class="post__meta">
+                            <span class="post__date"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M12,2A10,10,0,1,0,22,12,10.01114,10.01114,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.00917,8.00917,0,0,1,12,20ZM14.09814,9.63379,13,10.26807V7a1,1,0,0,0-2,0v5a1.00025,1.00025,0,0,0,1.5.86621l2.59814-1.5a1.00016,1.00016,0,1,0-1-1.73242Z" />
+                                </svg> 9 hours ago</span>
+                            <span class="post__comments"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M13,11H7a1,1,0,0,0,0,2h6a1,1,0,0,0,0-2Zm4-4H7A1,1,0,0,0,7,9H17a1,1,0,0,0,0-2Zm2-5H5A3,3,0,0,0,2,5V15a3,3,0,0,0,3,3H16.59l3.7,3.71A1,1,0,0,0,21,22a.84.84,0,0,0,.38-.08A1,1,0,0,0,22,21V5A3,3,0,0,0,19,2Zm1,16.59-2.29-2.3A1,1,0,0,0,17,16H5a1,1,0,0,1-1-1V5A1,1,0,0,1,5,4H19a1,1,0,0,1,1,1Z" />
+                                </svg> 54</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end post -->
+        </section>
+        <!-- end news -->
+
+        <!-- partners -->
+        <!-- <div class="row">
+            <div class="col-12">
+                <div class="partners owl-carousel">
+                    <a href="#" class="partners__img">
+                        <img src="/dna/img/partners/3docean-light-background.png" alt="">
+                    </a>
+
+                    <a href="#" class="partners__img">
+                        <img src="/dna/img/partners/activeden-light-background.png" alt="">
+                    </a>
+
+                    <a href="#" class="partners__img">
+                        <img src="/dna/img/partners/audiojungle-light-background.png" alt="">
+                    </a>
+
+                    <a href="#" class="partners__img">
+                        <img src="/dna/img/partners/codecanyon-light-background.png" alt="">
+                    </a>
+
+                    <a href="#" class="partners__img">
+                        <img src="/dna/img/partners/photodune-light-background.png" alt="">
+                    </a>
+
+                    <a href="#" class="partners__img">
+                        <img src="/dna/img/partners/themeforest-light-background.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div> -->
+        <!-- end partners -->
     </div>
-</div>
+</main>
 @endsection
 
 @section('script')
-
-<script>
-    let currentAudioPlayer = null; // Track the currently playing audio player
-
-    function playAudio(playButton, audioSrc) {
-        // Get the parent li element
-        const liElement = playButton.closest('li');
-
-        // Get the hidden audio player in the li element
-        const audioPlayer = liElement.querySelector('.audio-player');
-
-        // If there is a currently playing audio player and it's not the one clicked, pause it
-        if (currentAudioPlayer && currentAudioPlayer !== audioPlayer) {
-            currentAudioPlayer.pause();
-            currentAudioPlayer.currentTime = 0; // Reset playback position
-            const currentPlayButton = document.querySelector('.la-pause-circle');
-            if (currentPlayButton) {
-                currentPlayButton.classList.remove('la-pause-circle');
-                currentPlayButton.classList.add('la-play-circle');
-            }
-        }
-
-        // Set the new audio source
-        audioPlayer.querySelector('source').src = audioSrc;
-        audioPlayer.load();
-
-        // Toggle play/pause based on the current state
-        if (audioPlayer === currentAudioPlayer) {
-            if (audioPlayer.paused) {
-                audioPlayer.play();
-                playButton.classList.remove('la-play-circle');
-                playButton.classList.add('la-pause-circle');
-            } else {
-                audioPlayer.pause();
-                playButton.classList.remove('la-pause-circle');
-                playButton.classList.add('la-play-circle');
-            }
-        } else {
-            // If a different audio player is clicked
-            audioPlayer.play();
-            playButton.classList.remove('la-play-circle');
-            playButton.classList.add('la-pause-circle');
-            currentAudioPlayer = audioPlayer;
-
-            // When audio ends, change the pause icon back to play icon
-            audioPlayer.onended = function() {
-                playButton.classList.remove('la-pause-circle');
-                playButton.classList.add('la-play-circle');
-                currentAudioPlayer = null; // Clear the current audio player
-            };
-        }
-    }
-</script>
-
-
 
 @endsection

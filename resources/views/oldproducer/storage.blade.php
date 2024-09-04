@@ -74,7 +74,12 @@
                     </div>
                   
                     <a class='btn btn-warning' href='/create-beat'> Create Beat</a>
-                    <p class='m-2 text-primary'><i>/Home</i></p>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb iq-bg-danger mb-0">
+                           <li class="breadcrumb-item"><a href="#" class="text-danger"><i class="ri-home-4-line mr-1 float-left"></i>Home</a></li>
+                          
+                        </ol>
+                     </nav>
                 </div>
               
             </div>

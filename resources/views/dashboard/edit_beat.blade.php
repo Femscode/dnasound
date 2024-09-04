@@ -1,4 +1,4 @@
-@extends('producer.master')
+@extends('dashboard.master')
 
 @section('header')
 
@@ -111,7 +111,7 @@
             <div class="col-12">
                 <ul class="breadcrumb">
                     <li class="breadcrumb__item"><a href="/dashboard">Home</a></li>
-                    <li class="breadcrumb__item breadcrumb__item--active">Create Beat</li>
+                    <li class="breadcrumb__item breadcrumb__item--active">Edit Beat</li>
                 </ul>
             </div>
             <!-- end breadcrumb -->
@@ -119,7 +119,7 @@
             <!-- title -->
             <div class="col-12">
                 <div class="main__title main__title--page">
-                    <h1>Create Beat</h1>
+                    <h1>Edit Beat</h1>
                 </div>
             </div>
             <!-- end title -->
@@ -127,14 +127,14 @@
 
         <div class="row row--grid">
             <div class="col-12 col-lg-7 col-xl-8">
-                <form method='post' action='/beat/save-beat' class="sign__form sign__form--contacts" enctype='multipart/form-data'>@csrf
+                <form method='post' action='/beat/update' class="sign__form sign__form--contacts" enctype='multipart/form-data'>@csrf
 
 
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <div class="sign__group">
                                 <select id="folder_id" name="folder_id" class="sign__input">
-                                    <option value='0'>Default(Home)</option>
+                                    <option value='{{$beat->folder_id ?? "0"}}'>{{$beat->folder->name ?? "Default(Home)"}}</option>
                                     @foreach($folders as $folder)
                                     <option value='{{$folder->id}}'>{{ $folder->name }}</option>
 
@@ -146,13 +146,15 @@
 
                         <div class="col-12 col-md-6">
                             <div class="sign__group">
-                                <input placeholder='Beat Title' type="text" id="title" name="title" class="sign__input">
+                                <input type='hidden' value='{{$beat->uuid}}'name='id'/>
+                                <input value='{{$beat->title}}' type="text" id="title" name="title" class="sign__input">
 
                             </div>
                         </div>
                         <div class="col-12 col-md-12">
                             <div class="sign__group">
-                                <textarea rows='8' placeholder='Beat Details' type="text" id="description" name="description" class="sign__input"></textarea>
+                                <input type='hidden' value='{{$beat->uuid}}'name='id'/>
+                                <textarea type="text" id="description" name="description" class="sign__input">{{$beat->description}}</textarea>
 
                             </div>
                         </div>
@@ -160,7 +162,7 @@
                         <div class="col-12 col-md-6">
                             <div class="sign__group">
                                 <select required id="genre" name="genre" class="sign__input">
-                                    <option>--Select Genre--</option>
+                                    <option value='{{$beat->genre ?? ""}}'>{{$beat->genre ?? "--Select Genre--"}}</option>
                                     <option value='Hip-Hop'>Hip-Hop</option>
                                     <option value='R&B'>R&B</option>
                                     <option value='Rock'>Rock</option>
@@ -172,7 +174,8 @@
                         <div class="col-12 col-md-6">
                             <div class="sign__group">
                             <select required id="visibility" name="visibility" class="sign__input">
-                                   <option>--Visibility--</option>
+                            <option value='{{$beat->visibility ?? ""}}'>{{$beat->visibility ?? "--Visibility--"}}</option>
+                                   
                                     <option value='Public'>Public</option>
                                     <option value='Private'>Private</option>
                                   </select>
@@ -182,7 +185,8 @@
                         <div class="col-12 col-md-6">
                             <div class="sign__group">
                                 <select required id="key" name="key" class="sign__input">
-                                    <option>--Select Key--</option>
+                                <option value='{{$beat->key ?? ""}}'>{{$beat->key ?? "--Select Key--"}}</option>
+                                   
                                     <option value='C-Major'>C Major</option>
                                     <option value='A-Major'>A Minor</option>
                                     <option value='G-Major'>G Major</option>
@@ -194,7 +198,9 @@
                             <div class="sign__group">
                                 <input type="hidden" name="instruments" id="selectedInstrumentsHidden">
 
-                                <ul id="selectedInstruments" class="selected-instruments-list"></ul>
+                                <ul id="selectedInstruments" class="selected-instruments-list">
+
+                                </ul>
                                 <select required id="instruments" multiple class="sign__input">
                                     <option>-Select Instruments-</option>
                                     <option value='Drums'>Drums</option>
@@ -228,7 +234,7 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <div class="sign__group">
-                                <input placeholder="Price (USD)" type="number" id="price" name="price" class="sign__input">
+                                <input value="{{$beat->price}}" type="number" id="price" name="price" class="sign__input">
                             </div>
                         </div>
 
@@ -301,7 +307,6 @@
 </script>
 <script>
     $(document).ready(function () {
-
     const $input = $('#tags');
     const $tagsContainer = $('#tags-container');
     const $hiddenInput = $('#tags-hidden');
@@ -348,6 +353,4 @@
 });
 
 </script>
-
-
 @endsection

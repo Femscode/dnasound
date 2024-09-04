@@ -14,4 +14,11 @@ class Beat extends Model
     public function author() {
         return $this->belongsTo(User::class,'user_id','uuid');
     }
+    public function folder() {
+        return $this->belongsTo(Folder::class,'folder_id');
+    }
+    protected $casts = [
+        'tags' => 'array',
+        'instruments' =>  'array',
+    ];
 }

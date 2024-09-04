@@ -27,6 +27,7 @@ class CreateBeatsTable extends Migration
             $table->string('description')->nullable();
             $table->string('tags')->nullable();
             $table->string('genre')->nullable();
+            $table->string('visibility')->default('public');
             $table->string('instruments')->nullable();
             $table->string('key')->nullable();
             $table->string('tempo')->nullable();
