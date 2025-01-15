@@ -2,20 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Beat;
 use App\Models\Blog;
 use App\Models\Contact;
 use App\Models\Project;
+use App\Models\ProjectAdditionalImage;
 use App\Models\Service;
 use Illuminate\Http\Request;
-use App\Models\ProjectAdditionalImage;
 
 class FrontendController extends Controller
 {
    
     public function index() {
-       
-        return view('newfrontend.index');
-        return view('frontend.index');
+        $data['trending']  = Beat::latest()->get();
+        return view('frontend.index',$data);
     }
     public function about() {
         return view('frontend.about');

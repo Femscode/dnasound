@@ -8,31 +8,23 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-
     <style>
-        * {
-            font-family: "Poppins", sans-serif;
-            ;
-            font-weight: 300;
-        }
-
-        body {
-            background: #222222;
-            color: #ffffff;
-        }
-
+         * {
+            font-family: 'Poppins';
+            font-weight: 500;
+         }
+       
         .login-container {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-
         .sign {
             text-decoration: none;
-            color: #FF482C;
-            font-size: 14px;
-
+            color:#FF482C;
+            font-size:14px;
+        
         }
 
         .login-form {
@@ -51,8 +43,8 @@
         }
 
         .my-input {
-            /* background: transparent; */
-            /* color: #fff !important; */
+            background: transparent;
+            color: #fff !important;
             padding: 15px;
         }
 
@@ -63,36 +55,14 @@
         p {
             color: #fff;
             text-align: center;
-            font-size: 14px;
-            color: #DBDBDB;
-            font-weight: 300;
         }
 
         .btn-login {
             background: #FF482C;
         }
 
-        .btn-login:hover {
-            background: #FFFDD4;
-            color: black;
-
-        }
-
         .recover {
             color: #FF482C;
-
-        }
-
-        .login-p {
-            font-size: 18px;
-            line-height: 29.16px;
-            font-weight: 400;
-        }
-
-        input {
-            color: #5A5A5A;
-            border: 1px solid #5A5A5A;
-            border-radius: 10px;
 
         }
 
@@ -101,42 +71,31 @@
                 display: none;
             }
         }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 5px;
-            background-color: #333333;
-        }
-
-        .header img {
-            max-width: 150px;
-        }
-
-        .continue {
-            font-size: 13px;
-            /* font-family: arial; */
-        }
     </style>
 </head>
 
 <body>
-    <!-- Header Section -->
-    <div class="header">
-        <img src="/assets/images/logo/png/logo4.png" alt="Logo">
-        <p class="mb-0">Don't have an account? <a href="/register" class="sign">Sign Up</a></p>
-    </div>
-
-    <!-- Login Content -->
     <div class="container-fluid">
+
         <div class="row login-container">
+
+
             <!-- Login Form -->
             <div class="col-md-6 d-flex flex-column align-items-center justify-content-center">
+                <div class="d-flex justify-content-between w-100 mb-4">
+                    <div>
+                        <img width="203" height="105" title="DNASound STUDIO.com" alt="DNASoundStudio Logo"
+                            aria-label="DNASound STUDIO.com" loading="eager" src="/assets/images/logo/png/logo4.png"
+                            data-v-c835270e />
+                    </div>
+                    <div class='mt-4'>
+                        <p class='mt-2'>Don't have an account? <a href='/register' class='sign'>Sign Up</a></p>
+                    </div>
 
+                </div>
                 <div class="login-form w-100">
-                    <h2 class="text-center mb-1">Get Started With MAKER</h2>
-                    <p class='login-p'>Getting started is easy!</p>
+                    <h2 class="text-center mb-1">Welcome Back</h2>
+                    <p>Login into your account!</p>
 
                     <!-- Social Login Buttons -->
                     <div class="d-flex justify-content-center mb-3">
@@ -177,35 +136,17 @@
                         </div>
 
                     </div>
-                    <p style='font-family:arial'>_________ <span class='continue'>or continue with</span> _________</p>
+                    <p style='font-family:arial'>_________ or continue with _________</p>
 
                     <!-- Login Form -->
-                    <form method='post' action='{{route("register")}}'>@csrf
-                        @if($errors->any())
-                        <div style='color:white' class='alert alert-danger'>
-
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        @endif
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Full Name</label>
-                            <input type="text" name='name' class="form-control my-input" id="email" placeholder="Enter Full Name" required>
-                        </div>
+                    <form>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email Address</label>
-                            <input type="email" name='email' class="form-control my-input" id="email" placeholder="Enter Email" required>
+                            <input type="email" class="form-control my-input" id="email" placeholder="Enter your email" required>
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" name='password' class="form-control my-input" id="password" placeholder="Enter your password" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Confirm Password</label>
-                            <input type="password" name='password_confirmation' class="form-control my-input" id="password" placeholder="Confirm Password" required>
+                            <input type="password" class="form-control my-input" id="password" placeholder="Enter your password" required>
                         </div>
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <div class="form-check">
@@ -216,13 +157,14 @@
 
 
                         </div>
-                        <button type="submit" class="btn btn-login w-100 text-dark">Create Account</button>
+                        <button type="submit" class="btn btn-login w-100 text-dark">Login</button>
                     </form>
                 </div>
             </div>
+
             <!-- Image Section -->
             <div class="col-md-6 login-image">
-                <img src="assets/images/loginhero.png" alt="Login Hero">
+                <img src='assets/images/loginhero.png' />
             </div>
         </div>
     </div>
