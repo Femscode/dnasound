@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Webestica.com">
-    <meta name="description" content="Booking - Multipurpose Online Booking Theme">
+    <meta name="description" content="Find the perfect beat for your project">
 
     <link rel="stylesheet" href="{{url('dna/css/bootstrap-reboot.min.css')}}">
     <link rel="stylesheet" href="{{url('dna/css/bootstrap-grid.min.css')}}">
