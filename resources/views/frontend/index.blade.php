@@ -62,8 +62,8 @@
 
         </div>
     </section>
-    <section class='row m-2 p-2'>
-    <div class="d-flex col-md-12 justify-content-start category-container">
+    <!-- <section class='row m-2 p-2'>
+        <div class="d-flex col-md-12 justify-content-start category-container">
             <h6 class='category_list'>Classical</h6>
             <h6 class='category_list'>Ambiant</h6>
             <h6 class='category_list'>Soundtrack</h6>
@@ -83,7 +83,7 @@
             <h6 class='category_list'>Trap</h6>
             <h6 class='category_list'>Hiphop</h6>
         </div>
-    </section>
+    </section> -->
 
     <!-- <section class="row row--grid m-2 p-2">
 
@@ -439,7 +439,7 @@
                                 <span><a href="#">Fasanya Pelumi</a></span>
                             </div>
                             <span class="single-item__time">5:35</span>
-                           
+
                         </li>
 
                         <li class="single-item">
@@ -461,7 +461,7 @@
                                 <span><a href="#">Fasanya Pelumi</a></span>
                             </div>
                             <span class="single-item__time">1:45</span>
-                           
+
                         </li>
 
                         <li class="single-item">
@@ -483,7 +483,7 @@
                                 <span><a href="#">Fasanya Pelumi</a></span>
                             </div>
                             <span class="single-item__time">2:05</span>
-                            
+
                         </li>
 
                         <li class="single-item">
@@ -505,7 +505,7 @@
                                 <span><a href="#">Fasanya Pelumi</a></span>
                             </div>
                             <span class="single-item__time">3:35</span>
-                            
+
                         </li>
 
                         <li class="single-item">
@@ -527,14 +527,14 @@
                                 <span><a href="#">Fasanya Pelumi</a></span>
                             </div>
                             <span class="single-item__time">2:35</span>
-                           
+
                         </li>
 
 
 
                     </ul>
                 </div>
-             
+
             </div>
         </div>
 
@@ -543,7 +543,7 @@
                 <!-- title -->
                 <div class="col-12">
                     <div class="main__title">
-                       <br>
+                        <br>
                     </div>
                 </div>
                 <!-- end title -->
@@ -567,7 +567,7 @@
                                 <span><a href="#">Fasanya Pelumi</a></span>
                             </div>
                             <span class="single-item__time">2:35</span>
-                           
+
                         </li>
                         <li class="single-item">
 
@@ -586,7 +586,7 @@
                                 <span><a href="#">Fasanya Pelumi</a></span>
                             </div>
                             <span class="single-item__time">1:35</span>
-                           
+
                         </li>
                         <li class="single-item">
 
@@ -605,7 +605,7 @@
                                 <span><a href="#">Fasanya Pelumi</a></span>
                             </div>
                             <span class="single-item__time">5:35</span>
-                           
+
                         </li>
                         <li class="single-item">
 
@@ -624,7 +624,7 @@
                                 <span><a href="#">Fasanya Pelumi</a></span>
                             </div>
                             <span class="single-item__time">2:05</span>
-                           
+
                         </li>
                         <li class="single-item">
 
@@ -643,11 +643,11 @@
                                 <span><a href="#">Fasanya Pelumi</a></span>
                             </div>
                             <span class="single-item__time">2:35</span>
-                            
+
                         </li>
                     </ul>
                 </div>
-               
+
             </div>
         </div>
 
