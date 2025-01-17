@@ -13,7 +13,7 @@
                 <div class="hero owl-carousel" id="hero">
                     <div class="hero__slide" data-bg="/dna/img/home/slide1.jpg">
                         <h1 class="hero__title">DNA Sound Studio</h1>
-                        <p class="hero__text">Connecting Music Stars, Producers, and Artists.</p>
+                        <p class="hero__text">Connecting Music Starss, Producers, and Artists.</p>
                         <div class="hero__btns">
                             <a href="#" class="hero__btn hero__btn--green">Get Started</a>
                             <a href="#" class="hero__btn">About Us</a>

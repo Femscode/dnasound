@@ -124,7 +124,7 @@
 <body>
     <!-- Header Section -->
     <div class="header">
-        <img src="/assets/images/logo/png/logo4.png" alt="Logo">
+        <a href='/'><img src="/assets/images/logo/png/logo4.png" alt="Logo"></a>
         <p class="mb-0">Don't have an account? <a href="/register" class="sign">Sign Up</a></p>
     </div>
 
