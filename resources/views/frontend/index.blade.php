@@ -47,7 +47,8 @@
                 <!-- Image -->
                 <div class="col-lg-4 position-relative">
 
-                    <img style='margin-left:40px' src="{{url('assets/images/hero2.png')}}" class="rounded" alt="">
+                    <img src="{{url('assets/images/hero2.png')}}" class="rounded" alt="">
+                    <!-- <img style='margin-left:40px' src="{{url('assets/images/hero2.png')}}" class="rounded" alt=""> -->
 
 
                     <!-- Support guid -->
