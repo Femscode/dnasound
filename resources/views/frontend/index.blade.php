@@ -63,7 +63,7 @@
 
         </div>
     </section>
-    <!-- <section class='row m-2 p-2'>
+    <section class='row m-2 p-2'>
         <div class="d-flex col-md-12 justify-content-start category-container">
             <h6 class='category_list'>Classical</h6>
             <h6 class='category_list'>Ambiant</h6>
@@ -84,7 +84,7 @@
             <h6 class='category_list'>Trap</h6>
             <h6 class='category_list'>Hiphop</h6>
         </div>
-    </section> -->
+    </section>
 
     <!-- <section class="row row--grid m-2 p-2">
 
