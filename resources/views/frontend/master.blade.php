@@ -116,7 +116,7 @@
             <div class="container">
                 <!-- Logo START -->
 
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/">
                     <img
                         width="203" height="45" title="DNASound STUDIO.com" alt="DNASoundStudio Logo"
                         aria-label="DNASound STUDIO.com" loading="eager" src="/assets/images/logo/png/logo4.png"
