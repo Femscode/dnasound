@@ -310,7 +310,7 @@
 
                 </div>
                 <div class=''>
-                    <a href="/beat/my-beats" style='border-color:#fff' class="btn btn-dark bg-transparent border-1">View all→</a>
+                    <a href="/trending" style='border-color:#fff' class="btn btn-dark bg-transparent border-1">View all→</a>
                 </div>
             </div>
         </div>
@@ -378,7 +378,7 @@
 
                 </div>
                 <div class=''>
-                    <a href="/beat/my-beats" style='border-color:#fff' class="btn btn-dark bg-transparent border-1">View all→</a>
+                    <a href="/mostrated" style='border-color:#fff' class="btn btn-dark bg-transparent border-1">View all→</a>
                 </div>
             </div>
         </div>

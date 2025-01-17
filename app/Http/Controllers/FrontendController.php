@@ -14,8 +14,16 @@ class FrontendController extends Controller
 {
    
     public function index() {
-        $data['trending']  = Beat::latest()->get();
+        $data['trending']  = Beat::latest()->take(20)->get();
         return view('frontend.index',$data);
+    }
+    public function mostrated() {
+        $data['mostrated']  = Beat::latest()->paginate(20);
+        return view('frontend.mostrated',$data);
+    }
+    public function trending() {
+        $data['trending']  = Beat::latest()->paginate(20);
+        return view('frontend.trending',$data);
     }
     public function about() {
         return view('frontend.about');
