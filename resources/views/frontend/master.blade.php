@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>DNASoundStudio</title>
+    <title>DNA Sound Studio</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,6 +22,124 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        .audio-player {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #1b1b1b;
+            padding: 15px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .audio-player__artwork {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .audio-player__artwork img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .audio-player__info {
+            flex-grow: 1;
+            min-width: 0;
+        }
+
+        .audio-player__title {
+            color: #fff;
+            margin: 0;
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .audio-player__artist {
+            color: #888;
+            font-size: 12px;
+        }
+
+        .audio-player__controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .audio-player__button {
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .audio-player__progress {
+            flex-grow: 1;
+            margin: 0 15px;
+        }
+
+        .audio-player__progress-bar {
+            width: 100%;
+            height: 4px;
+            background: #333;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        .audio-player__progress-current {
+            width: 0%;
+            height: 100%;
+            background: #ff8876;
+            border-radius: 2px;
+            transition: width 0.1s linear;
+        }
+
+        .audio-player__time {
+            color: #888;
+            font-size: 12px;
+            min-width: 100px;
+            text-align: right;
+        }
+
+        @media (max-width: 768px) {
+            .audio-player {
+                padding: 10px;
+            }
+
+            .audio-player__artwork {
+                width: 40px;
+                height: 40px;
+            }
+
+            .audio-player__time {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .audio-player__title {
+                font-size: 12px;
+            }
+
+            .audio-player__artist {
+                font-size: 11px;
+            }
+        }
+    </style>
 
     <!-- <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
 
@@ -188,20 +306,49 @@
     @yield('content')
 
 
-    <div class="player">
-        <div class="player__cover">
-            <img src="{{asset('dna/img/covers/cover.svg')}}" alt="">
-        </div>
-
-        <div class="player__content">
-            <span class="player__track"><b class="player__title">DNA Music</b> – <span class="player__artist">{{$user->name ?? "Playlist"}}</span></span>
-            <audio src="https://dmitryvolkov.me/demo/blast2.0/audio/12071151_epic-cinematic-trailer_by_audiopizza_preview.mp3" id="audio" controls></audio>
+    
+<div class="audio-player">
+    <div class="audio-player__artwork">
+        <img src="{{asset('dna/img/covers/cover.svg')}}" alt="Album Art">
+    </div>
+    
+    <div class="audio-player__info">
+        <h4 class="audio-player__title">DNA Music</h4>
+        <div class="audio-player__artist">{{$user->name ?? "Playlist"}}</div>
+    </div>
+    
+    <div class="audio-player__controls">
+        <button class="audio-player__button" id="prevBtn">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7 6c.55 0 1 .45 1 1v10c0 .55-.45 1-1 1s-1-.45-1-1V7c0-.55.45-1 1-1zm3.66 6.82l5.77 4.07c.66.47 1.58-.01 1.58-.82V7.93c0-.81-.91-1.28-1.58-.82l-5.77 4.07c-.57.4-.57 1.24 0 1.64z"/>
+            </svg>
+        </button>
+        
+        <button class="audio-player__button" id="playPauseBtn">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+            </svg>
+        </button>
+        
+        <button class="audio-player__button" id="nextBtn">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7.58 16.89l5.77-4.07c.56-.4.56-1.24 0-1.63L7.58 7.11C6.91 6.65 6 7.12 6 7.93v8.14c0 .81.91 1.28 1.58.82zM16 7v10c0 .55.45 1 1 1s1-.45 1-1V7c0-.55-.45-1-1-1s-1 .45-1 1z"/>
+            </svg>
+        </button>
+    </div>
+    
+    <div class="audio-player__progress">
+        <div class="audio-player__progress-bar">
+            <div class="audio-player__progress-current" id="progressBar"></div>
         </div>
     </div>
+    
+    <div class="audio-player__time">
+        <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+    </div>
 
-    <button class="player__btn" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M21.65,2.24a1,1,0,0,0-.8-.23l-13,2A1,1,0,0,0,7,5V15.35A3.45,3.45,0,0,0,5.5,15,3.5,3.5,0,1,0,9,18.5V10.86L20,9.17v4.18A3.45,3.45,0,0,0,18.5,13,3.5,3.5,0,1,0,22,16.5V3A1,1,0,0,0,21.65,2.24ZM5.5,20A1.5,1.5,0,1,1,7,18.5,1.5,1.5,0,0,1,5.5,20Zm13-2A1.5,1.5,0,1,1,20,16.5,1.5,1.5,0,0,1,18.5,18ZM20,7.14,9,8.83v-3L20,4.17Z" />
-        </svg> Player</button>
+    <audio id="audio" src="https://dmitryvolkov.me/demo/blast2.0/audio/12071151_epic-cinematic-trailer_by_audiopizza_preview.mp3"></audio>
+</div>
 
     <footer style='background-color: #333333;' class="text-light py-0">
         <div class="container">
@@ -354,9 +501,58 @@ Footer END -->
     <script src="{{url('dna/js/select2.min.js')}}"></script>
     <script src="{{url('dna/js/slider-radio.js')}}"></script>
     <script src="{{url('dna/js/jquery.inputmask.min.js')}}"></script>
-    <script src="{{url('dna/js/plyr.min.js')}}"></script>
+    <!-- <script src="{{url('dna/js/plyr.min.js')}}"></script> -->
     <script src="{{url('dna/js/main.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('audio');
+            const playPauseBtn = document.getElementById('playPauseBtn');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const progressBar = document.getElementById('progressBar');
+            const progressContainer = document.querySelector('.audio-player__progress-bar');
+            const currentTimeSpan = document.getElementById('currentTime');
+            const durationSpan = document.getElementById('duration');
+
+            // Play/Pause
+            playPauseBtn.addEventListener('click', () => {
+                if (audio.paused) {
+                    audio.play();
+                    playPauseBtn.innerHTML = '<svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+                } else {
+                    audio.pause();
+                    playPauseBtn.innerHTML = '<svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
+                }
+            });
+
+            // Update progress bar
+            audio.addEventListener('timeupdate', () => {
+                const progress = (audio.currentTime / audio.duration) * 100;
+                progressBar.style.width = progress + '%';
+                currentTimeSpan.textContent = formatTime(audio.currentTime);
+            });
+
+            // Click on progress bar
+            progressContainer.addEventListener('click', (e) => {
+                const clickPosition = (e.offsetX / progressContainer.offsetWidth);
+                audio.currentTime = clickPosition * audio.duration;
+            });
+
+            // Update duration
+            audio.addEventListener('loadedmetadata', () => {
+                durationSpan.textContent = formatTime(audio.duration);
+            });
+
+            // Format time
+            function formatTime(seconds) {
+                const minutes = Math.floor(seconds / 60);
+                seconds = Math.floor(seconds % 60);
+                return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            }
+        });
+    </script>
     @yield('script')
 
 </body>
