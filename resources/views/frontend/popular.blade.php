@@ -186,7 +186,7 @@
         </div>
         <!-- end title -->
 
-                            @foreach($trending as $beat)
+                            @foreach($popular as $beat)
                             <div class="col-6 col-sm-4 col-lg-2" style="margin-right:0px !important;">
                                 <div class="album">
                                     <div class="album__cover">

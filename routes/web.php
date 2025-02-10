@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('stripepay', 'stripepay');
 Route::get('/', [FrontendController::class, 'index'])->name('homepage');
+Route::get('/popular', [FrontendController::class, 'popular'])->name('popular');
 Route::get('/mostrated', [FrontendController::class, 'mostrated'])->name('mostrated');
 Route::get('/trending', [FrontendController::class, 'trending'])->name('trending');
 Route::get('/about', [FrontendController::class, 'about'])->name('about');

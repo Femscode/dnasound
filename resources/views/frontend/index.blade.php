@@ -1,6 +1,55 @@
 @extends('frontend.master')
 @section('header')
 <style>
+    .album {
+        width: 150px;
+        text-align: center;
+        display: inline-block;
+
+        vertical-align: top;
+    }
+
+    .album__image {
+        width: 150px;
+        height: 120px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .album__image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .album__info {
+        text-align: left;
+        /* margin-top: 5px; */
+        /* Reduced spacing */
+    }
+
+    .beat-title {
+        font-size: 14px;
+        /* Slightly smaller for compact layout */
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 2px;
+    }
+
+    .beat-author {
+        font-size: 12px;
+        color: #aaa;
+        margin-bottom: 5px;
+    }
+
+    /* Reduce spacing in the container */
+    .owl-item {
+        padding: 1px;
+        margin-right: 0px !important;
+        /* Adjusts spacing within the carousel */
+    }
+
     .custom-stats h1 {
         margin-bottom: 0rem !important;
     }
@@ -370,16 +419,16 @@
                     <div class="owl-stage-outer owl-height">
                         <div class="owl-stage">
                             @foreach($trending as $beat)
-                            <div class="owl-item">
+                            <div class="owl-item" style="margin-right:0px !important;">
                                 <div class="album">
                                     <div class="album__cover">
-                                        @if($beat->image !== null)
-                                        <img src="{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}"
-                                            alt="">
-                                        @else
-                                        <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png"
-                                            alt="">
-                                        @endif
+                                        <div class="album__image">
+                                            @if($beat->image !== null)
+                                            <img src="{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}" alt="{{ $beat->title }}">
+                                            @else
+                                            <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png" alt="Default Album Cover">
+                                            @endif
+                                        </div>
                                         <span class="main__list main__list--playlist main__list--dashbox">
                                             <a href="javascript:void(0)" onclick="playAudio('{{ asset('dnasoundfiles/public/beatFiles/' . $beat->file) }}', '{{$beat->title}}', '{{$beat->author->name}}', '{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}')">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -387,11 +436,15 @@
                                                 </svg>
                                             </a>
                                         </span>
-                                        <!-- ... rest of the code ... -->
+                                    </div>
+                                    <div class="album__info">
+                                        <h4 class="beat-title">{{ $beat->title }}</h4>
+                                        <p class="beat-author">{{ $beat->author->name }}</p>
                                     </div>
                                 </div>
                             </div>
                             @endforeach
+
                         </div>
                     </div>
                 </div>
@@ -428,35 +481,28 @@
                 <div class="main__carousel main__carousel--artists owl-carousel owl-loaded owl-drag" id="mostrated">
                     <div class="owl-stage-outer owl-height">
                         <div class="owl-stage">
-                            @foreach($trending as $beat)
-                            <div class="owl-item">
+                            @foreach($mostrated as $beat)
+                            <div class="owl-item" style="margin-right:0px !important;">
                                 <div class="album">
                                     <div class="album__cover">
-                                        @if($beat->image !== null)
-                                        <img src="{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}"
-                                            alt="">
-                                        @else
-                                        <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png"
-                                            alt="">
-                                        @endif
-                                        <!-- <img src="https://dnasoundstudio.com/dnasoundfiles/public/beatImages/{{$beat->image}}" alt=""> -->
+                                        <div class="album__image">
+                                            @if($beat->image !== null)
+                                            <img src="{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}" alt="{{ $beat->title }}">
+                                            @else
+                                            <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png" alt="Default Album Cover">
+                                            @endif
+                                        </div>
                                         <span class="main__list main__list--playlist main__list--dashbox">
-                                            <a data-playlist data-title="{{$beat->title}}" data-artist="{{$beat->author->name}}" href="{{ asset('dnasoundfiles/public/beatFiles/' . $beat->file) }}">
+                                            <a href="javascript:void(0)" onclick="playAudio('{{ asset('dnasoundfiles/public/beatFiles/' . $beat->file) }}', '{{$beat->title}}', '{{$beat->author->name}}', '{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}')">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                                     <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                                </svg></a></span>
-                                        <span class="album__stat">
-                                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
-                                                </svg> 7</span>
-                                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
-                                                </svg> 4 731</span>
+                                                </svg>
+                                            </a>
                                         </span>
                                     </div>
-                                    <div class="album__title">
-                                        <h3><a href="/beat/beat-details/{{ $beat->id }}">{{ $beat->title }}</a></h3>
-                                        <span><a href="#">{{ $beat->author->name ?? 'Unknown' }}</a></span>
+                                    <div class="album__info">
+                                        <h4 class="beat-title">{{ $beat->title }}</h4>
+                                        <p class="beat-author">{{ $beat->author->name }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -485,13 +531,20 @@
 
                 <div class="col-12">
                     <ul class="main__list">
+                        @foreach($quickpick1 as $beat)
                         <li class="single-item">
 
                             <span class="single-item__rate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                     <path d="M12.71,12.54a1,1,0,0,0-1.42,0l-3,3A1,1,0,0,0,9.71,17L12,14.66,14.29,17a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Zm-3-1.08L12,9.16l2.29,2.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42l-3-3a1,1,0,0,0-1.42,0l-3,3a1,1,0,0,0,1.42,1.42Z"></path>
                                 </svg>1</span>
-                            <a data-link="" data-playlist="" data-title="Moving - Omah" data-artist="Fasanya Pelumi" href="https://dnasoundstudio.com/dnasoundfiles/public/beatFiles/Q6dP1hPnIMfo3OX823oaq0ibtJs2aRbxeMqiBpjm.mp3" class="single-item__cover">
-                                <img src="https://dnasoundstudio.com/dnasoundfiles/public/beatImages/eVxB2ePDHubSq85uS21zx1GBWhH7tA3Sln9qz2Wd.jpg" alt="">
+                            <a data-link="" data-playlist="" data-title="Moving - Omah" data-artist="Fasanya Pelumi" onclick="playAudio('{{ asset('dnasoundfiles/public/beatFiles/' . $beat->file) }}', '{{$beat->title}}', '{{$beat->author->name}}', '{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}')" class="single-item__cover">
+                                @if($beat->image !== null)
+                                <img src="{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}"
+                                    alt="">
+                                @else
+                                <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png"
+                                    alt="">
+                                @endif
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                     <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
                                 </svg>
@@ -500,100 +553,15 @@
                                 </svg>
                             </a>
                             <div class="single-item__title">
-                                <h4><a href="#">Moving - Omah</a></h4>
-                                <span><a href="#">Fasanya Pelumi</a></span>
+                                <h4><a href="https://dnasoundstudio.com/dnasoundfiles/public/beatFiles/Q6dP1hPnIMfo3OX823oaq0ibtJs2aRbxeMqiBpjm.mp3"> {{ $beat->title }}
+                                    </a></h4>
+                                <span><a href="#">{{ $beat->author->name ?? 'Unknown' }}</a></span>
                             </div>
                             <span class="single-item__time">5:35</span>
 
                         </li>
+                        @endforeach
 
-                        <li class="single-item">
-
-                            <span class="single-item__rate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M12.71,12.54a1,1,0,0,0-1.42,0l-3,3A1,1,0,0,0,9.71,17L12,14.66,14.29,17a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Zm-3-1.08L12,9.16l2.29,2.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42l-3-3a1,1,0,0,0-1.42,0l-3,3a1,1,0,0,0,1.42,1.42Z"></path>
-                                </svg>2</span>
-                            <a data-link="" data-playlist="" data-title="Everyday - Dbanj" data-artist="Fasanya Pelumi" href="https://dnasoundstudio.com/dnasoundfiles/public/beatFiles/lTkXZ2hrJo5zQW1jKbtlbG70HM7qvxkWNa7w1wPX.mp3" class="single-item__cover">
-                                <img src="https://dnasoundstudio.com/dnasoundfiles/public/beatImages/yohuPfxUWNc0uihBHEBt0awiGxgbwRp0QCKs3Q6h.jpg" alt="">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z"></path>
-                                </svg>
-                            </a>
-                            <div class="single-item__title">
-                                <h4><a href="#">Everyday - Dbanj</a></h4>
-                                <span><a href="#">Fasanya Pelumi</a></span>
-                            </div>
-                            <span class="single-item__time">1:45</span>
-
-                        </li>
-
-                        <li class="single-item">
-
-                            <span class="single-item__rate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M12.71,12.54a1,1,0,0,0-1.42,0l-3,3A1,1,0,0,0,9.71,17L12,14.66,14.29,17a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Zm-3-1.08L12,9.16l2.29,2.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42l-3-3a1,1,0,0,0-1.42,0l-3,3a1,1,0,0,0,1.42,1.42Z"></path>
-                                </svg>3</span>
-                            <a data-link="" data-playlist="" data-title="Everyday - Fireboy" data-artist="Fasanya Pelumi" href="https://dnasoundstudio.com/dnasoundfiles/public/beatFiles/n9WPqTMZQ8DKM6QQZ12olKce6XtyU1Y3JTX2P9uQ.mp3" class="single-item__cover">
-                                <img src="https://dnasoundstudio.com/dnasoundfiles/public/beatImages/9RPx1PNAmW7UpQRgfDeFtXmAOc6B1ptO3XPLXbxl.jpg" alt="">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z"></path>
-                                </svg>
-                            </a>
-                            <div class="single-item__title">
-                                <h4><a href="#">Everyday - Fireboy</a></h4>
-                                <span><a href="#">Fasanya Pelumi</a></span>
-                            </div>
-                            <span class="single-item__time">2:05</span>
-
-                        </li>
-
-                        <li class="single-item">
-
-                            <span class="single-item__rate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M12.71,12.54a1,1,0,0,0-1.42,0l-3,3A1,1,0,0,0,9.71,17L12,14.66,14.29,17a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Zm-3-1.08L12,9.16l2.29,2.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42l-3-3a1,1,0,0,0-1.42,0l-3,3a1,1,0,0,0,1.42,1.42Z"></path>
-                                </svg>4</span>
-                            <a data-link="" data-playlist="" data-title="Joy - Davido" data-artist="Fasanya Pelumi" href="https://dnasoundstudio.com/dnasoundfiles/public/beatFiles/wRq6HVZjDoRtB0riujOfyiuQPxKU8fAq1sSxJv84.mp3" class="single-item__cover">
-                                <img src="https://dnasoundstudio.com/dnasoundfiles/public/beatImages/cpMrW5YdozgqJ0suh3SSCNOU0fyA2k1XjLmiYcsx.jpg" alt="">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z"></path>
-                                </svg>
-                            </a>
-                            <div class="single-item__title">
-                                <h4><a href="#">Joy - Davido</a></h4>
-                                <span><a href="#">Fasanya Pelumi</a></span>
-                            </div>
-                            <span class="single-item__time">3:35</span>
-
-                        </li>
-
-                        <li class="single-item">
-
-                            <span class="single-item__rate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M12.71,12.54a1,1,0,0,0-1.42,0l-3,3A1,1,0,0,0,9.71,17L12,14.66,14.29,17a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Zm-3-1.08L12,9.16l2.29,2.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42l-3-3a1,1,0,0,0-1.42,0l-3,3a1,1,0,0,0,1.42,1.42Z"></path>
-                                </svg>5</span>
-                            <a data-link="" data-playlist="" data-title="MMS - Asake" data-artist="Fasanya Pelumi" href="https://dnasoundstudio.com/dnasoundfiles/public/beatFiles/SezNR3vzigzaY3Sz20pnHhySLjCGZUz0a9h1MOkg.mp3" class="single-item__cover">
-                                <img src="https://dnasoundstudio.com/dnasoundfiles/public/beatImages/hnIAk3WvHkaOYkoUEZL5WW0riXFZGEaOVasuUYUu.jpg" alt="">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z"></path>
-                                </svg>
-                            </a>
-                            <div class="single-item__title">
-                                <h4><a href="#">MMS - Asake</a></h4>
-                                <span><a href="#">Fasanya Pelumi</a></span>
-                            </div>
-                            <span class="single-item__time">2:35</span>
-
-                        </li>
 
 
 
@@ -615,11 +583,20 @@
 
                 <div class="col-12">
                     <ul class="main__list">
+                        @foreach($quickpick2 as $beat)
                         <li class="single-item">
 
-
-                            <a data-link="" data-playlist="" data-title="Anikanda - Zino" data-artist="Fasanya Pelumi" href="https://dnasoundstudio.com/dnasoundfiles/public/beatFiles/ib1eHyjx4v1zYoyikNhMhHxgFgyxwiCwW0kT9xUj.mp3" class="single-item__cover">
-                                <img src="https://dnasoundstudio.com/dnasoundfiles/public/beatImages/N7rA0ZeC69fvetAccnkryRB9Da8Qyg7IS2tuZHio.jpg" alt="">
+                            <span class="single-item__rate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M12.71,12.54a1,1,0,0,0-1.42,0l-3,3A1,1,0,0,0,9.71,17L12,14.66,14.29,17a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Zm-3-1.08L12,9.16l2.29,2.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42l-3-3a1,1,0,0,0-1.42,0l-3,3a1,1,0,0,0,1.42,1.42Z"></path>
+                                </svg>1</span>
+                            <a data-link="" data-playlist="" data-title="Moving - Omah" data-artist="Fasanya Pelumi" onclick="playAudio('{{ asset('dnasoundfiles/public/beatFiles/' . $beat->file) }}', '{{$beat->title}}', '{{$beat->author->name}}', '{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}')" class="single-item__cover">
+                                @if($beat->image !== null)
+                                <img src="{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}"
+                                    alt="">
+                                @else
+                                <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png"
+                                    alt="">
+                                @endif
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                     <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
                                 </svg>
@@ -628,88 +605,14 @@
                                 </svg>
                             </a>
                             <div class="single-item__title">
-                                <h4><a href="#">Anikanda - Zino</a></h4>
-                                <span><a href="#">Fasanya Pelumi</a></span>
-                            </div>
-                            <span class="single-item__time">2:35</span>
-
-                        </li>
-                        <li class="single-item">
-
-
-                            <a data-link="" data-playlist="" data-title="Moving - Omah" data-artist="Fasanya Pelumi" href="https://dnasoundstudio.com/dnasoundfiles/public/beatFiles/Q6dP1hPnIMfo3OX823oaq0ibtJs2aRbxeMqiBpjm.mp3" class="single-item__cover">
-                                <img src="https://dnasoundstudio.com/dnasoundfiles/public/beatImages/eVxB2ePDHubSq85uS21zx1GBWhH7tA3Sln9qz2Wd.jpg" alt="">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z"></path>
-                                </svg>
-                            </a>
-                            <div class="single-item__title">
-                                <h4><a href="#">Moving - Omah</a></h4>
-                                <span><a href="#">Fasanya Pelumi</a></span>
-                            </div>
-                            <span class="single-item__time">1:35</span>
-
-                        </li>
-                        <li class="single-item">
-
-
-                            <a data-link="" data-playlist="" data-title="Treasure - Timaya" data-artist="Fasanya Pelumi" href="https://dnasoundstudio.com/dnasoundfiles/public/beatFiles/rqX2tyCXRJaXqE6OgU8MYQqjU2xtk1xfXwZChqdL.mp3" class="single-item__cover">
-                                <img src="https://dnasoundstudio.com/dnasoundfiles/public/beatImages/xqiMkNYANFPKcNCIM0IYYCiQrSOWk46G7SJuMe5O.jpg" alt="">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z"></path>
-                                </svg>
-                            </a>
-                            <div class="single-item__title">
-                                <h4><a href="#">Treasure - Timaya</a></h4>
-                                <span><a href="#">Fasanya Pelumi</a></span>
+                                <h4><a href="https://dnasoundstudio.com/dnasoundfiles/public/beatFiles/Q6dP1hPnIMfo3OX823oaq0ibtJs2aRbxeMqiBpjm.mp3"> {{ $beat->title }}
+                                    </a></h4>
+                                <span><a href="#">{{ $beat->author->name ?? 'Unknown' }}</a></span>
                             </div>
                             <span class="single-item__time">5:35</span>
 
                         </li>
-                        <li class="single-item">
-
-
-                            <a data-link="" data-playlist="" data-title="Joy - Davido" data-artist="Fasanya Pelumi" href="https://dnasoundstudio.com/dnasoundfiles/public/beatFiles/wRq6HVZjDoRtB0riujOfyiuQPxKU8fAq1sSxJv84.mp3" class="single-item__cover">
-                                <img src="https://dnasoundstudio.com/dnasoundfiles/public/beatImages/cpMrW5YdozgqJ0suh3SSCNOU0fyA2k1XjLmiYcsx.jpg" alt="">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z"></path>
-                                </svg>
-                            </a>
-                            <div class="single-item__title">
-                                <h4><a href="#">Joy - Davido</a></h4>
-                                <span><a href="#">Fasanya Pelumi</a></span>
-                            </div>
-                            <span class="single-item__time">2:05</span>
-
-                        </li>
-                        <li class="single-item">
-
-
-                            <a data-link="" data-playlist="" data-title="MMS - Asake" data-artist="Fasanya Pelumi" href="https://dnasoundstudio.com/dnasoundfiles/public/beatFiles/SezNR3vzigzaY3Sz20pnHhySLjCGZUz0a9h1MOkg.mp3" class="single-item__cover">
-                                <img src="https://dnasoundstudio.com/dnasoundfiles/public/beatImages/hnIAk3WvHkaOYkoUEZL5WW0riXFZGEaOVasuUYUu.jpg" alt="">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z"></path>
-                                </svg>
-                            </a>
-                            <div class="single-item__title">
-                                <h4><a href="#">MMS - Asake</a></h4>
-                                <span><a href="#">Fasanya Pelumi</a></span>
-                            </div>
-                            <span class="single-item__time">2:35</span>
-
-                        </li>
+                        @endforeach
                     </ul>
                 </div>
 
@@ -737,7 +640,7 @@
 
                 </div>
                 <div class=''>
-                    <a href="/beat/my-beats" style='border-color:#fff' class="btn btn-dark bg-transparent border-1">View all→</a>
+                    <a  href="/popular" style='border-color:#fff' class="btn btn-dark bg-transparent border-1">View all→</a>
                 </div>
             </div>
         </div>
@@ -748,35 +651,28 @@
                 <div class="main__carousel main__carousel--artists owl-carousel owl-loaded owl-drag" id="popular">
                     <div class="owl-stage-outer owl-height">
                         <div class="owl-stage">
-                            @foreach($trending as $beat)
-                            <div class="owl-item">
+                            @foreach($popular as $beat)
+                            <div class="owl-item" style="margin-right:0px !important;">
                                 <div class="album">
                                     <div class="album__cover">
-                                        @if($beat->image !== null)
-                                        <img src="{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}"
-                                            alt="">
-                                        @else
-                                        <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png"
-                                            alt="">
-                                        @endif
-                                        <!-- <img src="https://dnasoundstudio.com/dnasoundfiles/public/beatImages/{{$beat->image}}" alt=""> -->
+                                        <div class="album__image">
+                                            @if($beat->image !== null)
+                                            <img src="{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}" alt="{{ $beat->title }}">
+                                            @else
+                                            <img src="https://dnasoundstudio.com/producers/assets/images/music-dashboard/feature-album/05.png" alt="Default Album Cover">
+                                            @endif
+                                        </div>
                                         <span class="main__list main__list--playlist main__list--dashbox">
-                                            <a data-playlist data-title="{{$beat->title}}" data-artist="{{$beat->author->name}}" href="{{ asset('dnasoundfiles/public/beatFiles/' . $beat->file) }}">
+                                            <a href="javascript:void(0)" onclick="playAudio('{{ asset('dnasoundfiles/public/beatFiles/' . $beat->file) }}', '{{$beat->title}}', '{{$beat->author->name}}', '{{ config('app.env') === 'local' ? asset('beatImages/' . $beat->image) : 'https://dnasoundstudio.com/dnasoundfiles/public/beatImages/' . $beat->image }}')">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                                     <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                                </svg></a></span>
-                                        <span class="album__stat">
-                                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                    <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
-                                                </svg> 7</span>
-                                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                    <path d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
-                                                </svg> 4 731</span>
+                                                </svg>
+                                            </a>
                                         </span>
                                     </div>
-                                    <div class="album__title">
-                                        <h3><a href="/beat/beat-details/{{ $beat->id }}">{{ $beat->title }}</a></h3>
-                                        <span><a href="#">{{ $beat->author->name ?? 'Unknown' }}</a></span>
+                                    <div class="album__info">
+                                        <h4 class="beat-title">{{ $beat->title }}</h4>
+                                        <p class="beat-author">{{ $beat->author->name }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -795,24 +691,24 @@
 
 @section('script')
 <script>
-function playAudio(audioSrc, title, artist, coverImage) {
-    const audio = document.getElementById('audio');
-    const playerTitle = document.querySelector('.audio-player__title');
-    const playerArtist = document.querySelector('.audio-player__artist');
-    const playerArtwork = document.querySelector('.audio-player__artwork img');
-    
-    // Update player info
-    playerTitle.textContent = title;
-    playerArtist.textContent = artist;
-    playerArtwork.src = coverImage;
-    
-    // Update audio source and play
-    audio.src = audioSrc;
-    audio.play();
-    
-    // Update play button icon to pause
-    const playPauseBtn = document.getElementById('playPauseBtn');
-    playPauseBtn.innerHTML = '<svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
-}
+    function playAudio(audioSrc, title, artist, coverImage) {
+        const audio = document.getElementById('audio');
+        const playerTitle = document.querySelector('.audio-player__title');
+        const playerArtist = document.querySelector('.audio-player__artist');
+        const playerArtwork = document.querySelector('.audio-player__artwork img');
+
+        // Update player info
+        playerTitle.textContent = title;
+        playerArtist.textContent = artist;
+        playerArtwork.src = coverImage;
+
+        // Update audio source and play
+        audio.src = audioSrc;
+        audio.play();
+
+        // Update play button icon to pause
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        playPauseBtn.innerHTML = '<svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+    }
 </script>
 @endsection

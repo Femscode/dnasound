@@ -15,6 +15,10 @@ class FrontendController extends Controller
    
     public function index() {
         $data['trending']  = Beat::latest()->take(20)->get();
+        $data['mostrated']  = Beat::inRandomOrder()->take(20)->get();
+        $data['popular']  = Beat::inRandomOrder()->take(20)->get();
+        $data['quickpick1']  = Beat::inRandomOrder()->take(5)->get();
+        $data['quickpick2']  = Beat::inRandomOrder()->take(5)->get();
         return view('frontend.index',$data);
     }
     public function mostrated() {
@@ -24,6 +28,10 @@ class FrontendController extends Controller
     public function trending() {
         $data['trending']  = Beat::latest()->paginate(20);
         return view('frontend.trending',$data);
+    }
+    public function popular() {
+        $data['popular']  = Beat::latest()->paginate(20);
+        return view('frontend.popular',$data);
     }
     public function about() {
         return view('frontend.about');
