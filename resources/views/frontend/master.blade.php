@@ -313,7 +313,7 @@
     </div>
     
     <div class="audio-player__info">
-        <h4 class="audio-player__title">DNA Music</h4>
+        <h4 class="audio-player__title">DNA Sounds</h4>
         <div class="audio-player__artist">{{$user->name ?? "Playlist"}}</div>
     </div>
     
